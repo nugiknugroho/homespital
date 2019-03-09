@@ -3,11 +3,10 @@
     <color name="colorPrimary">#71C3FF</color>
     <color name="colorPrimaryDark">#7bc8f1</color>
     <color name="colorAccent">#3b5cef</color>
-    <color name="colorBaru">#f76d6d</color>
     <color name="colorNew">#fff</color>
-    <color name="colorBaru1">#f4d1d1</color>
     <color name="colorFont">#000064</color>
     <color name="colorHint">#FF868484</color>
+    <color name="colorborder">#757575</color>
     <color name="colorBackgroundLoginRegister">#FFEFECEC</color>
     <color name="colorFontBaru">#FF000000</color>
 </resources>

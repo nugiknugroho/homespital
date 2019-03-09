@@ -28,10 +28,10 @@
 
                 <ImageView
                     android:layout_marginTop="5dp"
-                    android:layout_width="100dp"
+                    android:layout_width="90dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
-                    android:layout_height="100dp"
+                    android:layout_height="90dp"
                     android:layout_gravity="center"
                     android:src="@drawable/logolagi"
                     android:layout_centerHorizontal="true"/>
