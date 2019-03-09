@@ -22,11 +22,14 @@
         <activity
             android:name=".Main2Activity"
             android:theme="@style/RegisterPage"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity android:name=".Splash"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".Splash"
             android:theme="@style/SplashPage"
-            android:windowSoftInputMode="adjustResize"
-            >
+            android:windowSoftInputMode="adjustResize"></activity>
+        <activity android:name=".RecyclerView"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustResize">
 
         </activity>
     </application>
