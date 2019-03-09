@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#7bc8f1</color>
     <color name="colorAccent">#3b5cef</color>
     <color name="colorNew">#fff</color>
+    <color name="colorMagenta">#E40082</color>
     <color name="colorFont">#000064</color>
     <color name="colorHint">#FF868484</color>
     <color name="colorborder">#757575</color>
