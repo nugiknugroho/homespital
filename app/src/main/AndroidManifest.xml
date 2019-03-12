@@ -26,10 +26,10 @@
         <activity
             android:name=".Splash"
             android:theme="@style/SplashPage"
-            android:windowSoftInputMode="adjustResize"></activity>
-        <activity android:name=".RecyclerView"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".DokterActivity"
+            android:theme="@style/DokterPage">
 
         </activity>
     </application>

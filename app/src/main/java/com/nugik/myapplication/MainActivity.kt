@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val button1 = findViewById(R.id.btn_login) as Button
         button1.setOnClickListener {
-            val intent = Intent(this, RecyclerView::class.java)
+            val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
      }
