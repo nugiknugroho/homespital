@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorNew">
+    android:background="@color/colorNew"
+    tools:context=".PerawatActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -23,112 +24,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="FITUR FITUR HOMESPITAL"
+                android:text="Daftar Perawat Spesialis Homespital"
                 android:textColor="@color/colorFontBaru"
                 android:textStyle="bold"
                 android:layout_marginLeft="25dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="Lihatlah fitur-fitur di aplikasi Homespital ini, gunakan layanan ini dengan baik"
-                android:textColor="@color/colorFontBaru"
-                />
 
             <LinearLayout
-                android:id="@+id/lin_dokter"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                android:onClick="lin_dokter"
-                >
-
-                <ImageView
-                    android:src="@drawable/doctor"
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    />
-                <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/tv_dokter"
-                        android:paddingLeft="10dp"
-                        android:text="DOKTER"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Tanya jawab langsung dengan dokter umum dan spesialis terpercaya"
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lin_bidan"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/nadib"
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    />
-                <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="BIDAN"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan kesehatan bersama bidan di rumah Anda"
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lin_nurse"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
@@ -153,16 +55,32 @@
 
                     <TextView
                         android:paddingLeft="10dp"
-                        android:text="PERAWAT"
-                        android:textSize="18sp"
+                        android:text="NAMA PERAWAT"
+                        android:textSize="15sp"
                         android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan kesehatan bersama perawat di rumah Anda"
-                        android:textSize="12dp"
+                        android:paddingLeft="10dp"
+                        android:text="Spesialis (Keahlian)"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Harga"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Status Ketersediaan"
+                        android:textSize="10sp"
                         android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -184,7 +102,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/ambul"
+                    android:src="@drawable/nurse"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -196,16 +114,32 @@
 
                     <TextView
                         android:paddingLeft="10dp"
-                        android:text="AMBULANCE"
-                        android:textSize="18sp"
+                        android:text="NAMA PERAWAT"
+                        android:textSize="15sp"
                         android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan informasi ketersediaan ambulance"
-                        android:textSize="12dp"
+                        android:paddingLeft="10dp"
+                        android:text="Spesialis (Keahlian)"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Harga"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Status Ketersediaan"
+                        android:textSize="10sp"
                         android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -227,7 +161,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/clinic"
+                    android:src="@drawable/nurse"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -239,16 +173,32 @@
 
                     <TextView
                         android:paddingLeft="10dp"
-                        android:text="KLINIK"
-                        android:textSize="18sp"
+                        android:text="NAMA PERAWAT"
+                        android:textSize="15sp"
                         android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan informasi Klinik terdekat"
-                        android:textSize="12dp"
+                        android:paddingLeft="10dp"
+                        android:text="Spesialis (Keahlian)"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Harga"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Status Ketersediaan"
+                        android:textSize="10sp"
                         android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -256,89 +206,189 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_item"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/nurse"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="NAMA PERAWAT"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Spesialis (Keahlian)"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Harga"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Status Ketersediaan"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_item"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/nurse"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="NAMA PERAWAT"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Spesialis (Keahlian)"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Harga"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Status Ketersediaan"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/bg_item"
+                android:padding="12dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/nurse"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    />
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="NAMA PERAWAT"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Spesialis (Keahlian)"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Harga"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Status Ketersediaan"
+                        android:textSize="10sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Blog-blog Informasi Kesehatan Terbaru"
-                android:textColor="@color/colorFontBaru"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"/>
-
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-                        <ImageView
-                            android:src="@drawable/tesdumy"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-                        <ImageView
-                            android:src="@drawable/tesdumy"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-                        <ImageView
-                            android:src="@drawable/tesdumy"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            />
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-                        <ImageView
-                            android:src="@drawable/tesdumy"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            />
-                    </LinearLayout>
-
-                </LinearLayout>
-                
-            </HorizontalScrollView>
+                android:layout_marginBottom="50dp"/>
 
         </LinearLayout>
 
