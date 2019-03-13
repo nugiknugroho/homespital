@@ -2,4 +2,9 @@
     <string name="app_name">Homespital</string>
     <string name="font_family_light">sans-serif-light</string>
     <string name="font_family_medium">sans-serif-medium</string>
+    <string-array name="kategori">
+        <item>Kesehatan</item>
+        <item>Kehamilan</item>
+        <item>Medis</item>
+    </string-array>
 </resources>

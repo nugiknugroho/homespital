@@ -8,10 +8,25 @@
     android:background="@color/colorNew"
     tools:context=".PerawatActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:minHeight="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PERAWAT"
+            android:textSize="20dp"
+            android:fontFamily="@string/font_family_medium"
+            android:textColor="@color/colorNew"
+            android:textAlignment="center"/>
+    </android.support.v7.widget.Toolbar>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
         >
 
         <LinearLayout
@@ -48,6 +63,7 @@
                     android:layout_height="68dp"
                     />
                 <LinearLayout
+                    android:layout_margin="1dp"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -107,6 +123,7 @@
                     android:layout_height="68dp"
                     />
                 <LinearLayout
+                    android:layout_margin="1dp"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -166,6 +183,7 @@
                     android:layout_height="68dp"
                     />
                 <LinearLayout
+                    android:layout_margin="1dp"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -225,6 +243,7 @@
                     android:layout_height="68dp"
                     />
                 <LinearLayout
+                    android:layout_margin="1dp"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -284,6 +303,7 @@
                     android:layout_height="68dp"
                     />
                 <LinearLayout
+                    android:layout_margin="1dp"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -343,6 +363,7 @@
                     android:layout_height="68dp"
                     />
                 <LinearLayout
+                    android:layout_margin="1dp"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical"
                     android:layout_width="wrap_content"
@@ -388,7 +409,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp"/>
+                android:layout_marginBottom="25dp"/>
 
         </LinearLayout>
 

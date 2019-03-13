@@ -27,7 +27,8 @@
             android:name=".Splash"
             android:theme="@style/SplashPage"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity"
+            android:theme="@style/DokterPage"/>
         <activity
             android:name=".DokterActivity"
             android:theme="@style/DokterPage">
