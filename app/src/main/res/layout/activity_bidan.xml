@@ -58,7 +58,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -118,7 +118,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -178,7 +178,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -238,7 +238,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -298,7 +298,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -358,7 +358,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />

@@ -57,7 +57,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -116,7 +116,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -175,7 +175,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -234,7 +234,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -293,7 +293,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -352,7 +352,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
