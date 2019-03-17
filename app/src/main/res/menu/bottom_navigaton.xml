@@ -4,30 +4,30 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/home_astri_baru"
         android:title="Beranda"
         />
     <item
         android:id="@+id/nav_fav"
-        android:icon="@drawable/baseline_insert_drive_file_black_18dp"
+        android:icon="@drawable/artikel_astri_baru"
         android:title="Artikel"
         />
 
     <item
         android:id="@+id/nav_history"
-        android:icon="@drawable/ic_history_black_24dp"
+        android:icon="@drawable/riwayat_astri_baru"
         android:title="Riwayat"
         />
 
     <item
         android:id="@+id/nav_notif"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:icon="@drawable/notif_astri_baru"
         android:title="Notifikasi"
         />
 
     <item
         android:id="@+id/nav_profil"
-        android:icon="@drawable/ic_account_box_black_24dp"
+        android:icon="@drawable/profil_astri_baru"
         android:title="Akun Saya"
         />
 </menu>

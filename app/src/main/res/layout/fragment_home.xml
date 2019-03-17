@@ -10,17 +10,24 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize">
 
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_marginStart="100dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo_astri_baru"
+            />
+
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
+            android:layout_marginLeft="10dp"
             android:layout_height="wrap_content"
             android:text="Homespital"
             android:textSize="20dp"
             android:fontFamily="@string/font_family_medium"
-            android:textColor="@color/colorNew"
-            android:textAlignment="center"/>
+            android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -276,7 +283,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Blog-blog Informasi Kesehatan Terbaru"
+                android:text="Artikel Informasi Kesehatan Terbaru"
                 android:textColor="@color/colorFontBaru"
                 android:textStyle="bold"
                 android:layout_marginLeft="25dp"/>
@@ -284,7 +291,7 @@
             <HorizontalScrollView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="50dp">
+                android:layout_marginBottom="25dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -304,8 +311,9 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/tesdumy" />
+                            android:src="@drawable/doctor" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -315,12 +323,13 @@
                         android:layout_marginLeft="20dp"
                         android:background="@drawable/bg_item"
                         >
+
                         <ImageView
-                            android:src="@drawable/tesdumy"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            />
+                            android:src="@drawable/doctor" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -330,12 +339,13 @@
                         android:layout_marginLeft="20dp"
                         android:background="@drawable/bg_item"
                         >
+
                         <ImageView
-                            android:src="@drawable/tesdumy"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            />
+                            android:src="@drawable/doctor" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -345,12 +355,13 @@
                         android:layout_marginLeft="20dp"
                         android:background="@drawable/bg_item"
                         >
+
                         <ImageView
-                            android:src="@drawable/tesdumy"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            />
+                            android:src="@drawable/doctor" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -360,27 +371,13 @@
                         android:layout_marginLeft="20dp"
                         android:background="@drawable/bg_item"
                         >
+
                         <ImageView
-                            android:src="@drawable/tesdumy"
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            />
+                            android:src="@drawable/doctor" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-                        <ImageView
-                            android:src="@drawable/tesdumy"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            />
-                    </LinearLayout>
+
 
                 </LinearLayout>
                 

@@ -21,7 +21,6 @@
         android:background="@color/colorNew"
         app:itemIconTint="@color/colorFontBaru"
         app:itemTextColor="@color/colorFontBaru"
-        android:layout_alignParentStart="true"
         app:menu="@menu/bottom_navigaton"
         >
 
