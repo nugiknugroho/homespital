@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 
+
 class HomeActivity : AppCompatActivity() {
 
     val manager = supportFragmentManager
@@ -23,10 +24,7 @@ class HomeActivity : AppCompatActivity() {
                 createFragmentThree()
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.nav_notif -> {
-                createFragmentFour()
-                return@OnNavigationItemSelectedListener true
-            }
+
             R.id.nav_profil -> {
                 createFragmentFive()
                 return@OnNavigationItemSelectedListener true
@@ -41,6 +39,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         createFragmentOne()
+
         bottom_nav.setOnNavigationItemSelectedListener(monNavigationItemSelectedListener)
     }
 

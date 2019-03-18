@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/LoginPage"
+            android:name=".Splash"
+            android:theme="@style/SplashPage"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,13 +20,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".MainActivity"
+            android:theme="@style/LoginPage"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
             android:name=".Main2Activity"
             android:theme="@style/RegisterPage"
             android:windowSoftInputMode="adjustResize" />
-        <activity
-            android:name=".Splash"
-            android:theme="@style/SplashPage"
-            android:windowSoftInputMode="adjustResize" />
+
         <activity android:name=".HomeActivity"
             android:theme="@style/DokterPage"/>
         <activity

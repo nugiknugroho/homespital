@@ -74,7 +74,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/doctor"
+                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -120,7 +120,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nadib"
+                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -164,7 +164,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/nurse"
+                    android:src="@drawable/warnaperawat"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -207,7 +207,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/ambul"
+                    android:src="@drawable/warnaambulance"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -250,7 +250,7 @@
                 >
 
                 <ImageView
-                    android:src="@drawable/clinic"
+                    android:src="@drawable/warnaklinik"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
                     />
@@ -311,7 +311,7 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/doctor" />
+                            android:src="@drawable/warnaklinik" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -327,7 +327,7 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/doctor" />
+                            android:src="@drawable/warnaklinik" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -343,7 +343,7 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/doctor" />
+                            android:src="@drawable/warnaklinik" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -359,7 +359,7 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/doctor" />
+                            android:src="@drawable/warnaklinik" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -375,7 +375,7 @@
                         <ImageView
                             android:layout_width="150dp"
                             android:layout_height="150dp"
-                            android:src="@drawable/doctor" />
+                            android:src="@drawable/warnaklinik" />
                     </LinearLayout>
 
 
