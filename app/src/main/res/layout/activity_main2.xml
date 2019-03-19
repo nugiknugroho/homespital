@@ -57,27 +57,27 @@
                     android:textSize="25dp"/>
 
                 <TextView
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/colorFontBaru"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nama Lengkap"/>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Nama Lengkap"
+                    android:textColor="@color/colorFontBaru"
+                    android:textSize="15dp" />
 
                 <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:hint="Nama Lengkap"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/nama"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:hint="Nama Lengkap"
                     android:padding="10dp"
-                    />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorHint" />
 
                 <TextView
                     android:layout_marginStart="20dp"
@@ -89,50 +89,48 @@
                     android:layout_height="wrap_content"
                     android:text="Tanggal Lahir"/>
 
-                <TextView
-                    android:id="@+id/tv_date"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
+                <EditText
+                    android:id="@+id/ttl"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Tanggal Lahir"
-                    android:textColor="@color/colorHint"
-                    android:textColorHint="@color/colorHint"
-                    android:drawableRight="@drawable/ic_date_range_black_24dp"
-                    android:onClick="ClickDate"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:hint="Tanggal Lahir"
                     android:padding="10dp"
-                    />
+                    android:textColor="@color/colorHint"
+                    android:textColorHint="@color/colorHint" />
 
 
                 <TextView
-                    android:id="@+id/jenis_kelamin"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/colorFontBaru"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Jenis Kelamin"/>
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/colorFontBaru"
+                    android:textSize="15dp" />
 
                 <RadioGroup
-                    android:id="@+id/radiogroup"
+                    android:id="@+id/gender"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     >
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Laki-laki"
-                        android:checked="true"
-                        android:textColor="@color/colorFontBaru"
-                        />
 
                     <RadioButton
+                        android:id="@+id/laki"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Laki-laki"
+                        android:textColor="@color/colorFontBaru" />
+
+                    <RadioButton
+                        android:id="@+id/cewek"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Perempuan"
@@ -150,17 +148,17 @@
                     android:text="Alamat"/>
 
                 <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:hint="Alamat"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/alamat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:hint="Alamat"
                     android:padding="10dp"
-                    />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorHint" />
 
                 <TextView
                     android:layout_marginStart="20dp"
@@ -173,19 +171,19 @@
                     android:text="Username"/>
 
                 <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_user"
-                    android:hint="Username"
-                    android:drawablePadding="10dp"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="10dp"
+                    android:hint="Username"
                     android:padding="10dp"
-                />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorHint" />
 
                 <TextView
                     android:layout_marginStart="20dp"
@@ -198,20 +196,20 @@
                     android:text="Email"/>
 
                 <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_email"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
-                    android:drawablePadding="10dp"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:drawableStart="@drawable/ic_email"
+                    android:drawablePadding="10dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
                     android:padding="10dp"
-                    />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorHint" />
 
                 <TextView
                     android:layout_marginStart="20dp"
@@ -224,20 +222,20 @@
                     android:text="Password"/>
 
                 <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_password"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:drawablePadding="10dp"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="10dp"
+                    android:hint="Password"
+                    android:inputType="textPassword"
                     android:padding="10dp"
-                    />
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorHint" />
 
                 <Button
                     android:id="@+id/btn_daftar"
