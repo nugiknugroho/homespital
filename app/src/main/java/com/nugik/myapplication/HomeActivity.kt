@@ -24,6 +24,10 @@ class HomeActivity : AppCompatActivity() {
                 createFragmentThree()
                 return@OnNavigationItemSelectedListener true
             }
+            R.id.nav_notif -> {
+                createFragmentFour()
+                return@OnNavigationItemSelectedListener true
+            }
 
             R.id.nav_profil -> {
                 createFragmentFive()

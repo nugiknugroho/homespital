@@ -19,8 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginTop="15dp"
             android:orientation="vertical"
             android:background="@color/colorPrimary"
             android:layout_centerVertical="true"
@@ -38,6 +37,7 @@
                     android:layout_centerHorizontal="true"/>
             <LinearLayout
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -64,6 +64,82 @@
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="Nama User"/>
+
+                <EditText
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_user"
+                    android:hint="Nama User"
+                    android:drawablePadding="10dp"
+                    android:textColorHint="@color/colorHint"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_background"
+                    android:padding="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Email"
+                    android:textColor="@color/colorFontBaru"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/login_edit_background"
+                    android:drawablePadding="10dp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorHint" />
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorFontBaru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"/>
+
+                <EditText
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableStart="@drawable/ic_password"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:drawablePadding="10dp"
+                    android:textColorHint="@color/colorHint"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edit_background"
+                    android:padding="10dp"
+                    />
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/colorFontBaru"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="Nama Lengkap"/>
 
                 <EditText
@@ -71,6 +147,8 @@
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="10dp"
                     android:hint="Nama Lengkap"
+                    android:drawableStart="@drawable/ic_account_circle_black_24dp"
+                    android:drawablePadding="10dp"
                     android:textColorHint="@color/colorHint"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
@@ -99,7 +177,8 @@
                     android:hint="Tanggal Lahir"
                     android:textColor="@color/colorHint"
                     android:textColorHint="@color/colorHint"
-                    android:drawableRight="@drawable/ic_date_range_black_24dp"
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+                    android:drawablePadding="10dp"
                     android:onClick="ClickDate"
                     android:background="@drawable/login_edit_background"
                     android:padding="10dp"
@@ -147,17 +226,19 @@
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Alamat"/>
+                    android:text="Kota Asal"/>
 
                 <EditText
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="10dp"
-                    android:hint="Alamat"
+                    android:hint="Kota Asal"
                     android:textColorHint="@color/colorHint"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                    android:drawablePadding="10dp"
                     android:background="@drawable/login_edit_background"
                     android:padding="10dp"
                     />
@@ -170,71 +251,19 @@
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Username"/>
+                    android:text="Alamat Lengkap"/>
 
                 <EditText
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_user"
-                    android:hint="Username"
-                    android:drawablePadding="10dp"
+                    android:hint="Alamat Lengkap"
                     android:textColorHint="@color/colorHint"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/login_edit_background"
-                    android:padding="10dp"
-                />
-
-                <TextView
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/colorFontBaru"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Email"/>
-
-                <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_email"
-                    android:hint="Email"
-                    android:inputType="textEmailAddress"
+                    android:drawableStart="@drawable/ic_location_on_black_24dp"
                     android:drawablePadding="10dp"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/login_edit_background"
-                    android:padding="10dp"
-                    />
-
-                <TextView
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:textSize="15dp"
-                    android:textColor="@color/colorFontBaru"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Password"/>
-
-                <EditText
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_password"
-                    android:hint="Password"
-                    android:inputType="textPassword"
-                    android:drawablePadding="10dp"
-                    android:textColorHint="@color/colorHint"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:background="@drawable/login_edit_background"
                     android:padding="10dp"
                     />
@@ -246,26 +275,10 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginStart="60dp"
                     android:layout_marginEnd="60dp"
-                    android:layout_marginBottom="30dp"
+                    android:layout_marginBottom="25dp"
                     android:text="DAFTAR"
                     android:background="@drawable/button_background"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
             </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

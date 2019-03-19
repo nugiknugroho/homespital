@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorNew">
+    android:background="#faf6f6">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -33,74 +33,55 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        >
+        android:layout_marginBottom="25dp">
 
         <LinearLayout
-            android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="FITUR FITUR HOMESPITAL"
-                android:textColor="@color/colorFontBaru"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="Lihatlah fitur-fitur di aplikasi Homespital ini, gunakan layanan ini dengan baik"
-                android:textColor="@color/colorFontBaru"
-                />
 
             <LinearLayout
                 android:id="@+id/lin_dokter"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
                 android:onClick="lin_dokter"
-                >
+                android:orientation="horizontal"
+                android:padding="12dp">
 
                 <ImageView
-                    android:src="@drawable/warnadokter"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    />
+                    android:src="@drawable/warnadokter" />
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tv_dokter"
-                        android:paddingLeft="10dp"
-                        android:text="DOKTER"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        />
+                        android:paddingLeft="10dp"
+                        android:text="DOKTER"
+                        android:textColor="@color/colorFontBaru"
+                        android:textSize="18sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10sp"
                         android:text="Tanya jawab langsung dengan dokter umum dan spesialis terpercaya"
-                        android:textSize="12dp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -108,43 +89,42 @@
 
             <LinearLayout
                 android:id="@+id/lin_bidan"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_item"
-                android:padding="12dp"
                 android:orientation="horizontal"
-                >
+                android:padding="12dp">
 
                 <ImageView
-                    android:src="@drawable/warnabidan"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    />
+                    android:src="@drawable/warnabidan" />
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="BIDAN"
-                        android:textSize="18sp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="18sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10sp"
                         android:text="Pelayanan kesehatan bersama bidan di rumah Anda"
-                        android:textSize="12dp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -152,129 +132,126 @@
 
             <LinearLayout
                 android:id="@+id/lin_nurse"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_item"
-                android:padding="12dp"
                 android:orientation="horizontal"
-                >
+                android:padding="12dp">
 
                 <ImageView
-                    android:src="@drawable/warnaperawat"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    />
+                    android:src="@drawable/warnaperawat" />
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="PERAWAT"
-                        android:textSize="18sp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="18sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10sp"
                         android:text="Pelayanan kesehatan bersama perawat di rumah Anda"
-                        android:textSize="12dp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_item"
-                android:padding="12dp"
                 android:orientation="horizontal"
-                >
+                android:padding="12dp">
 
                 <ImageView
-                    android:src="@drawable/warnaambulance"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    />
+                    android:src="@drawable/warnaambulance" />
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="AMBULANCE"
-                        android:textSize="18sp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="18sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10sp"
                         android:text="Pelayanan informasi ketersediaan ambulance"
-                        android:textSize="12dp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="88dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/bg_item"
-                android:padding="12dp"
                 android:orientation="horizontal"
-                >
+                android:padding="12dp">
 
                 <ImageView
-                    android:src="@drawable/warnaklinik"
                     android:layout_width="68dp"
                     android:layout_height="68dp"
-                    />
+                    android:src="@drawable/warnaklinik" />
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10dp"
                         android:text="KLINIK"
-                        android:textSize="18sp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="18sp" />
 
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:paddingLeft="10sp"
                         android:text="Pelayanan informasi Klinik terdekat"
-                        android:textSize="12dp"
                         android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:textSize="12dp" />
 
                 </LinearLayout>
 
@@ -283,10 +260,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
                 android:text="Artikel Informasi Kesehatan Terbaru"
                 android:textColor="@color/colorFontBaru"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"/>
+                android:textStyle="bold" />
 
             <HorizontalScrollView
                 android:layout_width="wrap_content"
@@ -296,91 +273,58 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginBottom="30dp"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_height="120dp"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/warnaklinik" />
-                    </LinearLayout>
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cth_berita" />
 
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_height="120dp"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/warnaklinik" />
-                    </LinearLayout>
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cth_berita" />
 
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_height="120dp"
                         android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/warnaklinik" />
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cth_berita" />
+
                     </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/warnaklinik" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="20dp"
-                        android:background="@drawable/bg_item"
-                        >
-
-                        <ImageView
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/warnaklinik" />
-                    </LinearLayout>
-
 
                 </LinearLayout>
-                
+
             </HorizontalScrollView>
 
         </LinearLayout>

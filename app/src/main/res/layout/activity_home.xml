@@ -20,7 +20,7 @@
         android:layout_alignParentBottom="true"
         android:background="@color/colorNew"
         app:itemTextColor="@color/colorFontBaru"
-        app:itemIconTint="@color/colorMagenta"
+        app:itemIconTint="@color/colorFontBaru"
         app:menu="@menu/bottom_navigaton"
         >
 

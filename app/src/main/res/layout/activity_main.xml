@@ -68,6 +68,7 @@
                     android:background="@drawable/login_edit_background"
                     android:drawablePadding="10dp"
                     android:drawableStart="@drawable/ic_email"
+                    android:inputType="textEmailAddress"
                     android:hint="Email"
                     android:padding="10dp"
                     android:textColor="@color/colorPrimaryDark"

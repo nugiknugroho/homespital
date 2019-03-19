@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="DOKTER"
+            android:gravity="center"
             android:textSize="20dp"
             android:fontFamily="@string/font_family_medium"
             android:textColor="@color/colorNew"
@@ -29,20 +30,10 @@
         >
 
         <LinearLayout
-            android:layout_marginTop="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Daftar Dokter Spesialis Homespital"
-                android:textColor="@color/colorFontBaru"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"/>
-
 
             <LinearLayout
                 android:layout_marginTop="10dp"

@@ -30,20 +30,10 @@
         >
 
         <LinearLayout
-            android:layout_marginTop="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Daftar Perawat Spesialis Homespital"
-                android:textColor="@color/colorFontBaru"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"/>
-
 
             <LinearLayout
                 android:layout_marginTop="10dp"

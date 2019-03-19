@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorNew"
+    android:background="#faf6f6"
     tools:context=".BidanActivity">
 
     <android.support.v7.widget.Toolbar
@@ -30,19 +30,10 @@
         >
 
         <LinearLayout
-            android:layout_marginTop="25dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="50dp"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Daftar Bidan Spesialis Homespital"
-                android:textColor="@color/colorFontBaru"
-                android:textStyle="bold"
-                android:layout_marginLeft="25dp"/>
 
 
             <LinearLayout
