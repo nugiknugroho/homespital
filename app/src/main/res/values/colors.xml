@@ -5,6 +5,7 @@
     <color name="colorAccent">#ffffff</color>
     <color name="colorNew">#fff</color>
     <color name="colorMagenta">#E40082</color>
+    <color name="colorBackgroundAll">#EEEEEF</color>
     <color name="colorFont">#000064</color>
     <color name="colorHint">#FF868484</color>
     <color name="colorHint1">#dfdfdf</color>
