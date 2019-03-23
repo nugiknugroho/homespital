@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
@@ -49,7 +49,7 @@
                 android:orientation="horizontal"
                 >
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_item_riwayat">
@@ -61,6 +61,11 @@
                         android:text="AMBULANCE"
                         android:textColor="@color/colorNew"
                         android:textSize="18sp"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -78,10 +83,13 @@
                         android:layout_marginLeft="5dp"
                         android:text="06:00 PM"
                         android:textColor="@color/colorFontBaru"/>
+
                 </LinearLayout>
 
-            </LinearLayout>
-            <LinearLayout
+
+
+            </RelativeLayout>
+            <RelativeLayout
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:layout_width="match_parent"
@@ -91,18 +99,147 @@
                 android:orientation="horizontal"
                 >
 
-                <View
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="1dp"
-                    android:background="@color/colorHint"/>
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_item_riwayat">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="DOKTER"
+                        android:textColor="@color/colorNew"
+                        android:textSize="18sp"/>
+                </RelativeLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="01-01-2019"
+                        android:textColor="@color/colorFontBaru"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="06:00 PM"
+                        android:textColor="@color/colorFontBaru"/>
 
-            </LinearLayout>
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_item_riwayat">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="BIDAN"
+                        android:textColor="@color/colorNew"
+                        android:textSize="18sp"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="01-01-2019"
+                        android:textColor="@color/colorFontBaru"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="06:00 PM"
+                        android:textColor="@color/colorFontBaru"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_item_riwayat">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="PERAWAT"
+                        android:textColor="@color/colorNew"
+                        android:textSize="18sp"/>
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="01-01-2019"
+                        android:textColor="@color/colorFontBaru"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="06:00 PM"
+                        android:textColor="@color/colorFontBaru"/>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
 
         </LinearLayout>
     </ScrollView>

@@ -33,7 +33,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/ss_header_pp"
+        android:background="@drawable/header_profil"
         android:padding="12dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -188,6 +188,16 @@
                 android:text="**************"
                 android:textStyle="bold"
                 android:textColor="@color/colorFontBaru"/>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Logout"/>
 
         </LinearLayout>
     </ScrollView>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/login_background"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LogRegister.MainActivity">
 
 
     <ScrollView
@@ -60,15 +60,16 @@
                     android:textSize="18dp" />
 
                 <EditText
+                    android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
-                    android:drawablePadding="10dp"
-                    android:drawableStart="@drawable/ic_email"
+                    android:drawableStart="@drawable/ic_mail_outline_black_24dp"
                     android:inputType="textEmailAddress"
+                    android:drawablePadding="10dp"
                     android:hint="Email"
                     android:padding="10dp"
                     android:textColor="@color/colorPrimaryDark"
@@ -85,14 +86,15 @@
                     android:textSize="18dp" />
 
                 <EditText
+                    android:id="@+id/edt_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@drawable/login_edit_background"
+                    android:drawableStart="@drawable/ic_lock_outline_black_24dp"
                     android:drawablePadding="10dp"
-                    android:drawableStart="@drawable/ic_password"
                     android:hint="Password"
                     android:inputType="textPassword"
                     android:padding="10dp"

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nugik.myapplication">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/logo_astri_baru"
+        android:icon="@mipmap/launcherbiru"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -20,29 +20,29 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LogRegister.MainActivity"
             android:theme="@style/LoginPage"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Main2Activity"
+            android:name=".LogRegister.Main2Activity"
             android:theme="@style/RegisterPage"
             android:windowSoftInputMode="adjustResize" />
 
-        <activity android:name=".HomeActivity"
+        <activity android:name=".FragmentMenuLayanan.HomeActivity"
             android:theme="@style/DokterPage"/>
         <activity
-            android:name=".DokterActivity"
+            android:name=".DetailActivityMenu.DokterActivity"
             android:theme="@style/DokterPage"
             >
 
         </activity>
         <activity
-            android:name=".BidanActivity"
+            android:name=".DetailActivityMenu.BidanActivity"
             android:theme="@style/DokterPage">
 
         </activity>
         <activity
-            android:name=".PerawatActivity"
+            android:name=".DetailActivityMenu.PerawatActivity"
             android:theme="@style/DokterPage">
 
         </activity>

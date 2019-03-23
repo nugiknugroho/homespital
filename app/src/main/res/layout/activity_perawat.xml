@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBackgroundAll"
-    tools:context=".PerawatActivity">
+    tools:context=".DetailActivityMenu.PerawatActivity">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -17,11 +18,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
             android:text="PERAWAT"
             android:textSize="20dp"
             android:fontFamily="@string/font_family_medium"
-            android:textColor="@color/colorNew"
-            android:textAlignment="center"/>
+            android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
