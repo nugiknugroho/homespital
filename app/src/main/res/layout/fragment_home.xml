@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#faf6f6">
+    android:background="@color/colorBackgroundAll">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -42,221 +42,241 @@
             android:layout_marginTop="5dp"
             android:orientation="vertical">
 
-
-            <LinearLayout
-                android:id="@+id/lin_dokter"
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_dokter"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_item"
-                android:onClick="lin_dokter"
-                android:orientation="horizontal"
-                android:padding="12dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:src="@drawable/warnadokter" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_image_dokter"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/warnadokter"/>
 
-                    <TextView
-                        android:id="@+id/tv_dokter"
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="DOKTER"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="18sp" />
+                        android:layout_toRightOf="@id/iv_image_dokter">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10sp"
-                        android:text="Tanya jawab langsung dengan dokter umum dan spesialis terpercaya"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:text="DOKTER"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lin_bidan"
+                        <TextView
+                            android:text="Tanya jawab langsung dengan dokter umum dan spesialis terpercaya"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_bidan"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal"
-                android:padding="12dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:src="@drawable/warnabidan" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_image_bidan"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/warnabidan"/>
 
-                    <TextView
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="BIDAN"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="18sp" />
+                        android:layout_toRightOf="@id/iv_image_bidan">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan kesehatan bersama bidan di rumah Anda"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:text="BIDAN"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/lin_nurse"
+                        <TextView
+                            android:text="Pelayanan kesehatan bersama bidan di rumah Anda"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_perawat"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal"
-                android:padding="12dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:src="@drawable/warnaperawat" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_image_perawat"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/warnaperawat"/>
 
-                    <TextView
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="PERAWAT"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="18sp" />
+                        android:layout_toRightOf="@id/iv_image_perawat">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan kesehatan bersama perawat di rumah Anda"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:text="PERAWAT"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+                        <TextView
+                            android:text="Pelayanan kesehatan bersama perawat di rumah Anda"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_ambulance"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal"
-                android:padding="12dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:src="@drawable/warnaambulance" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_image_ambulance"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/warnaambulance"/>
 
-                    <TextView
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="AMBULANCE"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="18sp" />
+                        android:layout_toRightOf="@id/iv_image_ambulance">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan informasi ketersediaan ambulance"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:text="AMBULANCE"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+                        <TextView
+                            android:text="Pelayanan informasi ketersediaan ambulance"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_klinik"
                 android:layout_width="match_parent"
-                android:layout_height="88dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/bg_item"
-                android:orientation="horizontal"
-                android:padding="12dp">
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                card_view:cardCornerRadius="5dp">
 
-                <ImageView
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:src="@drawable/warnaklinik" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/iv_image_klinik"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/warnaklinik"/>
 
-                    <TextView
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="10dp"
-                        android:text="KLINIK"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="18sp" />
+                        android:layout_toRightOf="@id/iv_image_klinik">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="10sp"
-                        android:text="Pelayanan informasi Klinik terdekat"
-                        android:textColor="@color/colorFontBaru"
-                        android:textSize="12dp" />
+                        <TextView
+                            android:text="KLINIK"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
-                </LinearLayout>
-
-            </LinearLayout>
+                        <TextView
+                            android:text="Pelayanan informasi Klinik terdekat"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
                 android:text="Artikel Informasi Kesehatan Terbaru"

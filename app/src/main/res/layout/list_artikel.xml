@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorNew">
+
+        <Spinner
+            android:id="@+id/spin_kategori"
+            android:padding="5dp"
+            android:backgroundTint="@color/colorMagenta"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_item"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:entries="@array/kategori"
+            >
+
+        </Spinner>
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:background="@color/colorNew"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_image_artikel"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/artikel_astri_baru"/>
+
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_image_artikel">
+
+                <TextView
+                    android:id="@+id/textViewJudulArtikel"
+                    android:text="JUDUL ARTIKEL"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorFontBaru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                <TextView
+                    android:id="@+id/textViewIsiKonten"
+                    android:text="Sebagian Isi Artikel...."
+                    android:textSize="12sp"
+                    android:textColor="@color/colorFontBaru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                <TextView
+                    android:id="@+id/textViewKategori"
+                    android:text="Kategori"
+                    android:textSize="12sp"
+                    android:background="@drawable/bg_kategori"
+                    android:textColor="@color/colorFontBaru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

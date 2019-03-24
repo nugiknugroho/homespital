@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/colorBackgroundAll">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackgroundAll"
+    android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
@@ -29,6 +28,7 @@
             android:fontFamily="@string/font_family_medium"
             android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -56,312 +56,397 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="100dp"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/bg_item"
-                android:padding="12dp"
-                android:orientation="horizontal"
-                >
-
-                <ImageView
-                    android:src="@drawable/artikel_astri_baru"
-                    android:layout_width="68dp"
-                    android:layout_height="65dp"
-                    />
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:paddingLeft="10dp"
-                        android:text="JUDUL ARTIKEL"
-                        android:textSize="18sp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                    <TextView
-                        android:paddingLeft="10sp"
-                        android:text="Sebagian Isi Artikel ..........."
-                        android:textSize="12dp"
-                        android:textColor="@color/colorFontBaru"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <TextView
+            <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="65dp"/>
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel1"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel1">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel2"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel2">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel3"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel3">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel4"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel4">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel5"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel5">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                app:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="88dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_image_artikel6"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_margin="5dp"
+                        android:src="@drawable/artikel_astri_baru"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_artikel6">
+
+                        <TextView
+                            android:text="JUDUL ARTIKEL"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:text="Sebagian Isi Artikel...."
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:text="Kategori"
+                            android:textSize="12sp"
+                            android:background="@drawable/bg_kategori"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
         </LinearLayout>
 
     </ScrollView>
+
+
+
 
 </LinearLayout>

@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
         }
         val button1 = findViewById(R.id.btn_login) as Button
         button1.setOnClickListener {
-            val intent = Intent(this, HomeActivity::class.java)
-            startActivity(intent)
             load_data()
         }
     }
@@ -40,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
 
         AndroidNetworking.post(ApiEndPoint.READ_LOGIN)
-                .addBodyParameter("email", edt_email.text.toString())
+                .addBodyParameter("username", edt_email.text.toString())
                 .addBodyParameter("password", edt_password.text.toString())
                 .setPriority(Priority.MEDIUM)
                 .build()

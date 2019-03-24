@@ -27,17 +27,16 @@ class FragmentHome :Fragment(){
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        lin_dokter?.setOnClickListener {
+        cv_dokter?.setOnClickListener {
             val intent = Intent(activity, DokterActivity::class.java)
             activity!!.startActivity(intent)
         }
 
-        lin_bidan?.setOnClickListener {
+        cv_bidan?.setOnClickListener {
             val intent = Intent(activity, BidanActivity::class.java)
             activity!!.startActivity(intent)
         }
-
-        lin_nurse?.setOnClickListener {
+        cv_perawat?.setOnClickListener {
             val intent = Intent(activity, PerawatActivity::class.java)
             activity!!.startActivity(intent)
         }
