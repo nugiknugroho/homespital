@@ -6,9 +6,11 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nugik.myapplication.DetailActivityMenu.BidanActivity
-import com.nugik.myapplication.DetailActivityMenu.DokterActivity
-import com.nugik.myapplication.DetailActivityMenu.PerawatActivity
+import com.nugik.myapplication.DetailActivityMenu.Ambulance.AmbulanceActivity
+import com.nugik.myapplication.DetailActivityMenu.Bidan.BidanActivity
+import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikActivity
+import com.nugik.myapplication.DetailActivityMenu.Dokter.DokterActivity
+import com.nugik.myapplication.DetailActivityMenu.Perawat.PerawatActivity
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -38,6 +40,14 @@ class FragmentHome :Fragment(){
         }
         cv_perawat?.setOnClickListener {
             val intent = Intent(activity, PerawatActivity::class.java)
+            activity!!.startActivity(intent)
+        }
+        cv_home_ambulance?.setOnClickListener {
+            val intent = Intent(activity, AmbulanceActivity::class.java)
+            activity!!.startActivity(intent)
+        }
+        cv_home_klinik?.setOnClickListener {
+            val intent = Intent(activity, KlinikActivity::class.java)
             activity!!.startActivity(intent)
         }
     }

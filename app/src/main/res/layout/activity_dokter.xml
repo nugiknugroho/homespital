@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorBackgroundAll"
-    tools:context=".DetailActivityMenu.DokterActivity">
+    tools:context=".DetailActivityMenu.Dokter.DokterActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,6 +23,7 @@
             android:fontFamily="@string/font_family_medium"
             android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

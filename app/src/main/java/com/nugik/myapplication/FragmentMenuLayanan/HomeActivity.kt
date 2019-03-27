@@ -66,8 +66,12 @@ class HomeActivity : AppCompatActivity() {
     fun createFragmentThree(){
         val transaction = manager.beginTransaction()
         val fragment = FragmentHistory()
-        transaction.replace(R.id.fragmnet_container, fragment)
-        transaction.addToBackStack(null)
+        val tag = fragment.tag
+
+        if (manager.findFragmentByTag(tag)==null){
+            transaction.add(R.id.fragmnet_container, fragment, tag  )
+        }
+        transaction.show(fragment)
         transaction.commit()
     }
     fun createFragmentFour(){

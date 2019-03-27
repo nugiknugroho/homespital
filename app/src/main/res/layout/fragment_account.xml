@@ -33,7 +33,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/header_profil"
+        android:background="@color/colorMagenta"
         android:padding="12dp"
         android:gravity="center"
         android:orientation="vertical"
@@ -53,151 +53,191 @@
         android:layout_marginBottom="50dp">
 
         <LinearLayout
-            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="50dp">
+            android:layout_marginBottom="25dp">
 
-            <TextView
+            <LinearLayout
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Nama Lengkap"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Homespital.id"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Tanggal Lahir"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="01-01-0001"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Jenis Kelamin"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Laki-laki"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Alamat Lengkap"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Jalan Kebonagung 173 Rt.05 Rw.01 Tamanharjo Singosari"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Kota Asal"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Malang"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Nama User"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="nugik_nugroho"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Email"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="nugiknugroho9897@gmail.com"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="10dp"
-                android:text="Password"
-                android:textStyle="bold"
-                android:textColor="@color/colorFont"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginBottom="25dp"
-                android:text="**************"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
+                android:background="@drawable/bg_account"
+                android:padding="10dp"
+                android:orientation="vertical"
+                >
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BASIC DETAIL*"
+                    android:textColor="@color/colorMagenta"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorHint"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_account_circle_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="Nama Anda"
+                    android:textColorHint="@color/colorFontBaru"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Lahir"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_date_range_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="01-01-10001"
+                    android:textColorHint="@color/colorFontBaru"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_gender"
+                    android:drawablePadding="5dp"
+                    android:hint="Jenis Kelamin"
+                    android:textColorHint="@color/colorFontBaru"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_account"
+                android:padding="10dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CONTACT DETAIL*"
+                    android:textColor="@color/colorMagenta"
+                    android:textStyle="bold"/>
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorHint"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="Email Anda"
+                    android:textColorHint="@color/colorFontBaru"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nama User"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_account_circle_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="Nama User Anda"
+                    android:textColorHint="@color/colorFontBaru"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="*****************"
+                    android:textColorHint="@color/colorFontBaru"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Kota Asal"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_location_on_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="Kota Asal Anda"
+                    android:textColorHint="@color/colorFontBaru"/>
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat Lengkap"
+                    android:textColor="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_location_city_black_24dp"
+                    android:drawablePadding="5dp"
+                    android:hint="Alamat Lengkap Anda"
+                    android:textColorHint="@color/colorFontBaru"/>
+            </LinearLayout>
             <Button
                 android:id="@+id/btn_logout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_background"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginBottom="15dp"
-                android:text="Logout"/>
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_account"
+                android:text="LOGOUT"
+                android:textColor="@color/colorHint"/>
 
         </LinearLayout>
     </ScrollView>

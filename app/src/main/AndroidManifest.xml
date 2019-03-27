@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nugik.myapplication">
+
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/launcherbiru"
@@ -27,25 +29,22 @@
             android:name=".LogRegister.Main2Activity"
             android:theme="@style/RegisterPage"
             android:windowSoftInputMode="adjustResize" />
-
-        <activity android:name=".FragmentMenuLayanan.HomeActivity"
-            android:theme="@style/DokterPage"/>
         <activity
-            android:name=".DetailActivityMenu.DokterActivity"
-            android:theme="@style/DokterPage"
-            >
-
-        </activity>
+            android:name=".FragmentMenuLayanan.HomeActivity"
+            android:theme="@style/DokterPage" />
         <activity
-            android:name=".DetailActivityMenu.BidanActivity"
-            android:theme="@style/DokterPage">
-
-        </activity>
+            android:name=".DetailActivityMenu.Dokter.DokterActivity"
+            android:theme="@style/DokterPage" />
         <activity
-            android:name=".DetailActivityMenu.PerawatActivity"
-            android:theme="@style/DokterPage">
-
-        </activity>
+            android:name=".DetailActivityMenu.Bidan.BidanActivity"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Perawat.PerawatActivity"
+            android:theme="@style/DokterPage" />
+        <activity android:name=".DetailActivityMenu.Ambulance.AmbulanceActivity" />
+        <activity android:name=".DetailActivityMenu.Klinik.KlinikActivity" />
+        <activity android:name=".DetailActivityMenu.Ambulance.AmbulanceMapsActivity" />
+        <activity android:name=".DetailActivityMenu.Klinik.KlinikMapsActivity"></activity>
     </application>
 
 </manifest>
