@@ -23,7 +23,7 @@ class FragmentHistory :Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewpager_main.adapter = MyPagerAdapter(activity!!.supportFragmentManager)
-        tabs_main.setupWithViewPager(viewpager_main)
+        viewpager_main!!.adapter = MyPagerAdapter(activity!!.supportFragmentManager)
+        tabs_main?.setupWithViewPager(viewpager_main)
     }
 }

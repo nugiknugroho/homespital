@@ -41,10 +41,26 @@
         <activity
             android:name=".DetailActivityMenu.Perawat.PerawatActivity"
             android:theme="@style/DokterPage" />
-        <activity android:name=".DetailActivityMenu.Ambulance.AmbulanceActivity" />
-        <activity android:name=".DetailActivityMenu.Klinik.KlinikActivity" />
-        <activity android:name=".DetailActivityMenu.Ambulance.AmbulanceMapsActivity" />
-        <activity android:name=".DetailActivityMenu.Klinik.KlinikMapsActivity"></activity>
+        <activity
+            android:name=".DetailActivityMenu.Ambulance.AmbulanceActivity"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Klinik.KlinikActivity"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Ambulance.AmbulanceMapsActivity"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Klinik.KlinikMapsActivity"
+            android:theme="@style/DokterPage" />
+        <activity android:name=".DetailActivityMenu.Ambulance.PesanAmbulance"
+            android:theme="@style/DokterPage"/>
+        <activity android:name=".DetailActivityMenu.Dokter.PesanDokter"
+            android:theme="@style/DokterPage"/>
+        <activity android:name=".DetailActivityMenu.Bidan.PesanBidan"
+            android:theme="@style/DokterPage"/>
+        <activity android:name=".DetailActivityMenu.Perawat.PesanPerawat"
+            android:theme="@style/DokterPage"></activity>
     </application>
 
 </manifest>

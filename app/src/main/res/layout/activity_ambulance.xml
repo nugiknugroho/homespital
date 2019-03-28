@@ -17,7 +17,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
             android:text="AMBULANCE"
             android:textSize="20dp"
             android:fontFamily="@string/font_family_medium"
@@ -64,7 +63,7 @@
                         android:layout_toRightOf="@id/iv_image_dokter">
 
                         <TextView
-                            android:text="NAMA KLINIK"
+                            android:text="AMBULANCE"
                             android:textSize="18sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
@@ -72,14 +71,14 @@
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
                         <TextView
-                            android:text="Alamat Klinik"
+                            android:text="Nsms Klinik"
                             android:textSize="12sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
                         <TextView
-                            android:text="Jarak Tempuh"
+                            android:text="Alamat Klinik"
                             android:textSize="12sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
@@ -116,7 +115,7 @@
                         android:layout_toRightOf="@id/iv_image_ambulance">
 
                         <TextView
-                            android:text="NAMA KLINIK"
+                            android:text="AMBULANCE"
                             android:textSize="18sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
@@ -124,14 +123,14 @@
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
                         <TextView
-                            android:text="Alamat Klinik"
+                            android:text="Nsms Klinik"
                             android:textSize="12sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
                         <TextView
-                            android:text="Jarak Tempuh"
+                            android:text="Alamat Klinik"
                             android:textSize="12sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
