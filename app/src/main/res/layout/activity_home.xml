@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".FragmentMenuLayanan.HomeActivity">
 
     <FrameLayout
         android:id="@+id/fragmnet_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     </FrameLayout>
-
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_nav"
@@ -20,10 +19,9 @@
         android:layout_alignParentBottom="true"
         android:background="@color/colorNew"
         app:itemTextColor="@color/colorFontBaru"
-        app:itemIconTint="@color/colorMagenta"
+        app:itemIconTint="@color/colorFontBaru"
         app:menu="@menu/bottom_navigaton"
         >
 
     </android.support.design.widget.BottomNavigationView>
-
 </RelativeLayout>
