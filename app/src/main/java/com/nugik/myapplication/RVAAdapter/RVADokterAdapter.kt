@@ -20,27 +20,18 @@ class RVADokterAdapter(val userList: ArrayList<Dokter>) : RecyclerView.Adapter<R
         return ViewHolder(v)
     }
 
+
+
+    override fun getItemCount(): Int=userList!!.size
+
     override fun onBindViewHolder(holder: RVADokterAdapter.ViewHolder, position: Int) {
-        holder.bindItems(userList[position])
+        holder.itemView.textViewNamaDokter.text = userList?.get(position)?.name
+        holder.itemView.textViewSpesialis.text = userList?.get(position)?.spesialis
+        holder.itemView.textViewHarga.text = userList?.get(position)?.harga
+        holder.itemView.textViewStatus.text = userList?.get(position)?.status
+
+//        holder.bindItems(userList[position])
     }
 
-    override fun getItemCount(): Int {
-        return userList.size
-    }
-
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-        fun bindItems(user: Dokter) {
-
-            val textViewNamaDokter = itemView.findViewById(R.id.textViewNamaDokter) as TextView
-            val textViewSpesialis = itemView.findViewById(R.id.textViewSpesialis) as TextView
-            val textViewHarga = itemView.findViewById(R.id.textViewHarga) as TextView
-            val textViewStatus = itemView.findViewById(R.id.textViewStatus) as TextView
-
-            textViewNamaDokter.text = user.name
-            textViewSpesialis.text = user.spesialis
-            textViewHarga.text = user.harga
-            textViewStatus.text = user.status
-        }
-    }
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 }
