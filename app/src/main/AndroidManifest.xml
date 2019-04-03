@@ -53,13 +53,21 @@
         <activity
             android:name=".DetailActivityMenu.Klinik.KlinikMapsActivity"
             android:theme="@style/DokterPage" />
-        <activity android:name=".DetailActivityMenu.Ambulance.PesanAmbulance"
+        <activity
+            android:name=".DetailActivityMenu.Ambulance.PesanAmbulance"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Dokter.PesanDokter"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Bidan.PesanBidan"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".DetailActivityMenu.Perawat.PesanPerawat"
+            android:theme="@style/DokterPage" />
+        <activity android:name=".FragmentMenuLayanan.FragmentTabLayout.DetailRiwayatChat.DetailRiwayatChat"
             android:theme="@style/DokterPage"/>
-        <activity android:name=".DetailActivityMenu.Dokter.PesanDokter"
-            android:theme="@style/DokterPage"/>
-        <activity android:name=".DetailActivityMenu.Bidan.PesanBidan"
-            android:theme="@style/DokterPage"/>
-        <activity android:name=".DetailActivityMenu.Perawat.PesanPerawat"
+        <activity android:name=".FragmentMenuLayanan.FragmentTabLayout.DetailRiwayatMenu.DetailRiwayatMenu"
             android:theme="@style/DokterPage"></activity>
     </application>
 

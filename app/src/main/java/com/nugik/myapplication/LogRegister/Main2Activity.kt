@@ -69,7 +69,7 @@ class Main2Activity : AppCompatActivity() {
     private fun register(){
 
         val loading = ProgressDialog(this)
-        loading.setMessage("Menambahkan data...")
+        loading.setMessage("Mendaftarkan Diri ...")
         loading.show()
 
         AndroidNetworking.post(ApiEndPoint.CREATE)

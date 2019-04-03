@@ -69,7 +69,7 @@ class HomeActivity : AppCompatActivity() {
         val tag = fragment.tag
 
         if (manager.findFragmentByTag(tag)==null){
-            transaction.add(R.id.fragmnet_container, fragment, tag  )
+            transaction.add(R.id.fragmnet_container, fragment, tag)
         }
         transaction.show(fragment)
         transaction.commit()

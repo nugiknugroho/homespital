@@ -23,8 +23,8 @@
                 android:src="@drawable/warnadokter"/>
 
             <LinearLayout
-                android:layout_margin="5dp"
-                android:padding="5dp"
+                android:layout_margin="1dp"
+                android:padding="10dp"
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,6 +33,7 @@
                 <TextView
                     android:id="@+id/textViewNamaDokter"
                     android:text="NAMA DOKTER"
+                    android:textStyle="bold"
                     android:textSize="15sp"
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="wrap_content"
@@ -42,7 +43,7 @@
                 <TextView
                     android:id="@+id/textViewSpesialis"
                     android:text="Spesialis (Keahlian)"
-                    android:textSize="10sp"
+                    android:textSize="13sp"
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -51,22 +52,26 @@
                 <TextView
                     android:id="@+id/textViewHarga"
                     android:text="Harga"
-                    android:textSize="10sp"
-                    android:textColor="@color/colorFontBaru"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
-
-                <TextView
-                    android:id="@+id/textViewStatus"
-                    android:text="Status Ketersediaan"
-                    android:textSize="10sp"
+                    android:textSize="13sp"
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/iv_image_dokter"
+                android:gravity="end"
+                android:background="@color/colorPrimary"
+                android:text="Status Ketersediaan"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorFontBaru"
+                android:textSize="15sp" />
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 

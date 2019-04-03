@@ -1,5 +1,6 @@
 package com.nugik.myapplication.LogRegister
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -36,6 +37,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun load_data() {
 
+        val loading = ProgressDialog(this)
+        loading.setMessage("Tunggu Sebentar...")
+        loading.show()
 
         AndroidNetworking.post(ApiEndPoint.READ_LOGIN)
                 .addBodyParameter("username", edt_email.text.toString())
@@ -49,6 +53,7 @@ class MainActivity : AppCompatActivity() {
 
                         if (response?.getString("message")?.contains("successfully")!!) {
 
+                            Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@MainActivity, HomeActivity::class.java)
                             startActivity(intent)
 

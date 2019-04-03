@@ -3,8 +3,8 @@ package com.nugik.myapplication.TabLayoutAdapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.nugik.myapplication.FragmentMenuLayanan.FragmentTabLayout.HistoryChatFragment
-import com.nugik.myapplication.FragmentMenuLayanan.FragmentTabLayout.HistoryMenuFragment
+import com.nugik.myapplication.FragmentMenuLayanan.FragmentTabLayout.DetailRiwayatChat.HistoryChatFragment
+import com.nugik.myapplication.FragmentMenuLayanan.FragmentTabLayout.DetailRiwayatMenu.HistoryMenuFragment
 
 class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
 
@@ -28,7 +28,7 @@ class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
         return when(position){
             0 -> "Riwayat Menu"
             1 -> "Riwayat Chat"
-            else -> return null
+            else -> null
         }
     }
 }

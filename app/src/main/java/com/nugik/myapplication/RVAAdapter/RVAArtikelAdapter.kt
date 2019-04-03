@@ -1,5 +1,6 @@
 package com.nugik.myapplication.RVAAdapter
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -16,7 +17,9 @@ class RVAArtikelAdapter(val userList: ArrayList<Artikel>) : RecyclerView.Adapter
     }
 
     override fun onBindViewHolder(holder: RVAArtikelAdapter.ViewHolder, position: Int) {
-        holder.bindItems(userList[position])
+        holder.itemView.textViewJudulArtikel.text = userList?.get(position).judul
+        holder.itemView.textViewKategori.text = userList?.get(position).kategori
+//        holder.bindItems(userList[position])
     }
 
     override fun getItemCount(): Int {
@@ -25,12 +28,11 @@ class RVAArtikelAdapter(val userList: ArrayList<Artikel>) : RecyclerView.Adapter
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindItems(user: Artikel) {
-
-            itemView.textViewJudulArtikel?.text = user.judul
-            itemView.textViewIsiKonten?.text = user.isi
-            itemView.textViewKategori?.text = user.kategori
-
-        }
+//        fun bindItems(user: Artikel) {
+//
+//            itemView.textViewJudulArtikel?.text = user.judul
+//            itemView.textViewKategori?.text = user.kategori
+//
+//        }
     }
 }

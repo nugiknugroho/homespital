@@ -198,31 +198,31 @@
                         android:layout_width="68dp"
                         android:layout_height="68dp"
                         android:layout_margin="5dp"
-                        android:src="@drawable/warnaambulance"/>
+                        android:src="@drawable/warnaambulance" />
 
                     <LinearLayout
-                        android:layout_margin="5dp"
-                        android:padding="5dp"
-                        android:orientation="vertical"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@id/iv_image_ambulance">
+                        android:layout_margin="5dp"
+                        android:layout_toRightOf="@id/iv_image_ambulance"
+                        android:orientation="vertical"
+                        android:padding="5dp">
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:text="AMBULANCE"
-                            android:textSize="18sp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                             android:textColor="@color/colorFontBaru"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                            android:textSize="18sp" />
 
                         <TextView
-                            android:text="Pelayanan informasi ketersediaan ambulance"
-                            android:textSize="12sp"
-                            android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                            android:text="Pelayanan informasi ketersediaan ambulance"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="@color/colorFontBaru"
+                            android:textSize="12sp" />
                     </LinearLayout>
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -283,67 +283,80 @@
                 android:textColor="@color/colorFontBaru"
                 android:textStyle="bold" />
 
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp">
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="50dp"
+                >
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp"
-                    android:background="#ffffff"
-                    android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="120dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
 
-                        <ImageView
-                            android:layout_width="300dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/cth_berita" />
+            </android.support.v7.widget.RecyclerView>
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="120dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+            <!--<HorizontalScrollView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="25dp">-->
 
-                        <ImageView
-                            android:layout_width="300dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/cth_berita" />
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="30dp"-->
+                    <!--android:background="#ffffff"-->
+                    <!--android:orientation="horizontal">-->
 
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="120dp"
-                        android:layout_marginBottom="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:layout_marginBottom="5dp"-->
+                        <!--android:layout_marginEnd="10dp"-->
+                        <!--android:layout_marginStart="10dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:orientation="horizontal">-->
 
-                        <ImageView
-                            android:layout_width="300dp"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/cth_berita" />
+                        <!--<ImageView-->
+                            <!--android:layout_width="300dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:src="@drawable/cth_berita" />-->
 
-                    </LinearLayout>
+                    <!--</LinearLayout>-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:layout_marginBottom="5dp"-->
+                        <!--android:layout_marginEnd="10dp"-->
+                        <!--android:layout_marginStart="10dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:orientation="horizontal">-->
 
-                </LinearLayout>
+                        <!--<ImageView-->
+                            <!--android:layout_width="300dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:src="@drawable/cth_berita" />-->
 
-            </HorizontalScrollView>
+                    <!--</LinearLayout>-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="120dp"-->
+                        <!--android:layout_marginBottom="5dp"-->
+                        <!--android:layout_marginEnd="10dp"-->
+                        <!--android:layout_marginStart="10dp"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<ImageView-->
+                            <!--android:layout_width="300dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:src="@drawable/cth_berita" />-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</HorizontalScrollView>-->
 
         </LinearLayout>
 

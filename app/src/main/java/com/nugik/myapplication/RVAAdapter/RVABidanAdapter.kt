@@ -1,5 +1,6 @@
 package com.nugik.myapplication.RVAAdapter
 
+import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +8,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.nugik.myapplication.Data.Bidan
 import com.nugik.myapplication.R
+import kotlinx.android.synthetic.main.list_bidan.view.*
 
-class RVABidanAdapter(val userList: ArrayList<Bidan>) : RecyclerView.Adapter<RVABidanAdapter.ViewHolder>() {
+class RVABidanAdapter(val context: Context, val userList: ArrayList<Bidan>) : RecyclerView.Adapter<RVABidanAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVABidanAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.list_bidan, parent, false)
@@ -16,7 +18,11 @@ class RVABidanAdapter(val userList: ArrayList<Bidan>) : RecyclerView.Adapter<RVA
     }
 
     override fun onBindViewHolder(holder: RVABidanAdapter.ViewHolder, position: Int) {
-        holder.bindItems(userList[position])
+        holder.itemView.textViewNamaBidan.text = userList?.get(position)?.name
+        holder.itemView.textViewAlamat.text = userList?.get(position)?.alamat
+        holder.itemView.textViewHarga.text = userList?.get(position)?.harga
+        holder.itemView.textViewStatus.text = userList?.get(position)?.status
+        //holder.bindItems(userList[position])
     }
 
     override fun getItemCount(): Int {
@@ -25,17 +31,17 @@ class RVABidanAdapter(val userList: ArrayList<Bidan>) : RecyclerView.Adapter<RVA
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bindItems(user: Bidan) {
-
-            val textViewNamaBidan = itemView.findViewById(R.id.textViewNamaBidan) as TextView
-            val textViewAlamat = itemView.findViewById(R.id.textViewAlamat) as TextView
-            val textViewHarga = itemView.findViewById(R.id.textViewHarga) as TextView
-            val textViewStatus = itemView.findViewById(R.id.textViewStatus) as TextView
-
-            textViewNamaBidan.text = user.name
-            textViewAlamat.text = user.alamat
-            textViewHarga.text = user.harga
-            textViewStatus.text = user.status
-        }
+//        fun bindItems(user: Bidan) {
+//
+//            val textViewNamaBidan = itemView.findViewById(R.id.textViewNamaBidan) as TextView
+//            val textViewAlamat = itemView.findViewById(R.id.textViewAlamat) as TextView
+//            val textViewHarga = itemView.findViewById(R.id.textViewHarga) as TextView
+//            val textViewStatus = itemView.findViewById(R.id.textViewStatus) as TextView
+//
+//            textViewNamaBidan.text = user.name
+//            textViewAlamat.text = user.alamat
+//            textViewHarga.text = user.harga
+//            textViewStatus.text = user.status
+//        }
     }
 }
