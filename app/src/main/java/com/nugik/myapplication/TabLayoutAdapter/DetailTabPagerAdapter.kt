@@ -3,15 +3,15 @@ package com.nugik.myapplication.TabLayoutAdapter
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatChat.HistoryChatFragment
-import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.HistoryMenuFragment
+import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatChat.TabLayoutDetailChat.ProfilDokterFragment
+import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatChat.TabLayoutDetailChat.RiwayatChat
 
-class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
+class DetailTabPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
 
     // sebuah list yang menampung objek Fragment
     private val pages = listOf(
-            HistoryMenuFragment(),
-            HistoryChatFragment()
+            ProfilDokterFragment(),
+            RiwayatChat()
     )
 
     // menentukan fragment yang akan dibuka pada posisi tertentu
@@ -26,8 +26,8 @@ class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
     // judul untuk tabs
     override fun getPageTitle(position: Int): CharSequence? {
         return when(position){
-            0 -> "Riwayat Menu"
-            1 -> "Riwayat Chat"
+            0 -> "Profil"
+            1 -> "Chat"
             else -> null
         }
     }

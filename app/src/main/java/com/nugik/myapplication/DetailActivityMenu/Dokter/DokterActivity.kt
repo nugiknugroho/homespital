@@ -1,7 +1,6 @@
 package com.nugik.myapplication.DetailActivityMenu.Dokter
 
 import android.app.ProgressDialog
-import android.content.Intent
 import android.util.Log
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -10,19 +9,19 @@ import android.support.v7.widget.RecyclerView
 import android.view.MenuItem
 import android.widget.LinearLayout
 import android.widget.Toast
-import com.nugik.myapplication.Data.Dokter
-import com.nugik.myapplication.R
-import com.nugik.myapplication.RVAAdapter.RVADokterAdapter
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
+import com.nugik.myapplication.Data.Dokter
+import com.nugik.myapplication.R
+import com.nugik.myapplication.RVAAdapter.RVADokterAdapter
 import org.json.JSONObject
 import kotlinx.android.synthetic.main.activity_dokter.*
 
-class DokterActivity : AppCompatActivity() {
 
+class DokterActivity : AppCompatActivity() {
     val users = ArrayList<Dokter>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +37,6 @@ class DokterActivity : AppCompatActivity() {
 
         //adding a layoutmanager
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
-
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -105,6 +103,7 @@ class DokterActivity : AppCompatActivity() {
                             })
 
     }
+
 
 
  }

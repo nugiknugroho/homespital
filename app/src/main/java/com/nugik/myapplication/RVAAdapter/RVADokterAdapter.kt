@@ -24,6 +24,7 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
         return ViewHolder(v)
     }
 
+
     override fun onBindViewHolder(holder: RVADokterAdapter.ViewHolder, position: Int) {
         holder.itemView.textViewNamaDokter.text = userList?.get(position)?.name
         holder.itemView.textViewSpesialis.text = userList?.get(position)?.spesialis
@@ -45,5 +46,7 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
         override fun onClick(v: View?) {
             v!!.context.startActivity(Intent(v.context, PesanDokter::class.java))
         }
+
     }
 }
+
