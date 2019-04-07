@@ -34,9 +34,15 @@ class PesanDokter : AppCompatActivity() {
 
     private fun onEditMode(){
 
-        tv_namaDokter.setText(i.getStringExtra("nm_dokter"))
-        tv_spesialisDokter.setText(i.getStringExtra("nm_spesialis"))
-        tv_hargaDokter.setText(i.getStringExtra("harga_dokter"))
+        cobacoba1.setText(i.getStringExtra("nm_dokter"))
+        cobacoba2.setText(i.getStringExtra("nm_spesialis"))
+        cobacoba3.setText(i.getStringExtra("harga_dokter"))
+        cobacoba4.setText(i.getStringExtra("status"))
+
+        cobacoba1.isEnabled = false
+        cobacoba2.isEnabled = false
+        cobacoba3.isEnabled = false
+        cobacoba4.isEnabled = false
 
      }
 
