@@ -65,10 +65,13 @@
         <activity
             android:name=".DetailActivityMenu.Perawat.PesanPerawat"
             android:theme="@style/DokterPage" />
-        <activity android:name=".FragmentMenuLayanan.FragmentTabLayout.DetailRiwayatChat.DetailRiwayatChat"
-            android:theme="@style/DokterPage"/>
-        <activity android:name=".FragmentMenuLayanan.FragmentTabLayout.DetailRiwayatMenu.DetailRiwayatMenu"
-            android:theme="@style/DokterPage"></activity>
+        <activity
+            android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatChat.DetailRiwayatChat"
+            android:theme="@style/DokterPage" />
+        <activity
+            android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.DetailRiwayatMenu"
+            android:theme="@style/DokterPage" />
+        <activity android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.TabLayoutDetailMenu.DetailMenuAmbulance"></activity>
     </application>
 
 </manifest>

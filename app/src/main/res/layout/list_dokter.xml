@@ -60,14 +60,14 @@
 
             </LinearLayout>
 
-            <TextView
+            <Button
                 android:id="@+id/textViewStatus"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignTop="@+id/iv_image_dokter"
                 android:gravity="end"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/bg_status"
                 android:text="Status Ketersediaan"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorFontBaru"

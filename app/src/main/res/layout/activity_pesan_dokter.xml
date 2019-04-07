@@ -47,6 +47,7 @@
                 android:src="@drawable/warnadokter"/>
 
             <TextView
+                android:id="@+id/tv_namaDokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -55,6 +56,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/colorFontBaru"/>
             <TextView
+                android:id="@+id/tv_spesialisDokter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -106,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <TextView
+                        android:id="@+id/tv_hargaDokter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Biaya Per Jam"
@@ -161,7 +164,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_pesan_ambulance"
+                android:id="@+id/btn_pesan_dokter"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginTop="50dp"
