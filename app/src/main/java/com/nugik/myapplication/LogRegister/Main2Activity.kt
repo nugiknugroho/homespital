@@ -100,7 +100,7 @@ class Main2Activity : AppCompatActivity() {
                     override fun onError(anError: ANError?) {
                         loading.dismiss()
                         Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext,"Connection Failure", Toast.LENGTH_SHORT).show()                    }
+                        Toast.makeText(applicationContext,"Koneksi Gagal", Toast.LENGTH_SHORT).show()                    }
 
 
                 })

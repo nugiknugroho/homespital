@@ -6,8 +6,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.LinearLayout
+import android.widget.SearchView
 import android.widget.Toast
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
@@ -48,6 +50,27 @@ class DokterActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.menu, menu)
+//        val searchItem = menu?.findItem(R.id.menu_search)
+//
+//        if (searchItem != null){
+//            val searchView = searchItem.actionView as SearchView
+//            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//                override fun onQueryTextSubmit(query: String?): Boolean {
+//                    return true
+//                }
+//
+//                override fun onQueryTextChange(newText: String?): Boolean {
+//                    return true
+//                }
+//
+//            })
+//        }
+//
+//        return super.onCreateOptionsMenu(menu)
+//    }
 
     override fun onResume() {
         super.onResume()

@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.os.Handler
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.LogRegister.MainActivity
 
 class Splash : AppCompatActivity() {
