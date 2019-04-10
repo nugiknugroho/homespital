@@ -1,12 +1,14 @@
 package com.nugik.myapplication.RVAAdapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.nugik.myapplication.Data.Perawat
+import com.nugik.myapplication.DetailActivityMenu.Perawat.PesanPerawat
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.list_perawat.view.*
 
@@ -22,6 +24,16 @@ class RVAPerawatAdapter(val context: Context, val userList: ArrayList<Perawat>) 
         holder.itemView.textViewAlamat.text = userList?.get(position)?.alamat
         holder.itemView.textViewHarga.text = userList?.get(position)?.harga
         holder.itemView.textViewStatus.text = userList?.get(position)?.status
+        holder.itemView.cv_layanan_perawat?.setOnClickListener {
+            val i = Intent(context, PesanPerawat::class.java)
+            i.putExtra("pesan", "1")
+            i.putExtra("nm_perawat", userList?.get(position)?.name)
+            i.putExtra("alamat_perawat", userList?.get(position)?.alamat)
+            i.putExtra("harga", userList?.get(position)?.harga)
+            i.putExtra("status", userList?.get(position)?.status)
+            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            context.startActivity(i)
+        }
         //holder.bindItems(userList[position])
     }
 

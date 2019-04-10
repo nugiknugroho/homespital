@@ -31,14 +31,14 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
         holder.itemView.textViewHarga.text = userList?.get(position)?.harga
         holder.itemView.textViewStatus.text = userList?.get(position)?.status
 
-        holder.itemView.cv_dokter.setOnClickListener {
+        holder.itemView.cv_layanan_dokter?.setOnClickListener {
             val i = Intent(context, PesanDokter::class.java)
-            i.putExtra("modepesan", "1")
-            i.putExtra("nm_dokter", userList?.get(position)?.name)
-            i.putExtra("nm_spesialis", userList?.get(position)?.spesialis)
-            i.putExtra("harga_dokter", userList?.get(position)?.harga)
-            i.putExtra("status", userList?.get(position)?.status)
-            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                i.putExtra("pesan", "1")
+                i.putExtra("nm_dokter", userList?.get(position)?.name)
+                i.putExtra("nm_spesialis", userList?.get(position)?.spesialis)
+                i.putExtra("harga_dokter", userList?.get(position)?.harga)
+                i.putExtra("status", userList?.get(position)?.status)
+                i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }
         // holder.bindItems(userList[position])
@@ -48,10 +48,7 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
         return userList.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
-        override fun onClick(v: View?) {
-            v!!.context.startActivity(Intent(v.context, PesanDokter::class.java))
-        }
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
     }
 }

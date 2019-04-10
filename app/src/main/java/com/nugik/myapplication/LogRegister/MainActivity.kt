@@ -1,6 +1,7 @@
 package com.nugik.myapplication.LogRegister
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +20,7 @@ import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var session: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,15 @@ class MainActivity : AppCompatActivity() {
         val button1 = findViewById(R.id.btn_login) as Button
         button1.setOnClickListener {
             load_data()
+        }
+
+        session = SessionManager(applicationContext)
+        if (session.isLoggedIn()){
+            var i:Intent = Intent(applicationContext, HomeActivity::class.java)
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(i)
+            finish()
         }
     }
 
@@ -53,6 +64,7 @@ class MainActivity : AppCompatActivity() {
 
                         if (response?.getString("message")?.contains("successfully")!!) {
 
+                            session.createLoginSession("username","email")
                             Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@MainActivity, HomeActivity::class.java)
                             startActivity(intent)
@@ -60,14 +72,14 @@ class MainActivity : AppCompatActivity() {
                             this@MainActivity.finish()
 
                         } else {
-                            Toast.makeText(applicationContext, "Login Gagal", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, "Login Gagal \n Email / Password Salah", Toast.LENGTH_SHORT).show()
                         }
 
                     }
 
                     override fun onError(anError: ANError?) {
                         Log.d("ONERROR", anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext, "Koneksi Gagal", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, "Koneksi Gagal, Coba Lagi", Toast.LENGTH_SHORT).show()
                     }
 
 

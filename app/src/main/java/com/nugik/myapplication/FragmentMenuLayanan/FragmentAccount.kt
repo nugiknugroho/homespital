@@ -7,10 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.nugik.myapplication.LogRegister.MainActivity
+import com.nugik.myapplication.LogRegister.SessionManager
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class FragmentAccount :Fragment(){
+
+    lateinit var session: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +24,20 @@ class FragmentAccount :Fragment(){
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        session = SessionManager(this!!.context!!)
+        session.checkLogin()
+
+        var user: HashMap<String, String> = session.getUserDetails()
+
+        var name: String = user.get(SessionManager.KEY_NAME)!!
+        var email: String = user.get(SessionManager.KEY_EMAIL)!!
+
+        edt_user.setText("Nama" +name)
+        edt_email.setText("Email" +email)
+
         btn_logout?.setOnClickListener {
-            val intent = Intent(activity, MainActivity::class.java)
-            activity!!.startActivity(intent)
+            session.logoutUser()
         }
 
     }
