@@ -108,7 +108,7 @@ class DokterActivity : AppCompatActivity() {
                                         val jsonObject = jsonArray?.optJSONObject(i)
                                         users.add(Dokter(jsonObject.getString("nm_dokter"),
                                                 jsonObject.getString("nm_spesialis"),
-                                                jsonObject.getString("harga_dokter"),
+                                                jsonObject.getString("Rp" + ("harga_dokter")),
                                                 jsonObject.getString("status")))
                                         if(jsonArray?.length() - 1 == i){
 
