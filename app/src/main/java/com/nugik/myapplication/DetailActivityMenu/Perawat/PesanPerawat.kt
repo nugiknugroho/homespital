@@ -45,6 +45,5 @@ class PesanPerawat : AppCompatActivity() {
         tv_namaPerawat.setText(i.getStringExtra("nm_perawat"))
         tv_alamatPerawat.setText(i.getStringExtra("alamat_perawat"))
         tv_hargaPerawat.setText("Rp. " +i.getStringExtra("harga"))
-        tot_bayar_perawat.setText("Rp. " +i.getStringExtra("harga"))
     }
 }

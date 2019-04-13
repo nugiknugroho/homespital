@@ -46,6 +46,5 @@ class PesanBidan : AppCompatActivity() {
         tv_namaBidan.setText(i.getStringExtra("nm_bidan"))
         tv_alamatBidan.setText(i.getStringExtra("alamat_bidan"))
         tv_hargaBidan.setText("Rp. " +i.getStringExtra("harga_bidan"))
-        tot_bayar_bidan.setText("Rp. " +i.getStringExtra("harga_bidan"))
     }
 }

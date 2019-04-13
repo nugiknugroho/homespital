@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.nugik.myapplication.Data.Ambulance
 import com.nugik.myapplication.Data.Dokter
+import com.nugik.myapplication.DetailActivityMenu.Ambulance.PesanAmbulance
 import com.nugik.myapplication.DetailActivityMenu.Dokter.PesanDokter
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -33,7 +34,7 @@ class RVAAmbulanceAdapter(val context: Context, val userList: ArrayList<Ambulanc
         holder.itemView.textViewStatus.text = userList?.get(position)?.status
 
         holder.itemView.cv_layanan_ambulance?.setOnClickListener {
-            val i = Intent(context, PesanDokter::class.java)
+            val i = Intent(context, PesanAmbulance::class.java)
             i.putExtra("pesan", "1")
             i.putExtra("plat_ambulance", userList?.get(position)?.no_plat)
             i.putExtra("alamat_ambulance", userList?.get(position)?.alamat_klinik)
