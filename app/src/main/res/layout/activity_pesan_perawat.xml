@@ -154,7 +154,7 @@
 
 
             <Button
-                android:id="@+id/btn_pesan_ambulance"
+                android:id="@+id/btn_pesan_perawat"
                 android:layout_marginStart="50dp"
                 android:layout_marginEnd="50dp"
                 android:layout_marginTop="50dp"

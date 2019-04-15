@@ -1,5 +1,6 @@
 package com.nugik.myapplication.DetailActivityMenu.Ambulance
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +29,10 @@ class PesanAmbulance : AppCompatActivity() {
             }
 
         }
+
+        btn_pesan_ambulance.setOnClickListener {
+            onPesanAmbulance()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -45,6 +50,13 @@ class PesanAmbulance : AppCompatActivity() {
         tv_noplat.setText(i.getStringExtra("plat_ambulance"))
         tv_alamatklinikambulance.setText(i.getStringExtra("alamat_ambulance"))
         tv_kota_klinikambulance.setText(i.getStringExtra("kota"))
+        tv_tujuanKlinik.setText(i.getStringExtra("alamat_ambulance"))
+    }
+
+    private fun onPesanAmbulance(){
+        val loading = ProgressDialog(this)
+        loading.setMessage("Mengkonfirmasi Pesanan Anda ...")
+        loading.show()
     }
 
 }

@@ -3,8 +3,9 @@ package com.nugik.myapplication.LogRegister
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.preference.PreferenceManager
 
-class SessionManager {
+class SessionManager{
 
     lateinit var pref: SharedPreferences
     lateinit var editor: SharedPreferences.Editor
@@ -12,8 +13,8 @@ class SessionManager {
     var PRIVATE_MODE: Int = 0
 
     constructor(context: Context){
-        this.con = con
-        pref = con.getSharedPreferences(PREF_NAME, PRIVATE_MODE)
+//        this.con = con
+        pref = PreferenceManager.getDefaultSharedPreferences(context)
         editor = pref.edit()
     }
 

@@ -9,8 +9,7 @@ class PrefManager(internal var _context: Context) {
 
     // shared pref mode
     internal var PRIVATE_MODE = 0
-
-    var isFirstTimeLaunch: Boolean
+        var isFirstTimeLaunch: Boolean
         get() = pref.getBoolean(IS_FIRST_TIME_LAUNCH, true)
         set(isFirstTime) {
             editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime)

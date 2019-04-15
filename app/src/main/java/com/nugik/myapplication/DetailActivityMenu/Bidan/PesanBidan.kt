@@ -1,5 +1,6 @@
 package com.nugik.myapplication.DetailActivityMenu.Bidan
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -29,6 +30,10 @@ class PesanBidan : AppCompatActivity() {
             }
 
         }
+
+        btn_pesan_bidan.setOnClickListener {
+            onPesan()
+        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -46,5 +51,15 @@ class PesanBidan : AppCompatActivity() {
         tv_namaBidan.setText(i.getStringExtra("nm_bidan"))
         tv_alamatBidan.setText(i.getStringExtra("alamat_bidan"))
         tv_hargaBidan.setText("Rp. " +i.getStringExtra("harga_bidan"))
+    }
+
+    private fun onPesan(){
+
+        val loading = ProgressDialog(this)
+        loading.setMessage("Mengkonfirmasi Pesanan Anda ...")
+        loading.show()
+
+
+
     }
 }
