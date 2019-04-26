@@ -64,7 +64,14 @@ class MainActivity : AppCompatActivity() {
 
                         if (response?.getString("message")?.contains("successfully")!!) {
 
-                            session.createLoginSession("username","email")
+                            session.createLoginSession("Nugroho Ardhi",
+                                    "14-01-2018",
+                                    "Laki-laki",
+                                    "nugik@email.com",
+                                    "nugik",
+                                    "*****",
+                                    "Malang",
+                                    "Malang")
                             Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@MainActivity, HomeActivity::class.java)
                             startActivity(intent)
