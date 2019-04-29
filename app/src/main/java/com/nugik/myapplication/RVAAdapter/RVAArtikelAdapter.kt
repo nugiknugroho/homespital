@@ -33,6 +33,7 @@ class RVAArtikelAdapter(val userList: ArrayList<Artikel>) : RecyclerView.Adapter
 //            itemView.textViewJudulArtikel?.text = user.judul
 //            itemView.textViewKategori?.text = user.kategori
 //
+
 //        }
     }
 }

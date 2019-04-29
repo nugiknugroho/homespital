@@ -14,6 +14,7 @@ class ApiEndPoint {
         val READ_PERAWAT = SERVER +"read_perawat.php"
         val READ_ARTIKEL = SERVER +"read_artikel.php"
         val READ_AMBULANCE = SERVER +"read_ambulance.php"
+        val BOOKING = SERVER +"booking.php"
 
     }
 

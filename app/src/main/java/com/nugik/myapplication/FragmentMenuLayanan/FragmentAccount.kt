@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nugik.myapplication.LogRegister.MainActivity
 import com.nugik.myapplication.LogRegister.SessionManager
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_account.*
@@ -33,7 +32,7 @@ class FragmentAccount :Fragment(){
         var name: String = user.get(SessionManager.KEY_NAME)!!
         var email: String = user.get(SessionManager.KEY_EMAIL)!!
 
-        edt_user.setText("Nama" +name)
+        edt_nama_lengkap.setText(name)
         edt_email.setText("Email" +email)
 
         btn_logout?.setOnClickListener {

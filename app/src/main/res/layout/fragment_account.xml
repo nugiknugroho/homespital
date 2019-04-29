@@ -87,6 +87,7 @@
                         android:background="@color/colorHint"
                         />
                     <TextView
+                        android:id="@+id/edt_nama_lengkap"
                         android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
