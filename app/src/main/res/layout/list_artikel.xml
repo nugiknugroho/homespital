@@ -6,6 +6,7 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cv_artikel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -47,7 +48,7 @@
                     android:text="Kategori"
                     android:textSize="15sp"
                     android:background="@drawable/bg_kategori"
-                    android:textColor="@color/colorFontBaru"
+                    android:textColor="@color/colorNew"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>

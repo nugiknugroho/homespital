@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <permission
+        android:name="com.example.mapexdemo.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/launcherbiru"
@@ -11,6 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBsmWBC5UrNuU6P0e0E_ZKvNBVVBo_e7qg" />
+
         <activity
             android:name=".Splash"
             android:theme="@style/SplashPage"
@@ -71,7 +79,12 @@
         <activity
             android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.DetailRiwayatMenu"
             android:theme="@style/DokterPage" />
-        <activity android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.TabLayoutDetailMenu.DetailMenuAmbulance"></activity>
+        <activity android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.TabLayoutDetailMenu.DetailMenuAmbulance" />
+        <activity
+            android:name=".FragmentMenuLayanan.DetailArtikel"
+            android:theme="@style/DokterPage">
+
+        </activity>
     </application>
 
 </manifest>

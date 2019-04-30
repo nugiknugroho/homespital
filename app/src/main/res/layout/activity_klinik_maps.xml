@@ -24,54 +24,12 @@
             android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+    <fragment xmlns:tools="http://schemas.android.com/tools"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="vertical"
-        android:background="@color/colorNew">
+        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/edt_alamat_asal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="5dp"
-            android:padding="5dp"
-            android:drawableStart="@drawable/ic_placeholder"
-            android:drawablePadding="10dp"
-            android:hint="Lokasi Anda"
-            android:textColor="@color/colorFontBaru"
-            android:textColorHint="@color/colorFontBaru"
-            android:background="@drawable/login_edit_background"
-            />
-        <EditText
-            android:id="@+id/edt_alamat_klinik"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="5dp"
-            android:padding="5dp"
-            android:drawableStart="@drawable/ic_placeholder"
-            android:drawablePadding="10dp"
-            android:hint="Lokasi Klinik"
-            android:textColor="@color/colorFontBaru"
-            android:textColorHint="@color/colorFontBaru"
-            android:background="@drawable/login_edit_background"
-            />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/bg_map">
-
-
-
-    </LinearLayout>
+    </fragment>
 
 </LinearLayout>
