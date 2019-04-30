@@ -17,7 +17,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBsmWBC5UrNuU6P0e0E_ZKvNBVVBo_e7qg" />
+            android:value="AIzaSyAA4EQ0BhkYDrIq1QFd-6ugWq6dOc4oKwY" />
 
         <activity
             android:name=".Splash"
