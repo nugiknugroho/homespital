@@ -45,6 +45,7 @@ class RVAArtikelAdapter(val context: Context, val userList: ArrayList<Artikel>) 
 //            itemView.textViewJudulArtikel?.text = user.judul
 //            itemView.textViewKategori?.text = user.kategori
 //
+
 //        }
     }
 }

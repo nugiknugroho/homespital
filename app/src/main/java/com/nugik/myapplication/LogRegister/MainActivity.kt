@@ -13,9 +13,13 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
+import com.nugik.myapplication.Data.Bidan
 import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.R
+import com.nugik.myapplication.RVAAdapter.RVABidanAdapter
+import kotlinx.android.synthetic.main.activity_bidan.*
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONArray
 import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
@@ -47,8 +51,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun load_data() {
-
-
         AndroidNetworking.post(ApiEndPoint.READ_LOGIN)
                 .addBodyParameter("username", edt_email.text.toString())
                 .addBodyParameter("password", edt_password.text.toString())
@@ -62,14 +64,14 @@ class MainActivity : AppCompatActivity() {
 
                             val jsonArray = response?.getJSONObject("user")
 //                            Toast.makeText(applicationContext, " ISI = "+jsonArray.toString(), Toast.LENGTH_SHORT).show()
-//                            for(i in 0 until jsonArray.length()){
-                            val email = jsonArray?.getString("email_user")
-                            val id= jsonArray?.getInt("id_user")
-                            val pw = jsonArray?.getString("pw_user")
-                            session.createLoginSession(jsonArray?.getString("username").toString(), email.toString(), id.toString(),pw.toString())
-                            Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this@MainActivity, HomeActivity::class.java)
-                            startActivity(intent)
+                                val email = jsonArray?.getString("email_user")
+                                val id= jsonArray?.getInt("id_user")
+                                val pw = jsonArray?.getString("pw_user")
+                                session.createLoginSession(jsonArray?.getString("username").toString(), email.toString(), id.toString(),pw.toString())
+                                Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
+                                val intent = Intent(this@MainActivity, HomeActivity::class.java)
+                                startActivity(intent)
+
 
 //                            }
 
