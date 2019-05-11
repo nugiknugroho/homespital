@@ -3,6 +3,10 @@
     package="com.nugik.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <permission
         android:name="com.example.mapexdemo.permission.MAPS_RECEIVE"
@@ -15,9 +19,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MapsActivity"></activity>
+        <activity
+            android:name=".DetailActivityMenu.Dokter.ChatDokter"
+            android:theme="@style/DokterPage"
+            />
+
         <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBsmWBC5UrNuU6P0e0E_ZKvNBVVBo_e7qg" />
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key"/>
 
         <activity
             android:name=".Splash"
@@ -82,9 +92,8 @@
         <activity android:name=".FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.TabLayoutDetailMenu.DetailMenuAmbulance" />
         <activity
             android:name=".FragmentMenuLayanan.DetailArtikel"
-            android:theme="@style/DokterPage">
+            android:theme="@style/DokterPage" />
 
-        </activity>
     </application>
 
 </manifest>

@@ -22,6 +22,7 @@ import com.nugik.myapplication.DetailActivityMenu.Ambulance.AmbulanceActivity
 import com.nugik.myapplication.DetailActivityMenu.Bidan.BidanActivity
 import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikActivity
 import com.nugik.myapplication.DetailActivityMenu.Dokter.DokterActivity
+import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikMapsActivity
 import com.nugik.myapplication.DetailActivityMenu.Perawat.PerawatActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter
@@ -82,9 +83,9 @@ class FragmentHome :Fragment(){
                         for(i in 0 until jsonArray?.length()!!){
 
                             val jsonObject = jsonArray?.optJSONObject(i)
-                            users.add(Artikel(jsonObject.getString("judul_artikel"),
-                                    jsonObject.getString("isi_artikel"),
-                                    jsonObject.getString("kategori")))
+                            users.add(Artikel(jsonObject.getString("title"),
+                                    jsonObject.getString("content"),
+                                    jsonObject.getString("nama_kategori")))
 
                             if(jsonArray?.length() - 1 == i){
 

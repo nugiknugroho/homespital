@@ -30,13 +30,8 @@ class KlinikMapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(p0: GoogleMap?) {
         googleMap=p0
 
-        //Adding markers to map
-
-        val latLng=LatLng(-7.968027,112.638699)
-        val markerOptions:MarkerOptions=MarkerOptions().position(latLng).title("KOTA MALANG")
-
         val latLng1=LatLng(-7.965477,112.637884)
-        val markerOptions1:MarkerOptions=MarkerOptions().position(latLng1).title("LAVALETTE")
+        val markerOptions1:MarkerOptions=MarkerOptions().position(latLng1).title("RUMAH SAKIT LAVALETTE")
 
         // moving camera and zoom map
 
@@ -44,13 +39,8 @@ class KlinikMapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
 
         googleMap.let {
-            it!!.addMarker(markerOptions)
-            it.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel))
-        }
-
-        googleMap.let {
             it!!.addMarker(markerOptions1)
-            it.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel))
+            it.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng1, zoomLevel))
         }
     }
 

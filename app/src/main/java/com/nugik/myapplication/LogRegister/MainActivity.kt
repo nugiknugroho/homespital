@@ -48,9 +48,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun load_data() {
 
-        val loading = ProgressDialog(this)
-        loading.setMessage("Tunggu Sebentar...")
-        loading.show()
 
         AndroidNetworking.post(ApiEndPoint.READ_LOGIN)
                 .addBodyParameter("username", edt_email.text.toString())
@@ -61,22 +58,21 @@ class MainActivity : AppCompatActivity() {
 
                     override fun onResponse(response: JSONObject?) {
 
-
                         if (response?.getString("message")?.contains("successfully")!!) {
 
-                            session.createLoginSession("Nugroho Ardhi",
-                                    "14-01-2018",
-                                    "Laki-laki",
-                                    "nugik@email.com",
-                                    "nugik",
-                                    "*****",
-                                    "Malang",
-                                    "Malang")
+                            val jsonArray = response?.getJSONObject("user")
+//                            Toast.makeText(applicationContext, " ISI = "+jsonArray.toString(), Toast.LENGTH_SHORT).show()
+//                            for(i in 0 until jsonArray.length()){
+                            val email = jsonArray?.getString("email_user")
+                            val id= jsonArray?.getInt("id_user")
+                            val pw = jsonArray?.getString("pw_user")
+                            session.createLoginSession(jsonArray?.getString("username").toString(), email.toString(), id.toString(),pw.toString())
                             Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@MainActivity, HomeActivity::class.java)
                             startActivity(intent)
 
-                            this@MainActivity.finish()
+//                            }
+
 
                         } else {
                             Toast.makeText(applicationContext, "Login Gagal \n Email / Password Salah", Toast.LENGTH_SHORT).show()

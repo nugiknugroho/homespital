@@ -25,9 +25,9 @@ class RVAArtikelAdapter(val context: Context, val userList: ArrayList<Artikel>) 
         holder.itemView.cv_artikel.setOnClickListener {
             val i = Intent(context, DetailArtikel::class.java)
             i.putExtra("lihat", "1")
-            i.putExtra("judul_artikel", userList?.get(position)?.judul)
-            i.putExtra("kategori", userList?.get(position)?.kategori)
-            i.putExtra("isi_artikel", userList?.get(position)?.isi)
+            i.putExtra("title", userList?.get(position)?.judul)
+            i.putExtra("nama_kategori", userList?.get(position)?.kategori)
+            i.putExtra("content", userList?.get(position)?.isi)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

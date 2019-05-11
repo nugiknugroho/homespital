@@ -14,7 +14,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="88dp"
+            android:layout_height="90dp"
             android:background="@drawable/ripple"
             android:padding="5dp">
 
@@ -37,7 +37,7 @@
                     android:id="@+id/textViewJudulArtikel"
                     android:text="JUDUL ARTIKEL"
                     android:textStyle="bold"
-                    android:textSize="18sp"
+                    android:textSize="15sp"
                     android:textColor="@color/colorFontBaru"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                 <TextView
                     android:id="@+id/textViewKategori"
                     android:text="Kategori"
-                    android:textSize="15sp"
+                    android:textSize="12sp"
                     android:background="@drawable/bg_kategori"
                     android:textColor="@color/colorNew"
                     android:layout_width="wrap_content"

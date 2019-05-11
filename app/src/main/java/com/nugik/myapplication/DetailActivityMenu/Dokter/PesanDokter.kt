@@ -32,7 +32,8 @@ class PesanDokter : AppCompatActivity() {
         }
 
         btn_pesan_dokter.setOnClickListener {
-
+            val intent = Intent(this, ChatDokter::class.java)
+            startActivity(intent)
         }
     }
 

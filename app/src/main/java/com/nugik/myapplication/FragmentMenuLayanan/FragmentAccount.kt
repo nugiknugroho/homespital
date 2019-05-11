@@ -12,7 +12,7 @@ import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_account.*
 
 class FragmentAccount :Fragment(){
-
+    lateinit var i: Intent
     lateinit var session: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,26 +31,14 @@ class FragmentAccount :Fragment(){
         var user: HashMap<String, String> = session.getUserDetails()
 
         var name: String = user.get(SessionManager.KEY_NAME)!!
-        var date: String? = user!!.get(SessionManager.KEY_DATE)
-        var gender: String? = user!!.get(SessionManager.KEY_GENDER)
-        var email: String? = user!!.get(SessionManager.KEY_EMAIL)
-        var username: String? = user!!.get(SessionManager.KEY_USERNAME)
-        var password: String? = user!!.get(SessionManager.KEY_PASSWORD)
-        var kotaasal: String? = user!!.get(SessionManager.KEY_KOTAASAL)
-        var alamat: String? = user!!.get(SessionManager.KEY_ALAMAT)
+        var email: String = user.get(SessionManager.KEY_EMAIL)!!
 
         tv_namaLengkap.setText(name)
-        tv_tglLahir.setText(date)
-        tv_gender.setText(gender)
-        tv_email.setText(email)
-        tv_username.setText(username)
-        tv_password.setText(password)
-        tv_kotaAsal.setText(kotaasal)
-        tv_alamatLengkap.setText(alamat)
 
         btn_logout?.setOnClickListener {
             session.logoutUser()
         }
 
     }
+
 }
