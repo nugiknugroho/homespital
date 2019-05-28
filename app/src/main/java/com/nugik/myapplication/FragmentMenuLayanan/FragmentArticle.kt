@@ -76,9 +76,9 @@ class FragmentArticle :Fragment(){
                         for(i in 0 until jsonArray?.length()!!){
 
                             val jsonObject = jsonArray?.optJSONObject(i)
-                            users.add(Artikel(jsonObject.getString("judul_artikel"),
-                                    jsonObject.getString("isi_artikel"),
-                                    jsonObject.getString("kategori")))
+                            users.add(Artikel(jsonObject.getString("title"),
+                                    jsonObject.getString("content"),
+                                    jsonObject.getString("nama_kategori")))
 
                                     if(jsonArray?.length() - 1 == i){
 

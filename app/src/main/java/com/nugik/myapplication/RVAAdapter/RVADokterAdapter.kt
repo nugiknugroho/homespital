@@ -38,6 +38,7 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
                 i.putExtra("nm_spesialis", userList?.get(position)?.spesialis)
                 i.putExtra("harga_dokter", userList?.get(position)?.harga)
                 i.putExtra("status", userList?.get(position)?.status)
+                i.putExtra("id_dokter",userList?.get(position)?.id)
                 i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

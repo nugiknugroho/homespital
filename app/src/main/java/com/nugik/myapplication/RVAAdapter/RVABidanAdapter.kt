@@ -31,6 +31,7 @@ class RVABidanAdapter(val context: Context, val userList: ArrayList<Bidan>) : Re
             i.putExtra("alamat_bidan", userList?.get(position)?.alamat)
             i.putExtra("harga_bidan", userList?.get(position)?.harga)
             i.putExtra("status", userList?.get(position)?.status)
+            i.putExtra("id_bidan", userList.get(position)?.id)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

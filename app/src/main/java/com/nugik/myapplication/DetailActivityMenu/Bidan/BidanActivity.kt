@@ -23,6 +23,7 @@ import org.json.JSONObject
 class BidanActivity : AppCompatActivity() {
 
     val users = ArrayList<Bidan>()
+//    lateinit var session: Sessionbidan
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,10 +82,12 @@ class BidanActivity : AppCompatActivity() {
                         for(i in 0 until jsonArray?.length()!!){
 
                             val jsonObject = jsonArray?.optJSONObject(i)
-                            users.add(Bidan(jsonObject.getString("nm_bidan"),
+//                            session.Sessionbidan(jsonObject.getString("id_bidan"))
+                            users.add(Bidan( jsonObject.getString("nm_bidan"),
                                     jsonObject.getString("alamat_bidan"),
                                     jsonObject.getString("harga_bidan"),
-                                    jsonObject.getString("status")))
+                                    jsonObject.getString("status"),
+                                    jsonObject.getString("id_bidan")))
                             if(jsonArray?.length() - 1 == i){
 
                                 loading.dismiss()

@@ -25,6 +25,8 @@ class PesanBidan : AppCompatActivity() {
     lateinit var i: Intent
     lateinit var session: SessionManager
 
+    lateinit var bidan: Sessionbidan
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +64,7 @@ class PesanBidan : AppCompatActivity() {
     private fun onEditMode(){
 
         tv_namaBidan.setText(i.getStringExtra("nm_bidan"))
-        tv_alamatBidan.setText(i.getStringExtra("id_bidan"))
+        tv_alamatBidan.setText(i.getStringExtra("alamat_bidan"))
         tv_hargaBidan.setText("Rp. " +i.getStringExtra("harga_bidan"))
     }
 
@@ -71,18 +73,18 @@ class PesanBidan : AppCompatActivity() {
         session.checkLogin()
 
         var user: HashMap<String, String> = session.getUserDetails()
-
         var id: String = user.get(SessionManager.KEY_ID)!!
-
+        var bidan=i.getStringExtra("id_bidan")
         val loading = ProgressDialog(this)
         loading.setMessage("Mengkonfirmasi Pesanan Anda ...")
         loading.show()
         AndroidNetworking.post(ApiEndPoint.BOOKING)
+                .addBodyParameter("booking","1")
                 .addBodyParameter("id",id)
+                .addBodyParameter("id_bidan",bidan)
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {
-
                     override fun onResponse(response: JSONObject?) {
 
                         loading.dismiss()

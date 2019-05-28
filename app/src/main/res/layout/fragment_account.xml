@@ -102,8 +102,8 @@
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_account_circle_black_24dp"
                         android:drawablePadding="5dp"
-                        android:hint="Nama Anda"
-                        android:textColorHint="@color/colorFontBaru"/>
+                        android:text="Nama Anda"
+                        android:textColor="@color/colorFontBaru"/>
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
@@ -119,8 +119,8 @@
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_date_range_black_24dp"
                         android:drawablePadding="5dp"
-                        android:hint="01-01-10001"
-                        android:textColorHint="@color/colorFontBaru"/>
+                        android:text="01-01-10001"
+                        android:textColor="@color/colorFontBaru"/>
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
