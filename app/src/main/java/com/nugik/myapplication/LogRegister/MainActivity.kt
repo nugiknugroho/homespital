@@ -51,8 +51,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun load_data() {
-
-
         AndroidNetworking.post(ApiEndPoint.READ_LOGIN)
                 .addBodyParameter("username", edt_email.text.toString())
                 .addBodyParameter("password", edt_password.text.toString())
@@ -66,7 +64,6 @@ class MainActivity : AppCompatActivity() {
 
                             val jsonArray = response?.getJSONObject("user")
 //                            Toast.makeText(applicationContext, " ISI = "+jsonArray.toString(), Toast.LENGTH_SHORT).show()
-//                            for(i in 0 until jsonArray.length()){
                                 val email = jsonArray?.getString("email_user")
                                 val id= jsonArray?.getInt("id_user")
                                 val tanggal= jsonArray?.getString("tanggal_lahir")
@@ -79,6 +76,7 @@ class MainActivity : AppCompatActivity() {
                                 Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this@MainActivity, HomeActivity::class.java)
                                 startActivity(intent)
+
 
 //                            }
 

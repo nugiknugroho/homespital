@@ -3,91 +3,61 @@ package com.nugik.myapplication.FragmentMenuLayanan
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
+import android.support.v4.app.Fragment
+import android.widget.FrameLayout
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.activity_home.*
 
 
 class HomeActivity : AppCompatActivity() {
 
-    val manager = supportFragmentManager
+    private var content: FrameLayout? = null
 
-    private val monNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId){
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
             R.id.nav_home -> {
-                createFragmentOne()
+                val fragment = FragmentHome()
+                addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_fav -> {
-                createFragmentTwo()
+                val fragment = FragmentArticle()
+                addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_history -> {
-                createFragmentThree()
+                val fragment = FragmentHistory()
+                addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_notif -> {
-                createFragmentFour()
+                val fragment = FragmentNotif()
+                addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
-
             R.id.nav_profil -> {
-                createFragmentFive()
+                val fragment = FragmentAccount()
+                addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
-
         }
         false
+    }
 
+    private fun addFragment(fragment: Fragment) {
+        supportFragmentManager
+                .beginTransaction()
+                .setCustomAnimations(R.anim.design_snackbar_in, R.anim.design_snackbar_out)
+                .replace(R.id.content, fragment, fragment.javaClass.getSimpleName())
+                .commit()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        createFragmentOne()
-
-        bottom_nav.setOnNavigationItemSelectedListener(monNavigationItemSelectedListener)
-    }
-
-    fun createFragmentOne(){
-        val transaction = manager.beginTransaction()
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         val fragment = FragmentHome()
-        transaction.replace(R.id.fragmnet_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
-
-    fun createFragmentTwo(){
-        val transaction = manager.beginTransaction()
-        val fragment = FragmentArticle()
-        transaction.replace(R.id.fragmnet_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
-    fun createFragmentThree(){
-        val transaction = manager.beginTransaction()
-        val fragment = FragmentHistory()
-        val tag = fragment.tag
-
-        if (manager.findFragmentByTag(tag)==null){
-            transaction.add(R.id.fragmnet_container, fragment, tag)
-        }
-        transaction.show(fragment)
-        transaction.commit()
-    }
-    fun createFragmentFour(){
-        val transaction = manager.beginTransaction()
-        val fragment = FragmentNotif()
-        transaction.replace(R.id.fragmnet_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
-
-    fun createFragmentFive(){
-        val transaction = manager.beginTransaction()
-        val fragment = FragmentAccount()
-        transaction.replace(R.id.fragmnet_container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
+        addFragment(fragment)
     }
 
 }

@@ -22,6 +22,7 @@ import com.nugik.myapplication.DetailActivityMenu.Ambulance.AmbulanceActivity
 import com.nugik.myapplication.DetailActivityMenu.Bidan.BidanActivity
 import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikActivity
 import com.nugik.myapplication.DetailActivityMenu.Dokter.DokterActivity
+import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikMapsActivity
 import com.nugik.myapplication.DetailActivityMenu.Perawat.PerawatActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter

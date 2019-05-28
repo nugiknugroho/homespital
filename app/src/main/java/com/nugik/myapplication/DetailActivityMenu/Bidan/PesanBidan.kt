@@ -15,9 +15,7 @@ import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.LogRegister.MainActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.LogRegister.SessionManager
-import kotlinx.android.synthetic.main.activity_main2.*
 import kotlinx.android.synthetic.main.activity_pesan_bidan.*
-import kotlinx.android.synthetic.main.list_bidan.*
 import org.json.JSONObject
 
 class PesanBidan : AppCompatActivity() {

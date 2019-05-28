@@ -4,30 +4,30 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_ssdsd"
+        android:icon="@drawable/ic_home_black_24dp"
         android:title="Beranda"
         />
     <item
         android:id="@+id/nav_fav"
-        android:icon="@drawable/ic_file"
+        android:icon="@drawable/ic_article"
         android:title="Artikel"
         />
 
     <item
         android:id="@+id/nav_history"
-        android:icon="@drawable/ic_folder"
+        android:icon="@drawable/ic_history_black_24dp"
         android:title="Riwayat"
         />
 
     <item
         android:id="@+id/nav_notif"
-        android:icon="@drawable/ic_notification"
+        android:icon="@drawable/ic_notifications_black_24dp"
         android:title="Notifikasi"
         />
 
     <item
         android:id="@+id/nav_profil"
-        android:icon="@drawable/ic_user"
-        android:title="Akun Saya"
+        android:icon="@drawable/ic_account_box_black_24dp"
+        android:title="Profil"
         />
 </menu>

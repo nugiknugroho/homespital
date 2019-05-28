@@ -45,8 +45,8 @@ class DetailArtikel : AppCompatActivity() {
 
     private fun onEditMode(){
 
-        tv_detail_judul.setText(i.getStringExtra("judul_artikel"))
-        tv_detail_kategori.setText(i.getStringExtra("kategori"))
-        tv_detail_isi.setText(i.getStringExtra("isi_artikel"))
+        tv_detail_judul.setText(i.getStringExtra("title"))
+        tv_detail_kategori.setText(i.getStringExtra("nama_kategori"))
+        tv_detail_isi.setText(i.getStringExtra("content"))
     }
 }

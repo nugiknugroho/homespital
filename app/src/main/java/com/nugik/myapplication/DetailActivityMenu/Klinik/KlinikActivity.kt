@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.nugik.myapplication.DetailActivityMenu.Dokter.DokterActivity
+import com.nugik.myapplication.MapsActivity
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.activity_klinik.*
 
@@ -17,6 +18,12 @@ class KlinikActivity : AppCompatActivity() {
         cv_klinik?.setOnClickListener {
             val intent = Intent(this, KlinikMapsActivity::class.java)
             startActivity(intent)
+        }
+
+        cv_klinik1?.setOnClickListener{
+            val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+
         }
 
         setSupportActionBar(toolbar)

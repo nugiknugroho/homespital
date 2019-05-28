@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FragmentMenuLayanan.HomeActivity">
+    android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/fragmnet_container"
+        android:id="@+id/content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
     </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bottom_nav"
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
         android:background="@color/colorNew"
-        app:itemTextColor="@color/colorFontBaru"
         app:itemIconTint="@color/colorFontBaru"
-        app:menu="@menu/bottom_navigaton"
-        >
+        app:itemTextColor="@color/colorFontBaru"
+        app:menu="@menu/bottom_navigaton" />
 
-    </android.support.design.widget.BottomNavigationView>
-</RelativeLayout>
+</LinearLayout>

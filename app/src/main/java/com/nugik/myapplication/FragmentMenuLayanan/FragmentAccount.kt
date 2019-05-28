@@ -19,7 +19,7 @@ import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_account.*
 import org.json.JSONObject
 
-class FragmentAccount :Fragment(){
+class FragmentAccount :Fragment() {
     lateinit var i: Intent
     lateinit var session: SessionManager
 
