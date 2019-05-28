@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.nugik.myapplication.Data.Dokter
+import com.nugik.myapplication.DetailActivityMenu.Dokter.ChatDokter
 import com.nugik.myapplication.DetailActivityMenu.Dokter.PesanDokter
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.fragment_home.view.*
@@ -38,7 +39,11 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
                 i.putExtra("nm_spesialis", userList?.get(position)?.spesialis)
                 i.putExtra("harga_dokter", userList?.get(position)?.harga)
                 i.putExtra("status", userList?.get(position)?.status)
+                i.putExtra("id_dokter", userList?.get(position)?.id)
                 i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            val ia = Intent(context, ChatDokter::class.java)
+                ia.putExtra("id_dokter", userList?.get(position)?.id)
+                ia.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }
         // holder.bindItems(userList[position])

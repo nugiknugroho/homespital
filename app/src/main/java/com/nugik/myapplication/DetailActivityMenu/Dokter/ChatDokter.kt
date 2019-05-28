@@ -14,11 +14,18 @@ import android.support.v4.app.ActivityCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.MenuItem
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
+import com.androidnetworking.AndroidNetworking
+import com.androidnetworking.common.Priority
+import com.androidnetworking.error.ANError
+import com.androidnetworking.interfaces.JSONObjectRequestListener
+import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.RVAAdapter.AdapterChat
 import com.nugik.myapplication.Data.Chat
+import com.nugik.myapplication.LogRegister.MainActivity
 import kotlinx.android.synthetic.main.activity_chat_dokter.*
 import java.io.ByteArrayOutputStream
 import java.io.File
@@ -27,12 +34,15 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 import com.nugik.myapplication.R
+import kotlinx.android.synthetic.main.activity_main2.*
+import org.json.JSONObject
 
 class ChatDokter : AppCompatActivity() {
 
     private lateinit var listViewType: MutableList<Int>
     private lateinit var listChat: MutableList<Chat>
     private lateinit var adapterChat: AdapterChat
+    lateinit var ia:Intent
 
     private val requestCodeGallery = 1
     private val requestCodeCamera = 2
@@ -43,7 +53,6 @@ class ChatDokter : AppCompatActivity() {
         setContentView(R.layout.activity_chat_dokter)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
 
         checkRuntimePermissions()
         edit_text_chat_activity_main.setOnEditorActionListener { _, actionId, _ ->
@@ -116,7 +125,9 @@ class ChatDokter : AppCompatActivity() {
     }
 
     private fun sendTextMessage() {
+        ia = intent
         val idTypeChat = radio_group_activity_main.checkedRadioButtonId
+
         val typeChat = if (idTypeChat == R.id.radio_button_my_self_activity_main) {
             AdapterChat.VIEW_TYPE_MY_SELF
         } else {
@@ -127,12 +138,37 @@ class ChatDokter : AppCompatActivity() {
             Toast.makeText(this@ChatDokter, "Message is empty", Toast.LENGTH_SHORT)
                     .show()
         } else {
-            val dateTime = SimpleDateFormat("dd-MM-yyyy HH:mm", Locale.US)
+            val dateTime = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
                     .format(Date())
             val chat = Chat(message = message, dateTime = dateTime, image = "")
-            listViewType.add(typeChat)
-            listChat.add(chat)
-            adapterChat.notifyDataSetChanged()
+            var cg=ia.getStringExtra("id_dokter")
+            AndroidNetworking.post(ApiEndPoint.PESAN)
+                    .addBodyParameter("id_dokter", "1")
+                    .addBodyParameter("isi",message)
+                    .addBodyParameter("waktu",dateTime)
+                    .setPriority(Priority.MEDIUM)
+                    .build()
+                    .getAsJSONObject(object : JSONObjectRequestListener {
+
+                        override fun onResponse(response: JSONObject?) {
+
+                            Toast.makeText(applicationContext,response?.getString("message"), Toast.LENGTH_SHORT).show()
+
+                            if(response?.getString("message")?.contains("successfully")!!){
+                                listViewType.add(typeChat)
+                                listChat.add(chat)
+                                adapterChat.notifyDataSetChanged()
+                            }
+
+                        }
+
+                        override fun onError(anError: ANError?) {
+                            Log.d("ONERROR",anError?.errorDetail?.toString())
+                            Toast.makeText(applicationContext,"Koneksi Gagal", Toast.LENGTH_SHORT).show()                    }
+
+
+                    })
+
         }
     }
 

@@ -109,7 +109,8 @@ class DokterActivity : AppCompatActivity() {
                                         users.add(Dokter(jsonObject.getString("nm_dokter"),
                                                 jsonObject.getString("nm_spesialis"),
                                                 jsonObject.getString("harga_dokter"),
-                                                jsonObject.getString("status")))
+                                                jsonObject.getString("status"),
+                                                jsonObject.getString("id_dokter")))
                                         if(jsonArray?.length() - 1 == i){
 
                                             loading.dismiss()

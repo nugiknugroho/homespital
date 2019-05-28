@@ -31,7 +31,6 @@ class AdapterChat constructor(private val listViewType: List<Int>,
             }
         }
     }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val chat = listChat[position]
         listViewType[position].let {
