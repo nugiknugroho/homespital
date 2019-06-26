@@ -135,8 +135,8 @@
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_gender"
                         android:drawablePadding="5dp"
-                        android:hint="Jenis Kelamin"
-                        android:textColorHint="@color/colorFontBaru"/>
+                        android:text="Jenis Kelamin"
+                        android:textColor="@color/colorFontBaru"/>
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -184,8 +184,8 @@
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_mail_outline_black_24dp"
                         android:drawablePadding="5dp"
-                        android:hint="Email Anda"
-                        android:textColorHint="@color/colorFontBaru"/>
+                        android:text="Email Anda"
+                        android:textColor="@color/colorFontBaru"/>
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="match_parent"
@@ -201,8 +201,8 @@
                         android:layout_height="wrap_content"
                         android:drawableStart="@drawable/ic_account_circle_black_24dp"
                         android:drawablePadding="5dp"
-                        android:hint="Nama User Anda"
-                        android:textColorHint="@color/colorFontBaru"/>
+                        android:text="Nama User Anda"
+                        android:textColor="@color/colorFontBaru"/>
                     <TextView
                         android:layout_marginTop="5dp"
                         android:layout_width="match_parent"

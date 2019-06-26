@@ -33,6 +33,7 @@ class PesanDokter : AppCompatActivity() {
 
         btn_pesan_dokter.setOnClickListener {
             val intent = Intent(this, ChatDokter::class.java)
+            intent.putExtra("id_dokter",i.getStringExtra("id_dokter"))
             startActivity(intent)
         }
     }

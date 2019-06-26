@@ -26,10 +26,13 @@ class SessionManager{
         val KEY_ID: String="id"
         val PW: String="pw"
         val TGL:String="tgl"
+        val JK:String="jk"
+        val KOTA:String="kota"
+        val AL:String="al"
 
     }
 
-    fun createLoginSession(name: String, email: String, id: String,pw: String,tgl: String){
+    fun createLoginSession(name: String, email: String, id: String,pw: String,tgl: String,jk:String,kota:String,al:String){
 
         editor.putBoolean(IS_LOGIN, true)
         editor.putString(KEY_NAME, name)
@@ -37,6 +40,9 @@ class SessionManager{
         editor.putString(KEY_ID, id)
         editor.putString(PW, pw)
         editor.putString(TGL, tgl)
+        editor.putString(JK, jk)
+        editor.putString(KOTA, kota)
+        editor.putString(AL, al)
         editor.commit()
     }
 
@@ -57,6 +63,9 @@ class SessionManager{
         (user as HashMap).put(KEY_EMAIL, pref.getString(KEY_EMAIL, null))
         (user as HashMap).put(PW, pref.getString(PW, null))
         (user as HashMap).put(TGL, pref.getString(TGL, null))
+        (user as HashMap).put(JK, pref.getString(JK, null))
+        (user as HashMap).put(KOTA, pref.getString(KOTA, null))
+        (user as HashMap).put(AL, pref.getString(AL, null))
         return  user
     }
 

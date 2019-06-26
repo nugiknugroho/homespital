@@ -42,7 +42,7 @@ class ChatDokter : AppCompatActivity() {
     private lateinit var listViewType: MutableList<Int>
     private lateinit var listChat: MutableList<Chat>
     private lateinit var adapterChat: AdapterChat
-    lateinit var ia:Intent
+    lateinit var inten:Intent
 
     private val requestCodeGallery = 1
     private val requestCodeCamera = 2
@@ -86,6 +86,7 @@ class ChatDokter : AppCompatActivity() {
         }
     }
 
+
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         grantResults.forEach {
@@ -125,7 +126,8 @@ class ChatDokter : AppCompatActivity() {
     }
 
     private fun sendTextMessage() {
-        ia = intent
+        inten = intent
+        val cg = inten.getStringExtra("id_dokter")
         val idTypeChat = radio_group_activity_main.checkedRadioButtonId
 
         val typeChat = if (idTypeChat == R.id.radio_button_my_self_activity_main) {
@@ -141,10 +143,9 @@ class ChatDokter : AppCompatActivity() {
             val dateTime = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US)
                     .format(Date())
             val chat = Chat(message = message, dateTime = dateTime, image = "")
-            var cg=ia.getStringExtra("id_dokter")
             AndroidNetworking.post(ApiEndPoint.PESAN)
-                    .addBodyParameter("id_dokter", "1")
                     .addBodyParameter("isi",message)
+                    .addBodyParameter("id_dokter",cg)
                     .addBodyParameter("waktu",dateTime)
                     .setPriority(Priority.MEDIUM)
                     .build()

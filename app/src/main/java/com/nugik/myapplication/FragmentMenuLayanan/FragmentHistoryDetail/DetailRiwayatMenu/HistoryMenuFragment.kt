@@ -82,6 +82,7 @@ class HistoryMenuFragment : Fragment(){
                             val jsonObject = jsonArray?.optJSONObject(i)
                             users.add(history(jsonObject.getString("nama_pl"),
                                     jsonObject.getString("tanggal_pesan"),
+                                    jsonObject.getString("status"),
                                     jsonObject.getString("kode_pesanan")))
 
                             if(jsonArray?.length() - 1 == i){

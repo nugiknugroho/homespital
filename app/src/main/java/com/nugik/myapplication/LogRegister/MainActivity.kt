@@ -68,11 +68,17 @@ class MainActivity : AppCompatActivity() {
                                 val id= jsonArray?.getInt("id_user")
                                 val tanggal= jsonArray?.getString("tanggal_lahir")
                                 val pw = jsonArray?.getString("pw_user")
+                                val jk=jsonArray?.getString("jkel")
+                                val kota=jsonArray?.getString("kota")
+                                val al=jsonArray?.getString("alamat_user")
                                 session.createLoginSession(jsonArray?.getString("nm_user").toString(),
                                         email.toString(),
                                         id.toString(),
                                         pw.toString(),
-                                        tanggal.toString())
+                                        tanggal.toString(),
+                                        jk.toString(),
+                                        kota.toString(),
+                                        al.toString())
                                 Toast.makeText(applicationContext, "Login Sukses !!", Toast.LENGTH_SHORT).show()
                                 val intent = Intent(this@MainActivity, HomeActivity::class.java)
                                 startActivity(intent)

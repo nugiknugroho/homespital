@@ -41,9 +41,6 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
                 i.putExtra("status", userList?.get(position)?.status)
                 i.putExtra("id_dokter", userList?.get(position)?.id)
                 i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-            val ia = Intent(context, ChatDokter::class.java)
-                ia.putExtra("id_dokter", userList?.get(position)?.id)
-                ia.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }
         // holder.bindItems(userList[position])

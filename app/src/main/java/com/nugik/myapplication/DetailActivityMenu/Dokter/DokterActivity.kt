@@ -34,7 +34,6 @@ class DokterActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
 
         //adding a layoutmanager
@@ -51,26 +50,6 @@ class DokterActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        menuInflater.inflate(R.menu.menu, menu)
-//        val searchItem = menu?.findItem(R.id.menu_search)
-//
-//        if (searchItem != null){
-//            val searchView = searchItem.actionView as SearchView
-//            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-//                override fun onQueryTextSubmit(query: String?): Boolean {
-//                    return true
-//                }
-//
-//                override fun onQueryTextChange(newText: String?): Boolean {
-//                    return true
-//                }
-//
-//            })
-//        }
-//
-//        return super.onCreateOptionsMenu(menu)
-//    }
 
     override fun onResume() {
         super.onResume()
