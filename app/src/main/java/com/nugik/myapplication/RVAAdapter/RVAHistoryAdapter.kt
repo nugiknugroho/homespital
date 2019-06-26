@@ -22,6 +22,7 @@ class RVAHistoryAdapter(val context: Context, val userList: ArrayList<history>) 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.list_history, parent, false)
         return ViewHolder(v)
     }
+    //jsnaj
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.nama_pl.text = userList?.get(position).pl
