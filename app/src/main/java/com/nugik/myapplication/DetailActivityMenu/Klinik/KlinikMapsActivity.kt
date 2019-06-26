@@ -1,5 +1,6 @@
 package com.nugik.myapplication.DetailActivityMenu.Klinik
 
+import android.app.Activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
