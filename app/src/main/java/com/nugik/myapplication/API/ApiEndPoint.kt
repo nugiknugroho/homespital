@@ -4,7 +4,7 @@ class ApiEndPoint {
 
     companion object {
 
-        private val SERVER = "http://alfathtech.co.id/homespital/ws/"
+        private val SERVER = "https://fahrulakbar.000webhostapp.com/homespital/ws/"
         val CREATE = SERVER +"register.php"
         val DELETE = SERVER +"delete.php"
         val UPDATE = SERVER +"update.php"
@@ -17,6 +17,7 @@ class ApiEndPoint {
         val BOOKING = SERVER +"booking.php"
         val HISTORY = SERVER +"history.php"
         val PESAN = SERVER+"pesan.php"
+        val TAMPIL_PESAN= SERVER+"tampil_pesan.php"
     }
 
 }

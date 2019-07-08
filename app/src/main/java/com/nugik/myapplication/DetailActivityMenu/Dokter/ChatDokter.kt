@@ -34,6 +34,8 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 import com.nugik.myapplication.R
+import kotlinx.android.synthetic.main.activity_chat_dokter.toolbar
+import kotlinx.android.synthetic.main.activity_dokter.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import org.json.JSONObject
 
@@ -47,6 +49,7 @@ class ChatDokter : AppCompatActivity() {
     private val requestCodeGallery = 1
     private val requestCodeCamera = 2
     private val requestCodePermission = 100
+    val users = ArrayList<Chat>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -177,8 +180,42 @@ class ChatDokter : AppCompatActivity() {
         listViewType = mutableListOf()
         listChat = mutableListOf()
         adapterChat = AdapterChat(listViewType = listViewType, listChat = listChat)
-        recycler_view_chat_activity_main.layoutManager = LinearLayoutManager(this)
-        recycler_view_chat_activity_main.adapter = adapterChat
+
+        AndroidNetworking.get(ApiEndPoint.TAMPIL_PESAN)
+                .setPriority(Priority.MEDIUM)
+                .build()
+                .getAsJSONObject(object : JSONObjectRequestListener{
+                    override fun onError(anError: ANError?) {
+                        Log.d("ONERROR",anError?.errorDetail?.toString())
+                        Toast.makeText(applicationContext,"Connection Failure", Toast.LENGTH_SHORT).show()
+                    }
+                    override fun onResponse(response: JSONObject?) {
+                        users.clear()
+                        val jsonArray = response?.optJSONArray("result")
+                        if(jsonArray?.length() == 0){
+                            Toast.makeText(applicationContext," data is empty, Add the data first", Toast.LENGTH_SHORT).show()
+                        }
+                        for(i in 0 until jsonArray?.length()!!){
+                            val jsonObject = jsonArray?.optJSONObject(i)
+                            listChat.add(Chat(jsonObject.getString("isi_chat"),
+                                    jsonObject.getString("id_pengirim"),
+                                    jsonObject.getString("waktu_chat")
+                            ))
+                            listViewType.add(jsonObject.getInt("id_pengirim"))
+                            if(jsonArray?.length() - 1 == i){
+                                listChat.add(Chat(jsonObject.getString("isi_chat"),
+                                        jsonObject.getString("id_pengirim"),
+                                        jsonObject.getString("waktu_chat")
+                                ))
+                                listViewType.add(jsonObject.getInt("id_pengirim"))
+                                adapterChat.notifyDataSetChanged()
+                                recycler_view_chat_activity_main.layoutManager = LinearLayoutManager(this@ChatDokter)
+                                recycler_view_chat_activity_main.adapter = adapterChat
+
+                            }
+                        }
+                    }
+                })
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
