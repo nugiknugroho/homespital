@@ -87,6 +87,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account_circle_black_24dp"
                     android:drawablePadding="5dp"
+                    android:background="@drawable/edit_text_underline_selector"
                     android:text="Nama Anda"
                     android:textSize="13sp"
                     android:textColor="@color/colorFontBaru"/>
@@ -136,6 +137,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_mail_outline_black_24dp"
                     android:drawablePadding="5dp"
+                    android:background="@drawable/edit_text_underline_selector"
                     android:text="Email Anda"
                     android:textSize="13sp"
                     android:textColor="@color/colorFontBaru"/>
@@ -152,6 +154,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_account_circle_black_24dp"
                     android:drawablePadding="5dp"
+                    android:background="@drawable/edit_text_underline_selector"
                     android:text="Nama User Anda"
                     android:textSize="13sp"
                     android:textColor="@color/colorFontBaru"/>
@@ -168,6 +171,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_location_on_black_24dp"
                     android:drawablePadding="5dp"
+                    android:background="@drawable/edit_text_underline_selector"
                     android:hint="Kota Asal Anda"
                     android:textSize="13sp"
                     android:textColorHint="@color/colorFontBaru"/>
@@ -184,6 +188,7 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_location_city_black_24dp"
                     android:drawablePadding="5dp"
+                    android:background="@drawable/edit_text_underline_selector"
                     android:hint="Alamat Lengkap Anda"
                     android:textSize="13sp"
                     android:textColorHint="@color/colorFontBaru"/>

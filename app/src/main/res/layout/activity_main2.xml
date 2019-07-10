@@ -127,18 +127,24 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginEnd="20dp"
+                    android:orientation="horizontal"
                     >
                     <RadioButton
                         android:id="@+id/rb_laki"
-                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:buttonTint="@color/colorHint"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Laki-laki"
+                        android:theme="@style/AppTheme"
                         android:textColor="@color/colorFontBaru"
                         />
 
                     <RadioButton
                         android:id="@+id/rb_cewek"
-                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:buttonTint="@color/colorHint"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Perempuan"
                         android:textColor="@color/colorFontBaru" />
