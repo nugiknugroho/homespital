@@ -172,9 +172,9 @@
                     android:drawableStart="@drawable/ic_location_on_black_24dp"
                     android:drawablePadding="5dp"
                     android:background="@drawable/edit_text_underline_selector"
-                    android:hint="Kota Asal Anda"
+                    android:text="Kota Asal Anda"
                     android:textSize="13sp"
-                    android:textColorHint="@color/colorFontBaru"/>
+                    android:textColor="@color/colorFontBaru"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -189,9 +189,9 @@
                     android:drawableStart="@drawable/ic_location_city_black_24dp"
                     android:drawablePadding="5dp"
                     android:background="@drawable/edit_text_underline_selector"
-                    android:hint="Alamat Lengkap Anda"
+                    android:text="Alamat Lengkap Anda"
                     android:textSize="13sp"
-                    android:textColorHint="@color/colorFontBaru"/>
+                    android:textColor="@color/colorFontBaru"/>
 
                 <TextView
                     android:id="@+id/tv_edit_profil"
