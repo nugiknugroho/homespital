@@ -44,9 +44,9 @@ class FragmentAccount :Fragment() {
         var email:String=user.get(SessionManager.KEY_EMAIL)!!
 
         tv_namaLengkap.setText(name)
-        tv_tglLahir.setText(tanggal)
+//        tv_tglLahir.setText(tanggal)
         tv_email.setText(email)
-        tv_gender.setText(jk)
+//        tv_gender.setText(jk)
         btn_logout?.setOnClickListener {
             session.logoutUser()
         }

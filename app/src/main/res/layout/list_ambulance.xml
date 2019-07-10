@@ -71,7 +71,7 @@
                 android:layout_alignBottom="@+id/iv_image_dokter"
                 android:layout_alignParentEnd="true"
                 android:background="@drawable/bg_status"
-                android:gravity="end"
+                android:gravity="center"
                 android:text="Status Ketersediaan"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorFontBaru"

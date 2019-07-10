@@ -11,19 +11,37 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:title="Bidan"
+        app:titleTextColor="@color/colorNew"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:text="BIDAN"
-            android:textSize="20dp"
-            android:fontFamily="@string/font_family_medium"
-            android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/cari_bidan"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:background="@color/colorBackgroundAll"
+            android:elevation="2dp"
+            android:padding="10dp"
+            android:hint="Cari Bidan ..."
+            android:textColor="@color/colorHint"
+            android:textColorHint="@color/colorHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"

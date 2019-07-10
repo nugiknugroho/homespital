@@ -10,24 +10,33 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorNew"
         android:minHeight="?attr/actionBarSize">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_marginStart="100dp"
-            android:layout_height="40dp"
-            android:src="@drawable/logo_astri_baru"
-            />
-
-        <TextView
-            android:layout_width="150dp"
-            android:layout_marginLeft="10dp"
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="RIWAYAT"
-            android:textSize="20dp"
-            android:fontFamily="@string/font_family_medium"
-            android:textColor="@color/colorNew"/>
+            >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/launcherbiru"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="Riwayat"
+                android:textSize="20dp"
+                android:fontFamily="@string/font_family_medium"
+                android:textColor="@color/colorPrimary"/>
+        </LinearLayout>
+
+
     </android.support.v7.widget.Toolbar>
 
     <android.support.v4.view.ViewPager
@@ -39,7 +48,11 @@
             android:id="@+id/tabs_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
+            android:elevation="2dp"
+            android:background="@color/colorNew"
+            app:tabTextColor="@color/colorPrimary"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabSelectedTextColor="@color/colorPrimary"
             android:layout_gravity="top"
             />
 

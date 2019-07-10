@@ -22,10 +22,6 @@ class PesanBidan : AppCompatActivity() {
 
     lateinit var i: Intent
     lateinit var session: SessionManager
-
-    lateinit var bidan: Sessionbidan
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pesan_bidan)

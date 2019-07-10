@@ -44,7 +44,12 @@ class PesanDokter : AppCompatActivity() {
         }
 
         btn_pesan_dokter.setOnClickListener {
+
+//            val intent = Intent(this, ChatDokter::class.java)
+//            intent.putExtra("id_dokter",i.getStringExtra("id_dokter"))
+//            startActivity(intent)
             onPesan()
+
         }
     }
 
@@ -74,11 +79,15 @@ class PesanDokter : AppCompatActivity() {
 
         var id: String = user.get(SessionManager.KEY_ID)!!
 
+        var dokter=i.getStringExtra("id_dokter")
+
         val loading = ProgressDialog(this)
         loading.setMessage("Mengkonfirmasi Pesanan Anda ...")
         loading.show()
         AndroidNetworking.post(ApiEndPoint.BOOKING)
+                .addBodyParameter("booking","1")
                 .addBodyParameter("id",id)
+                .addBodyParameter("id_dokter",dokter)
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {
@@ -90,6 +99,7 @@ class PesanDokter : AppCompatActivity() {
 
                         if(response?.getString("message")?.contains("successfully")!!){
                             val intent = Intent(this@PesanDokter, ChatDokter::class.java)
+                            intent.putExtra("id_dokter",i.getStringExtra("id_dokter"))
                             startActivity(intent)
                         }
 
