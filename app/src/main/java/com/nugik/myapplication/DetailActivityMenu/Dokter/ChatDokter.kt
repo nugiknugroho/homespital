@@ -25,6 +25,8 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.RVAAdapter.AdapterChat
 import com.nugik.myapplication.Data.Chat
+import com.nugik.myapplication.Data.Dokter
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.LogRegister.MainActivity
 import kotlinx.android.synthetic.main.activity_chat_dokter.*
 import java.io.ByteArrayOutputStream
@@ -34,8 +36,10 @@ import java.io.IOException
 import java.text.SimpleDateFormat
 import java.util.*
 import com.nugik.myapplication.R
+import com.nugik.myapplication.RVAAdapter.RVADokterAdapter
 import kotlinx.android.synthetic.main.activity_chat_dokter.toolbar
 import kotlinx.android.synthetic.main.activity_dokter.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main2.*
 import org.json.JSONObject
 
@@ -177,11 +181,14 @@ class ChatDokter : AppCompatActivity() {
     }
 
     private fun setupAdapterRecyclerView() {
+        inten = intent
+        val cg = inten.getStringExtra("id_dokter")
         listViewType = mutableListOf()
         listChat = mutableListOf()
-        adapterChat = AdapterChat(listViewType = listViewType, listChat = listChat)
 
-        AndroidNetworking.get(ApiEndPoint.TAMPIL_PESAN)
+        adapterChat = AdapterChat(listViewType = listViewType, listChat = listChat)
+        AndroidNetworking.post(ApiEndPoint.TAMPIL_PESAN)
+                .addBodyParameter("id_dokter",cg)
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener{
