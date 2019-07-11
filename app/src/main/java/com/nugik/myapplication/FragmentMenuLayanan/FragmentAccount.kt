@@ -42,10 +42,17 @@ class FragmentAccount :Fragment() {
         var tanggal: String = user.get(SessionManager.TGL)!!
         var jk :String =user.get(SessionManager.JK)!!
         var email:String=user.get(SessionManager.KEY_EMAIL)!!
+        var username:String=user.get(SessionManager.KEY_NAME)!!
+        var kota:String=user.get(SessionManager.KOTA)!!
+        var alamat:String=user.get(SessionManager.AL)!!
 
         tv_namaLengkap.setText(name)
 //        tv_tglLahir.setText(tanggal)
         tv_email.setText(email)
+        tv_username.setText(username)
+        tv_kotaAsal.setText(kota)
+        tv_alamatLengkap.setText(alamat)
+
 //        tv_gender.setText(jk)
         btn_logout?.setOnClickListener {
             session.logoutUser()
