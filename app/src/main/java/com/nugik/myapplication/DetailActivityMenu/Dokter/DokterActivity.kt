@@ -1,13 +1,17 @@
 package com.nugik.myapplication.DetailActivityMenu.Dokter
 
 import android.app.ProgressDialog
+import android.content.Context
 import android.util.Log
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.SearchView
 import android.widget.Toast
@@ -24,7 +28,9 @@ import kotlinx.android.synthetic.main.activity_dokter.*
 
 
 class DokterActivity : AppCompatActivity() {
-    val users = ArrayList<Dokter>()
+
+    var users = ArrayList<Dokter>()
+    lateinit var adapter: RVADokterAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,13 +43,33 @@ class DokterActivity : AppCompatActivity() {
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
 
         //adding a layoutmanager
+
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
+
+        adapter = RVADokterAdapter(this, users)
+
+        recyclerView.adapter = adapter
+
+        cari_dokter.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                filter(s.toString())
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+            }
+
+        })
+
     }
+
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
             (android.R.id.home)->{
-                finish()
+                onBackPressed()
                 return true
             }
         }
@@ -107,7 +133,21 @@ class DokterActivity : AppCompatActivity() {
 
     }
 
+    fun filter(text: String) {
 
+        val filteredCourseAry: ArrayList<Dokter> = ArrayList()
+
+        val courseAry : ArrayList<Dokter> = users
+
+        for (eachCourse in courseAry) {
+            if (eachCourse.name!!.toLowerCase().contains(text.toLowerCase()) || eachCourse.spesialis!!.toLowerCase().contains(text.toLowerCase())) {
+                filteredCourseAry.add(eachCourse)
+            }
+        }
+
+        //calling a method of the adapter class and passing the filtered list
+        adapter.filterList(filteredCourseAry)
+    }
 
  }
 

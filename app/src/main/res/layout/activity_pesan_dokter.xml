@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorBackgroundAll"
-    tools:context=".DetailActivityMenu.Ambulance.PesanAmbulance">
+    tools:context=".DetailActivityMenu.Dokter.PesanDokter">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"

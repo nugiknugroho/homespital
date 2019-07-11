@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.list_dokter.view.*
  * Created by Belal on 6/19/2017.
  */
 
-class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : RecyclerView.Adapter<RVADokterAdapter.ViewHolder>() {
+class RVADokterAdapter(val context: Context, var userList: ArrayList<Dokter>) : RecyclerView.Adapter<RVADokterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVADokterAdapter.ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.list_dokter, parent, false)
@@ -52,6 +52,11 @@ class RVADokterAdapter(val context: Context, val userList: ArrayList<Dokter>) : 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
+    }
+
+    fun filterList(filteredDokterList : ArrayList<Dokter>){
+        this.userList = filteredDokterList
+        notifyDataSetChanged()
     }
 }
 

@@ -5,7 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".FragmentMenuLayanan.HomeActivity">
 
     <FrameLayout
         android:id="@+id/content"
@@ -14,14 +15,16 @@
         android:layout_weight="1">
     </FrameLayout>
 
+
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:background="@color/colorNew"
-        app:itemIconTint="@color/colorFontBaru"
-        app:itemTextColor="@color/colorFontBaru"
+        app:itemIconTint="@drawable/bottom_menu"
+        app:itemTextColor="@drawable/bottom_menu"
+        app:elevation="16dp"
         app:menu="@menu/bottom_navigaton" />
 
 </LinearLayout>

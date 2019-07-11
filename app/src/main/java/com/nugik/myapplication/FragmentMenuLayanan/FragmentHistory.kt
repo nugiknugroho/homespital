@@ -19,10 +19,8 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.Data.Artikel
-import com.nugik.myapplication.Data.history
 import com.nugik.myapplication.R
 //import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter
-import com.nugik.myapplication.RVAAdapter.RVAHistoryAdapter
 import com.nugik.myapplication.TabLayoutAdapter.MyPagerAdapter
 import kotlinx.android.synthetic.main.fragment_history.*
 import kotlinx.android.synthetic.main.fragment_menu_history.*

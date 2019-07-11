@@ -1,5 +1,7 @@
 package com.nugik.myapplication.DetailActivityMenu.Klinik
 
+import android.app.Activity
+import android.graphics.BitmapFactory
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,6 +10,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_klinik_maps.*
@@ -33,9 +36,15 @@ class KlinikMapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val latLng1=LatLng(-7.965477,112.637884)
         val markerOptions1:MarkerOptions=MarkerOptions().position(latLng1).title("RUMAH SAKIT LAVALETTE")
 
+        markerOptions1.icon(BitmapDescriptorFactory.fromBitmap(
+                BitmapFactory.decodeResource(resources, R.mipmap.ic_user_location)))
+
+        markerOptions1.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+
+
         // moving camera and zoom map
 
-        val zoomLevel = 12.0f //This goes up to 21
+        val zoomLevel = 15.0f //This goes up to 21
 
 
         googleMap.let {
