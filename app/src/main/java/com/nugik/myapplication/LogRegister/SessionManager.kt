@@ -13,7 +13,6 @@ class SessionManager{
     var PRIVATE_MODE: Int = 0
 
     constructor(context: Context){
-//        this.con = con
         pref = PreferenceManager.getDefaultSharedPreferences(context)
         editor = pref.edit()
     }
@@ -72,6 +71,7 @@ class SessionManager{
     fun logoutUser(){
         editor.clear()
         editor.commit()
+
 
         var i:Intent = Intent(con, MainActivity::class.java)
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)

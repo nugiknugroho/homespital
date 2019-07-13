@@ -3,10 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".DetailActivityMenu.Dokter.ChatDokter">
-
-
 
     <ImageView
         android:layout_width="match_parent"
@@ -21,18 +20,12 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
+            app:title="Nama Dokter"
+            app:titleTextColor="@color/colorNew"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             >
-            <TextView
-                android:id="@+id/nama_dokter"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="NAMA DOKTER"
-                android:textSize="20dp"
-                android:fontFamily="@string/font_family_medium"
-                android:textColor="@color/colorNew"/>
         </android.support.v7.widget.Toolbar>
 
         <android.support.v7.widget.RecyclerView

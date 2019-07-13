@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/image_view_icon_user_item_layout_chat_user"
-            android:background="#67BDF7"
+            android:background="@drawable/bg_userchat"
             android:paddingBottom="8dp"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"

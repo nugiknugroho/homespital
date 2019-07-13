@@ -10,6 +10,7 @@
     <color name="colorHint">#FF868484</color>
     <color name="colorHint1">#dfdfdf</color>
     <color name="colorborder">#757575</color>
+    <color name="coloranyar">#9BDBDB</color>
     <color name="colorBackgroundLoginRegister">#FFEFECEC</color>
     <color name="colorFontBaru">#FF000000</color>
 </resources>

@@ -10,17 +10,12 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:title="Artikel Kesehatan"
+        app:titleTextColor="@color/colorNew"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ARTIKEL KESEHATAN"
-            android:textSize="20dp"
-            android:fontFamily="@string/font_family_medium"
-            android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
 
     <ScrollView
@@ -28,17 +23,18 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:background="@color/colorNew"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:layout_margin="10dp">
 
             <ImageView
                 android:id="@+id/iv_artikel"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_margin="10dp"
-                android:src="@drawable/ic_file"
+                android:src="@drawable/ic_electrocardiogram"
                 android:layout_gravity="center"/>
 
             <TextView

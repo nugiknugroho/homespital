@@ -23,7 +23,7 @@
                 android:layout_width="68dp"
                 android:layout_height="68dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/artikel_astri_baru"/>
+                android:src="@drawable/ic_electrocardiogram"/>
 
             <LinearLayout
                 android:layout_margin="1dp"
@@ -38,7 +38,7 @@
                     android:text="JUDUL ARTIKEL"
                     android:textStyle="bold"
                     android:textSize="15sp"
-                    android:textColor="@color/colorNew"
+                    android:textColor="@color/colorFontBaru"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>

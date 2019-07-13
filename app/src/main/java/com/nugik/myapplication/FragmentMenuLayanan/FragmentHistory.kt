@@ -11,14 +11,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.Toast
-import com.androidnetworking.AndroidNetworking
-import com.androidnetworking.common.Priority
-import com.androidnetworking.error.ANError
-import com.androidnetworking.interfaces.JSONObjectRequestListener
-import com.nugik.myapplication.API.ApiEndPoint
-import com.nugik.myapplication.Data.Artikel
 import com.nugik.myapplication.R
 //import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter
 import com.nugik.myapplication.TabLayoutAdapter.MyPagerAdapter

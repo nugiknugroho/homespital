@@ -13,7 +13,6 @@
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:background="@color/colorNew">
 
         <LinearLayout
@@ -67,6 +66,7 @@
 
     <LinearLayout
         android:background="@color/colorNew"
+        android:elevation="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -80,7 +80,7 @@
             android:drawableStart="@drawable/ic_search_black_24dp"
             android:background="@color/colorBackgroundAll"
             android:padding="10dp"
-            android:hint="Cari Dokter ..."
+            android:hint="Cari Artikel ..........."
             android:textColor="@color/colorHint"
             android:textColorHint="@color/colorHint"
             android:layout_width="match_parent"

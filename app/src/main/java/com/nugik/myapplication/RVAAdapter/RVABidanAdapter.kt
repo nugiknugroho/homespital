@@ -57,4 +57,6 @@ class RVABidanAdapter(val context: Context, val userList: ArrayList<Bidan>) : Re
 //            textViewStatus.text = user.status
 //        }
     }
+
+
 }
