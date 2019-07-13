@@ -7,32 +7,32 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <permission
         android:name="com.example.mapexdemo.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
     <application
-        tools:ignore="GoogleAppIndexingWarning"
         android:allowBackup="true"
         android:icon="@mipmap/launcherbiru"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity_detail_riwayat_bidan"></activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
-        <activity android:name=".MapsActivity"
-            android:theme="@style/DokterPage">
+            android:value="@string/google_maps_key" />
 
-        </activity>
+        <activity
+            android:name=".MapsActivity"
+            android:theme="@style/DokterPage"></activity>
         <activity
             android:name=".DetailActivityMenu.Dokter.ChatDokter"
-            android:theme="@style/DokterPage"
-            />
-
+            android:theme="@style/DokterPage" />
         <activity
             android:name=".Splash"
             android:theme="@style/SplashPage"
@@ -40,6 +40,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -97,7 +98,6 @@
         <activity
             android:name=".FragmentMenuLayanan.DetailArtikel"
             android:theme="@style/DokterPage" />
-
     </application>
 
 </manifest>

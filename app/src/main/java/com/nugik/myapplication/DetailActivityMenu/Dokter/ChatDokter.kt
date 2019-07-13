@@ -166,6 +166,8 @@ class ChatDokter : AppCompatActivity() {
                                 listViewType.add(typeChat)
                                 listChat.add(chat)
                                 adapterChat.notifyDataSetChanged()
+                                recycler_view_chat_activity_main.layoutManager = LinearLayoutManager(this@ChatDokter)
+                                recycler_view_chat_activity_main.adapter = adapterChat
                             }
 
                         }

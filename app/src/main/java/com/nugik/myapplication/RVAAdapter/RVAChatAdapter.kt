@@ -6,17 +6,13 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.nugik.myapplication.Data.Artikel
-import com.nugik.myapplication.Data.history
+import com.nugik.myapplication.Data.hs_chat
+import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatChat.DetailRiwayatChat
 import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.DetailRiwayatMenu
-//import com.nugik.myapplication.FragmentMenuLayanan.DetailArtikel
 import com.nugik.myapplication.R
-import kotlinx.android.synthetic.main.fragment_menu_history.view.*
 import kotlinx.android.synthetic.main.list_history.view.*
 
-//import kotlinx.android.synthetic.main.list_artikel.view.*
-
-class RVAHistoryAdapter(val context: Context, val userList: ArrayList<history>) : RecyclerView.Adapter<RVAHistoryAdapter.ViewHolder>(){
+class RVAChatAdapter(val context: Context, val userList: ArrayList<hs_chat>) : RecyclerView.Adapter<RVAChatAdapter.ViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.list_history, parent, false)
@@ -44,7 +40,7 @@ class RVAHistoryAdapter(val context: Context, val userList: ArrayList<history>) 
             holder.itemView.status.text = userList?.get(position).status
         }
         holder.itemView.cv_riwayat.setOnClickListener {
-            val i = Intent(context, DetailRiwayatMenu::class.java)
+            val i = Intent(context, DetailRiwayatChat::class.java)
             i.putExtra("lihat", 1)
             i.putExtra("id_bidan",userList.get(position).id_bidan)
             i.putExtra("id_perawat",userList.get(position).id_perawat)

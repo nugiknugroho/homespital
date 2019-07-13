@@ -18,6 +18,8 @@ class ApiEndPoint {
         val HISTORY = SERVER +"history.php"
         val PESAN = SERVER+"pesan.php"
         val TAMPIL_PESAN= SERVER+"tampil_pesan.php"
+        val TAMPIL_DETAIL= SERVER+"detail_history.php"
+        val HISTORY_pesan= SERVER+"history_pesan.php"
     }
 
 }

@@ -56,7 +56,8 @@ class HistoryMenuFragment : Fragment(){
         loading.setMessage("Melihat data...")
         loading.show()
 
-        AndroidNetworking.get(ApiEndPoint.HISTORY)
+        AndroidNetworking.post(ApiEndPoint.HISTORY)
+                .addBodyParameter("id","2")
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {
@@ -83,7 +84,11 @@ class HistoryMenuFragment : Fragment(){
                             users.add(history(jsonObject.getString("nama_pl"),
                                     jsonObject.getString("tanggal_pesan"),
                                     jsonObject.getString("status"),
-                                    jsonObject.getString("kode_pesanan")))
+                                    jsonObject.getString("kode_pesanan"),
+                                    jsonObject.getString("id_bidan"),
+                                    jsonObject.getString("id_perawat"),
+                                    jsonObject.getString("nm_bidan"),
+                                    jsonObject.getString("nm_perawat")))
 
                             if(jsonArray?.length() - 1 == i){
 

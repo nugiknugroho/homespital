@@ -85,7 +85,7 @@ class PesanDokter : AppCompatActivity() {
         loading.setMessage("Mengkonfirmasi Pesanan Anda ...")
         loading.show()
         AndroidNetworking.post(ApiEndPoint.BOOKING)
-                .addBodyParameter("booking","1")
+                .addBodyParameter("booking","2")
                 .addBodyParameter("id",id)
                 .addBodyParameter("id_dokter",dokter)
                 .setPriority(Priority.MEDIUM)
@@ -95,8 +95,6 @@ class PesanDokter : AppCompatActivity() {
                     override fun onResponse(response: JSONObject?) {
 
                         loading.dismiss()
-                        Toast.makeText(applicationContext,response?.getString("message"), Toast.LENGTH_SHORT).show()
-
                         if(response?.getString("message")?.contains("successfully")!!){
                             val intent = Intent(this@PesanDokter, ChatDokter::class.java)
                             intent.putExtra("id_dokter",i.getStringExtra("id_dokter"))
