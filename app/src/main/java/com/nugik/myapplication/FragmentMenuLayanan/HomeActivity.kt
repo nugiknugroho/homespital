@@ -35,11 +35,6 @@ class HomeActivity : AppCompatActivity() {
                 addFragment(fragment)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.nav_notif -> {
-                val fragment = FragmentNotif()
-                addFragment(fragment)
-                return@OnNavigationItemSelectedListener true
-            }
             R.id.nav_profil -> {
                 val fragment = FragmentAccount()
                 addFragment(fragment)

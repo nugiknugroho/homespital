@@ -11,7 +11,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.RelativeLayout
 import android.widget.Toast
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
@@ -23,7 +22,6 @@ import com.nugik.myapplication.DetailActivityMenu.Ambulance.AmbulanceActivity
 import com.nugik.myapplication.DetailActivityMenu.Bidan.BidanActivity
 import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikActivity
 import com.nugik.myapplication.DetailActivityMenu.Dokter.DokterActivity
-import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikMapsActivity
 import com.nugik.myapplication.DetailActivityMenu.Perawat.PerawatActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter
@@ -126,6 +124,11 @@ class FragmentHome :Fragment(){
         }
         cv_home_klinik?.setOnClickListener {
             val intent = Intent(activity, KlinikActivity::class.java)
+            activity!!.startActivity(intent)
+        }
+
+        notfications?.setOnClickListener {
+            val intent = Intent(activity, NotifActivity::class.java)
             activity!!.startActivity(intent)
         }
     }

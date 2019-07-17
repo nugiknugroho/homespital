@@ -11,17 +11,12 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
+        app:title="Riwayat Booking"
+        app:titleTextColor="@color/colorNew"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PESAN BIDAN"
-            android:textSize="20dp"
-            android:fontFamily="@string/font_family_medium"
-            android:textColor="@color/colorNew"/>
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.CardView
@@ -85,7 +80,7 @@
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Form Pemesanan Layanan"
+                android:text="Total Pembayaran"
                 android:textStyle="bold"
                 android:textColor="@color/colorFontBaru"
                 android:gravity="center"/>
@@ -131,25 +126,7 @@
                         />
                 </LinearLayout>
             </LinearLayout>
-            <TextView
 
-                android:layout_margin="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Alamat Rumah Anda"
-                android:textStyle="bold"
-                android:textColor="@color/colorFontBaru"/>
-
-            <TextView
-                android:layout_margin="5dp"
-                android:drawableStart="@drawable/ic_location_city_black_24dp"
-                android:drawablePadding="5dp"
-                android:id="@+id/edt_alamat_pelanggan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Masukkan Alamat Rumah Anda (Jalan/desa/kecamatan)"
-                android:textColor="@color/colorFontBaru"
-                android:textSize="15sp"/>
 
 
         </LinearLayout>
