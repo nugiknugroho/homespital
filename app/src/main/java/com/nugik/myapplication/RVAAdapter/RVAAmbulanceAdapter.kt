@@ -8,11 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.nugik.myapplication.Data.Ambulance
-import com.nugik.myapplication.Data.Dokter
 import com.nugik.myapplication.DetailActivityMenu.Ambulance.PesanAmbulance
-import com.nugik.myapplication.DetailActivityMenu.Dokter.PesanDokter
 import com.nugik.myapplication.R
-import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.list_ambulance.view.*
 
 /**

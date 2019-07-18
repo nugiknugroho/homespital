@@ -22,8 +22,7 @@
                 android:id="@+id/iv_image_artikel"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:background="@drawable/article_image"
-                android:src="@drawable/health2" />
+                android:background="@drawable/article_image" />
 
             <LinearLayout
                 android:layout_margin="1dp"

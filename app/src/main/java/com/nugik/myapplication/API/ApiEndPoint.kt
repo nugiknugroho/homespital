@@ -20,6 +20,7 @@ class ApiEndPoint {
         val TAMPIL_PESAN= SERVER+"tampil_pesan.php"
         val TAMPIL_DETAIL= SERVER+"detail_history.php"
         val HISTORY_pesan= SERVER+"history_pesan.php"
+        val READ_KLINIK = SERVER +"klinik.php"
     }
 
 }

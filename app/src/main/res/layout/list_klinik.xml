@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+                android:id="@+id/cv_klinik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@color/colorNew"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:padding="10dp"
+                        android:id="@+id/iv_image_dokter"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/warnaklinik"/>
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_image_dokter">
+
+                        <TextView
+                            android:id="@+id/nama_klinik"
+                            android:text="OPSI PENCARIAN KLINIK 1"
+                            android:textSize="18sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                        <TextView
+                            android:id="@+id/alamat_klinik"
+                            android:text="Alamat Klinik"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                        <TextView
+                            android:id="@+id/telp_klinik"
+                            android:text="Nomor Telepon"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorFontBaru"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/lon"
+                        android:text="Nomor Telepon"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+                    <TextView
+                        android:id="@+id/lat"
+                        android:text="Nomor Telepon"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+</LinearLayout>

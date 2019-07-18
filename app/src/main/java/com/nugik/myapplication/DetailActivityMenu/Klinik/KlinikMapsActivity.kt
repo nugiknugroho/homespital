@@ -1,6 +1,7 @@
 package com.nugik.myapplication.DetailActivityMenu.Klinik
 
 import android.app.Activity
+import android.content.Intent
 import android.graphics.BitmapFactory
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -16,18 +17,38 @@ import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_klinik_maps.*
 
 class KlinikMapsActivity : AppCompatActivity(), OnMapReadyCallback {
+
+    lateinit var i: Intent
     private var googleMap:GoogleMap?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_klinik_maps)
-
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        i = intent
+
+        if(i.hasExtra(  "pesan")){
+
+            if(i.getStringExtra("pesan").equals("1")){
+
+                onEditMode()
+
+            }
+
+        }
 
         val mapFragment = supportFragmentManager
                 .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
+    }
+
+    private fun onEditMode(){
+
+        tv_detail_nama_klinik.setText(i.getStringExtra("nm_klinik"))
+        tv_detail_alamatklinik.setText(i.getStringExtra("alamat_klinik"))
+        tv_detail_telpklinik.setText(i.getStringExtra("no_telp"))
     }
 
     override fun onMapReady(p0: GoogleMap?) {
@@ -187,7 +208,7 @@ class KlinikMapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
             (android.R.id.home)->{
-                finish()
+                onBackPressed()
                 return true
             }
         }

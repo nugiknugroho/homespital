@@ -16,7 +16,7 @@ class KlinikActivity : AppCompatActivity() {
         setContentView(R.layout.activity_klinik)
 
         cv_klinik?.setOnClickListener {
-            val intent = Intent(this, KlinikMapsActivity::class.java)
+            val intent = Intent(this, DaftarKlinik::class.java)
             startActivity(intent)
         }
 
