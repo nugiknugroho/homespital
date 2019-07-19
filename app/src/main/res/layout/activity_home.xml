@@ -24,6 +24,7 @@
         android:background="@color/colorNew"
         app:itemIconTint="@drawable/bottom_menu"
         app:itemTextColor="@drawable/bottom_menu"
+        app:itemBackground="@drawable/ripple"
         app:elevation="16dp"
         app:menu="@menu/bottom_navigaton" />
 

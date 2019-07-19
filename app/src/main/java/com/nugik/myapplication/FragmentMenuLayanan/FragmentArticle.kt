@@ -18,6 +18,7 @@ import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.Data.Artikel
 import com.nugik.myapplication.R
+import com.nugik.myapplication.RVAAdapter.ArtikelHorizontalAdapter
 import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter
 import kotlinx.android.synthetic.main.activity_dokter.*
 import org.json.JSONObject
@@ -83,7 +84,7 @@ class FragmentArticle :Fragment(){
                                     if(jsonArray?.length() - 1 == i){
 
                                 loading.dismiss()
-                                val adapter = RVAArtikelAdapter(context!!, users)
+                                val adapter = ArtikelHorizontalAdapter(context!!, users)
                                 adapter.notifyDataSetChanged()
                                 recyclerView.adapter = adapter
 

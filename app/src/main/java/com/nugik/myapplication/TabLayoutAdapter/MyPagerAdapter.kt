@@ -2,11 +2,11 @@ package com.nugik.myapplication.TabLayoutAdapter
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.app.FragmentStatePagerAdapter
 import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatChat.HistoryChatFragment
 import com.nugik.myapplication.FragmentMenuLayanan.FragmentHistoryDetail.DetailRiwayatMenu.HistoryMenuFragment
 
-class MyPagerAdapter(fm: FragmentManager): FragmentPagerAdapter(fm){
+class MyPagerAdapter(fm: FragmentManager): FragmentStatePagerAdapter(fm){
 
     // sebuah list yang menampung objek Fragment
     private val pages = listOf(

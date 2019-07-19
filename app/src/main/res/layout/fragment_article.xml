@@ -6,14 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorBackgroundAll"
-    tools:context=".DetailActivityMenu.Dokter.DokterActivity">
+    android:background="@color/colorBackgroundAll">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="2dp"
         android:background="@color/colorNew">
 
         <LinearLayout
@@ -42,31 +40,8 @@
     </android.support.v7.widget.Toolbar>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/colorNew">
-
-        <Spinner
-            android:id="@+id/spin_kategori"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/bg_item"
-            android:backgroundTint="@color/colorPrimary"
-            android:entries="@array/kategori"
-            android:padding="5dp"
-            android:spinnerMode="dropdown">
-
-        </Spinner>
-
-    </LinearLayout>
-
-    <LinearLayout
         android:background="@color/colorNew"
+        android:elevation="2dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -80,7 +55,7 @@
             android:drawableStart="@drawable/ic_search_black_24dp"
             android:background="@color/colorBackgroundAll"
             android:padding="10dp"
-            android:hint="Cari Dokter ..."
+            android:hint="Cari Artikel ..........."
             android:textColor="@color/colorHint"
             android:textColorHint="@color/colorHint"
             android:layout_width="match_parent"
@@ -92,8 +67,6 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         >
     </android.support.v7.widget.RecyclerView>
 

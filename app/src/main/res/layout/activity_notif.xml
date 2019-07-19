@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackgroundAll"
+    tools:context=".FragmentMenuLayanan.NotifActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorNew"
+        app:title="Notifikasi"
+        app:titleTextColor="@color/colorPrimary"
+        app:theme="@style/ToolbarTheme"
+        android:elevation="2dp"
+        android:minHeight="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/logo_notif"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    />
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Waktu Pelayanan Selesai"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Pelayanan Perawatan Zila telah selesai"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/logo_notif"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    />
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Waktu Pelayanan Selesai"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Pelayanan Perawatan Zila telah selesai"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/logo_notif"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    />
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Waktu Pelayanan Selesai"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Pelayanan Perawatan Zila telah selesai"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/logo_notif"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    />
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Waktu Pelayanan Selesai"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Pelayanan Perawatan Zila telah selesai"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:background="@color/colorNew"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:src="@drawable/logo_notif"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    />
+                <LinearLayout
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:text="Waktu Pelayanan Selesai"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="Pelayanan Perawatan Zila telah selesai"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorFontBaru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

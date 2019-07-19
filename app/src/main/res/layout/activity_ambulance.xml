@@ -20,12 +20,29 @@
         >
     </android.support.v7.widget.Toolbar>
 
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/float_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/colorMagenta"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
+            android:src="@drawable/ic_home_black_24dp" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
 
 </LinearLayout>

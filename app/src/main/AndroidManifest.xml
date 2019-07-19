@@ -21,7 +21,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity_detail_riwayat_bidan"></activity>
+        <activity android:name=".DetailActivityMenu.Klinik.DaftarKlinik"  android:theme="@style/DokterPage"></activity>
+        <activity
+            android:name=".FragmentMenuLayanan.NotifActivity"
+            android:theme="@style/DokterPage" />
+        <activity android:name=".activity_detail_riwayat_bidan" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -29,7 +33,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:theme="@style/DokterPage"></activity>
+            android:theme="@style/DokterPage" />
         <activity
             android:name=".DetailActivityMenu.Dokter.ChatDokter"
             android:theme="@style/DokterPage" />

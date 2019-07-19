@@ -61,6 +61,11 @@ class ChatDokter : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        end_chat.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
+
         checkRuntimePermissions()
         edit_text_chat_activity_main.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {

@@ -1,4 +1,4 @@
-package com.nugik.myapplication.DetailActivityMenu.Ambulance
+package com.nugik.myapplication.DetailActivityMenu.Klinik
 
 import android.app.ProgressDialog
 import android.content.Intent
@@ -15,21 +15,21 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
-import com.nugik.myapplication.Data.Ambulance
+import com.nugik.myapplication.Data.Klinik
 import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.R
-import com.nugik.myapplication.RVAAdapter.RVAAmbulanceAdapter
-import kotlinx.android.synthetic.main.activity_ambulance.*
-import kotlinx.android.synthetic.main.list_ambulance.*
+import com.nugik.myapplication.RVAAdapter.KlinikAdapter
+import kotlinx.android.synthetic.main.activity_daftar_klinik.*
+import kotlinx.android.synthetic.main.activity_klinik.toolbar
 import org.json.JSONObject
 
-class AmbulanceActivity : AppCompatActivity() {
+class DaftarKlinik : AppCompatActivity() {
 
-    val users = ArrayList<Ambulance>()
+    val users = ArrayList<Klinik>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ambulance)
+        setContentView(R.layout.activity_daftar_klinik)
 
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -46,8 +46,8 @@ class AmbulanceActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when(item?.itemId){
-            (android.R.id.home)->{
+        when (item?.itemId) {
+            (android.R.id.home) -> {
                 onBackPressed()
                 return true
             }
@@ -60,20 +60,21 @@ class AmbulanceActivity : AppCompatActivity() {
         load_data()
     }
 
-    private fun load_data(){
+    private fun load_data() {
         val loading = ProgressDialog(this)
         loading.setMessage("Melihat data...")
         loading.show()
 
-        AndroidNetworking.get(ApiEndPoint.READ_AMBULANCE)
+        AndroidNetworking.get(ApiEndPoint.READ_KLINIK)
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {
                     override fun onError(anError: ANError?) {
                         loading.dismiss()
-                        Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext,"Connection Failure", Toast.LENGTH_SHORT).show()
+                        Log.d("ONERROR", anError?.errorDetail?.toString())
+                        Toast.makeText(applicationContext, "Connection Failure", Toast.LENGTH_SHORT).show()
                     }
+
                     override fun onResponse(response: JSONObject?) {
 
                         users.clear()
@@ -81,22 +82,23 @@ class AmbulanceActivity : AppCompatActivity() {
                         val jsonArray = response?.optJSONArray("result")
 
 
-                        if(jsonArray?.length() == 0){
+                        if (jsonArray?.length() == 0) {
                             loading.dismiss()
-                            Toast.makeText(applicationContext," data is empty, Add the data first", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, " data is empty, Add the data first", Toast.LENGTH_SHORT).show()
                         }
 //
-                        for(i in 0 until jsonArray?.length()!!){
+                        for (i in 0 until jsonArray?.length()!!) {
 
                             val jsonObject = jsonArray?.optJSONObject(i)
-                            users.add(Ambulance(jsonObject.getString("plat_ambulance"),
-                                    jsonObject.getString("alamat_ambulance"),
-                                    jsonObject.getString("kota"),
-                                    jsonObject.getString("status")))
-                            if(jsonArray?.length() - 1 == i){
+                            users.add(Klinik(jsonObject.getString("nm_klinik"),
+                                    jsonObject.getString("alamat_klinik"),
+                                    jsonObject.getString("no_telp"),
+                                    jsonObject.getString("lon"),
+                                    jsonObject.getString("lat")))
+                            if (jsonArray?.length() - 1 == i) {
 
                                 loading.dismiss()
-                                val adapter = RVAAmbulanceAdapter(applicationContext, users)
+                                val adapter = KlinikAdapter(applicationContext, users)
                                 adapter.notifyDataSetChanged()
                                 recyclerView.adapter = adapter
 

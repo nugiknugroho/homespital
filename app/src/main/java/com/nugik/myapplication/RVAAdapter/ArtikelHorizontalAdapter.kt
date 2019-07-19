@@ -9,23 +9,22 @@ import android.view.ViewGroup
 import com.nugik.myapplication.Data.Artikel
 import com.nugik.myapplication.FragmentMenuLayanan.DetailArtikel
 import com.nugik.myapplication.R
-import kotlinx.android.synthetic.main.list_artikel.view.*
-import kotlinx.android.synthetic.main.list_artikel.view.textViewJudulArtikel
-import kotlinx.android.synthetic.main.list_artikel.view.textViewKategori
+import kotlinx.android.synthetic.main.list_artikel_horizontal.view.textViewJudulArtikel
+import kotlinx.android.synthetic.main.list_artikel_horizontal.view.textViewKategori
 import kotlinx.android.synthetic.main.list_artikel_horizontal.view.*
 
-class RVAArtikelAdapter(val context: Context, val userList: ArrayList<Artikel>) : RecyclerView.Adapter<RVAArtikelAdapter.ViewHolder>() {
+class ArtikelHorizontalAdapter(val context: Context, val userList: ArrayList<Artikel>) : RecyclerView.Adapter<ArtikelHorizontalAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVAArtikelAdapter.ViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.list_artikel, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArtikelHorizontalAdapter.ViewHolder {
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.list_artikel_horizontal, parent, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(holder: RVAArtikelAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ArtikelHorizontalAdapter.ViewHolder, position: Int) {
         holder.itemView.textViewJudulArtikel.text = userList?.get(position).judul
         holder.itemView.textViewKategori.text = userList?.get(position).kategori
 
-        holder.itemView.cv_artikel.setOnClickListener {
+        holder.itemView.artikel2.setOnClickListener {
             val i = Intent(context, DetailArtikel::class.java)
             i.putExtra("lihat", "1")
             i.putExtra("title", userList?.get(position)?.judul)
