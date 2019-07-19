@@ -16,6 +16,7 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.Data.Ambulance
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVAAmbulanceAdapter
 import kotlinx.android.synthetic.main.activity_ambulance.*
@@ -32,6 +33,11 @@ class AmbulanceActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        float_home.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
 

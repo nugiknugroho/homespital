@@ -15,6 +15,7 @@
         android:background="@color/colorNew"
         app:title="Notifikasi"
         app:titleTextColor="@color/colorPrimary"
+        app:theme="@style/ToolbarTheme"
         android:elevation="2dp"
         android:minHeight="?attr/actionBarSize">
 

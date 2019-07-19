@@ -7,12 +7,6 @@
     android:orientation="vertical"
     tools:context=".DetailActivityMenu.Dokter.ChatDokter">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/android" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,6 +14,7 @@
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
+            android:elevation="2dp"
             app:title="Nama Dokter"
             app:titleTextColor="@color/colorNew"
             android:layout_width="match_parent"
@@ -30,51 +25,74 @@
         </android.support.v7.widget.Toolbar>
 
         <LinearLayout
-            android:background="@color/colorNew"
-            android:elevation="2dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:background="@color/colorNew"
+            android:orientation="vertical">
 
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textColor="@color/colorFontBaru"
+                android:text="Jika telah selesai konsultasi dengan Dokter, Silahkan tekan tombol SELESAI :)"/>
+            <TextView
+                android:id="@+id/end_chat"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@color/colorMagenta"
+                android:text="SELESAI"
+                android:textStyle="bold"
+                android:textColor="@color/colorNew"/>
 
         </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recycler_view_chat_activity_main"
+        <android.support.design.widget.CoordinatorLayout
+            android:background="@drawable/android"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="5dp" />
+            android:layout_height="match_parent">
 
-        <RadioGroup
-            android:id="@+id/radio_group_activity_main"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:orientation="horizontal">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_chat_activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp" />
 
-            <RadioButton
-                android:id="@+id/radio_button_my_self_activity_main"
+            <RadioGroup
+                android:id="@+id/radio_group_activity_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:checked="true"
-                android:text="My Self" />
+                android:visibility="gone"
+                android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/radio_button_user_activity_main"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="User" />
+                <RadioButton
+                    android:id="@+id/radio_button_my_self_activity_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="My Self" />
 
-        </RadioGroup>
+                <RadioButton
+                    android:id="@+id/radio_button_user_activity_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="User" />
 
+            </RadioGroup>
+
+        </android.support.design.widget.CoordinatorLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorNew"
+            android:layout_gravity="bottom"
             android:orientation="horizontal">
 
             <Button
@@ -83,17 +101,18 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:visibility="gone"
                 android:background="@drawable/ic_image"
                 android:padding="10dp"
                 tools:ignore="ButtonStyle" />
 
             <EditText
                 android:id="@+id/edit_text_chat_activity_main"
-                android:layout_width="231dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@drawable/login_edit_background"
-                android:hint="Message"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_text_underline_selector"
+                android:hint="Tulis Pesan"
                 android:imeOptions="actionDone"
                 android:inputType="text"
                 android:maxLines="1"
@@ -107,13 +126,15 @@
                 android:id="@+id/button_send_message_activity_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/ic_send"
+                android:background="@drawable/ic_send_button"
                 android:padding="10dp"
                 tools:ignore="ButtonStyle" />
 
         </LinearLayout>
+
+
 
 
 
