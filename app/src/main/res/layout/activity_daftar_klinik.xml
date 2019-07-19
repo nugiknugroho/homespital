@@ -59,8 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:backgroundTint="@color/colorMagenta"
-            android:layout_gravity="center|bottom"
-            android:layout_marginBottom="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="25dp"
             android:src="@drawable/ic_home_black_24dp" />
     </android.support.design.widget.CoordinatorLayout>
 

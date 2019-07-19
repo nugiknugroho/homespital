@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.content.Intent
 import android.util.Log
 import android.view.MenuItem
 import android.widget.LinearLayout
@@ -15,6 +16,7 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.Data.Bidan
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVABidanAdapter
 import kotlinx.android.synthetic.main.activity_bidan.*
@@ -31,6 +33,11 @@ class BidanActivity : AppCompatActivity() {
 
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        float_home.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
 

@@ -2,6 +2,7 @@ package com.nugik.myapplication.DetailActivityMenu.Dokter
 
 import android.app.ProgressDialog
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -21,6 +22,7 @@ import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.Data.Dokter
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVADokterAdapter
 import org.json.JSONObject
@@ -39,6 +41,12 @@ class DokterActivity : AppCompatActivity() {
         //backarrow
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        //float
+        float_home.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         val recyclerView = findViewById(R.id.recyclerView) as RecyclerView
 
