@@ -92,7 +92,6 @@ class PesanPerawat : AppCompatActivity() {
                     override fun onResponse(response: JSONObject?) {
 
                         loading.dismiss()
-                        Toast.makeText(applicationContext,response?.getString("message"), Toast.LENGTH_SHORT).show()
 
                         if(response?.getString("message")?.contains("successfully")!!){
                             val intent = Intent(this@PesanPerawat, MainActivity::class.java)
@@ -104,7 +103,7 @@ class PesanPerawat : AppCompatActivity() {
                     override fun onError(anError: ANError?) {
                         loading.dismiss()
                         Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext,"Koneksi Gagal", Toast.LENGTH_SHORT).show()                    }
+                                            }
 
 
                 })

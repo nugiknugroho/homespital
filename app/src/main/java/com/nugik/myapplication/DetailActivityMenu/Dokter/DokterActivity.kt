@@ -102,7 +102,6 @@ class DokterActivity : AppCompatActivity() {
                                 override fun onError(anError: ANError?) {
                                     loading.dismiss()
                                     Log.d("ONERROR",anError?.errorDetail?.toString())
-                                    Toast.makeText(applicationContext,"Connection Failure", Toast.LENGTH_SHORT).show()
                                 }
                                 override fun onResponse(response: JSONObject?) {
 
@@ -113,7 +112,6 @@ class DokterActivity : AppCompatActivity() {
 
                                     if(jsonArray?.length() == 0){
                                         loading.dismiss()
-                                        Toast.makeText(applicationContext," data is empty, Add the data first", Toast.LENGTH_SHORT).show()
                                     }
 //
                                     for(i in 0 until jsonArray?.length()!!){

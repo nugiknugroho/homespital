@@ -60,7 +60,6 @@ class FragmentArticle :Fragment(){
                     override fun onError(anError: ANError?) {
                         loading.dismiss()
                         Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(context,"Connection Failure", Toast.LENGTH_SHORT).show()
                     }
                     override fun onResponse(response: JSONObject?) {
 
@@ -71,7 +70,6 @@ class FragmentArticle :Fragment(){
 
                         if(jsonArray?.length() == 0){
                             loading.dismiss()
-                            Toast.makeText(context," data is empty, Add the data first", Toast.LENGTH_SHORT).show()
                         }
 //
                         for(i in 0 until jsonArray?.length()!!){

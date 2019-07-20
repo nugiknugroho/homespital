@@ -112,7 +112,7 @@ class PesanDokter : AppCompatActivity() {
                     override fun onError(anError: ANError?) {
                         loading.dismiss()
                         Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext,"Koneksi Gagal", Toast.LENGTH_SHORT).show()                    }
+                    }
 
 
                 })

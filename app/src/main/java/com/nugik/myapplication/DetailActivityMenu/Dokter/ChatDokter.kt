@@ -165,14 +165,14 @@ class ChatDokter : AppCompatActivity() {
 
                         override fun onResponse(response: JSONObject?) {
 
-                            Toast.makeText(applicationContext,response?.getString("message"), Toast.LENGTH_SHORT).show()
-
+//
                             if(response?.getString("message")?.contains("successfully")!!){
                                 listViewType.add(typeChat)
                                 listChat.add(chat)
                                 adapterChat.notifyDataSetChanged()
                                 recycler_view_chat_activity_main.layoutManager = LinearLayoutManager(this@ChatDokter)
                                 recycler_view_chat_activity_main.adapter = adapterChat
+
                             }
 
                         }
@@ -201,13 +201,11 @@ class ChatDokter : AppCompatActivity() {
                 .getAsJSONObject(object : JSONObjectRequestListener{
                     override fun onError(anError: ANError?) {
                         Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext,"Connection Failure", Toast.LENGTH_SHORT).show()
                     }
                     override fun onResponse(response: JSONObject?) {
                         users.clear()
                         val jsonArray = response?.optJSONArray("result")
                         if(jsonArray?.length() == 0){
-                            Toast.makeText(applicationContext," data is empty, Add the data first", Toast.LENGTH_SHORT).show()
                         }
                         for(i in 0 until jsonArray?.length()!!){
                             val jsonObject = jsonArray?.optJSONObject(i)

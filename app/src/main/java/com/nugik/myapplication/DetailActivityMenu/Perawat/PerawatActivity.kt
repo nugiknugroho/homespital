@@ -73,8 +73,7 @@ class PerawatActivity : AppCompatActivity() {
                     override fun onError(anError: ANError?) {
                         loading.dismiss()
                         Log.d("ONERROR",anError?.errorDetail?.toString())
-                        Toast.makeText(applicationContext,"Connection Failure", Toast.LENGTH_SHORT).show()
-                    }
+                        }
                     override fun onResponse(response: JSONObject?) {
 
                         users.clear()
@@ -84,8 +83,8 @@ class PerawatActivity : AppCompatActivity() {
 
                         if(jsonArray?.length() == 0){
                             loading.dismiss()
-                            Toast.makeText(applicationContext," data is empty, Add the data first", Toast.LENGTH_SHORT).show()
-                        }
+
+                             }
 //
                         for(i in 0 until jsonArray?.length()!!){
 
@@ -94,7 +93,7 @@ class PerawatActivity : AppCompatActivity() {
                             if(jsonObject.getString("pp_perawat") == ""){
                                 pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/0profil_foto.png"
                             }else {
-                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/bidan/" + jsonObject.getString("pp_perawat")
+                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/perawat/" + jsonObject.getString("pp_perawat")
                             }
                             users.add(Perawat(jsonObject.getString("nm_perawat"),
                                     jsonObject.getString("alamat_perawat"),
