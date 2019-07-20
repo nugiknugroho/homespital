@@ -119,11 +119,17 @@ class DokterActivity : AppCompatActivity() {
                                     for(i in 0 until jsonArray?.length()!!){
 
                                         val jsonObject = jsonArray?.optJSONObject(i)
+                                        var pathImg: String = ""
+                                        if(jsonObject.getString("pp_dokter") == ""){
+                                            pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/0profil_foto.png"
+                                        }else {
+                                            pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/" + jsonObject.getString("pp_dokter")
+                                        }
                                         users.add(Dokter(jsonObject.getString("nm_dokter"),
                                                 jsonObject.getString("nm_spesialis"),
                                                 jsonObject.getString("harga_dokter"),
                                                 jsonObject.getString("status"),
-                                                jsonObject.getString("id_dokter")))
+                                                jsonObject.getString("id_dokter"),pathImg))
                                         if(jsonArray?.length() - 1 == i){
 
                                             loading.dismiss()

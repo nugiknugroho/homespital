@@ -90,10 +90,16 @@ class PerawatActivity : AppCompatActivity() {
                         for(i in 0 until jsonArray?.length()!!){
 
                             val jsonObject = jsonArray?.optJSONObject(i)
+                            var pathImg=""
+                            if(jsonObject.getString("pp_perawat") == ""){
+                                pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/0profil_foto.png"
+                            }else {
+                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/bidan/" + jsonObject.getString("pp_perawat")
+                            }
                             users.add(Perawat(jsonObject.getString("nm_perawat"),
                                     jsonObject.getString("alamat_perawat"),
                                     jsonObject.getString("harga"),
-                                    jsonObject.getString("status")))
+                                    jsonObject.getString("status"),pathImg))
                             if(jsonArray?.length() - 1 == i){
 
                                 loading.dismiss()

@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.nugik.myapplication.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_artikel.*
+import kotlinx.android.synthetic.main.list_artikel_horizontal.view.*
 
 class DetailArtikel : AppCompatActivity() {
 
@@ -44,7 +46,10 @@ class DetailArtikel : AppCompatActivity() {
     }
 
     private fun onEditMode(){
-
+        Picasso
+                .with(this)
+                .load(i.getStringExtra("image"))
+                .into(iv_artikel)
         tv_detail_judul.setText(i.getStringExtra("title"))
         tv_detail_kategori.setText(i.getStringExtra("nama_kategori"))
         tv_detail_isi.setText(i.getStringExtra("content"))

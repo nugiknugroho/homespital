@@ -10,6 +10,8 @@ import android.widget.TextView
 import com.nugik.myapplication.Data.Perawat
 import com.nugik.myapplication.DetailActivityMenu.Perawat.PesanPerawat
 import com.nugik.myapplication.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.list_artikel.view.*
 import kotlinx.android.synthetic.main.list_perawat.view.*
 
 class RVAPerawatAdapter(val context: Context, val userList: ArrayList<Perawat>) : RecyclerView.Adapter<RVAPerawatAdapter.ViewHolder>() {
@@ -20,6 +22,10 @@ class RVAPerawatAdapter(val context: Context, val userList: ArrayList<Perawat>) 
     }
 
     override fun onBindViewHolder(holder: RVAPerawatAdapter.ViewHolder, position: Int) {
+        Picasso
+                .with(context)
+                .load(userList?.get(position).image)
+                .into(holder.itemView.iv_image_perawat)
         holder.itemView.textViewNamaPerawat.text = userList?.get(position)?.name
         holder.itemView.textViewAlamat.text = userList?.get(position)?.alamat
         holder.itemView.textViewHarga.text = userList?.get(position)?.harga
@@ -31,6 +37,7 @@ class RVAPerawatAdapter(val context: Context, val userList: ArrayList<Perawat>) 
             i.putExtra("alamat_perawat", userList?.get(position)?.alamat)
             i.putExtra("harga", userList?.get(position)?.harga)
             i.putExtra("status", userList?.get(position)?.status)
+            i.putExtra("image", userList?.get(position)?.image)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

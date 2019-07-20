@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.nugik.myapplication.Data.Artikel
 import com.nugik.myapplication.FragmentMenuLayanan.DetailArtikel
 import com.nugik.myapplication.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_artikel_horizontal.view.textViewJudulArtikel
 import kotlinx.android.synthetic.main.list_artikel_horizontal.view.textViewKategori
 import kotlinx.android.synthetic.main.list_artikel_horizontal.view.*
@@ -21,6 +22,10 @@ class ArtikelHorizontalAdapter(val context: Context, val userList: ArrayList<Art
     }
 
     override fun onBindViewHolder(holder: ArtikelHorizontalAdapter.ViewHolder, position: Int) {
+        Picasso
+                .with(context)
+                .load(userList?.get(position).image)
+                .into(holder.itemView.iv_image_artikel)
         holder.itemView.textViewJudulArtikel.text = userList?.get(position).judul
         holder.itemView.textViewKategori.text = userList?.get(position).kategori
 
@@ -30,6 +35,7 @@ class ArtikelHorizontalAdapter(val context: Context, val userList: ArrayList<Art
             i.putExtra("title", userList?.get(position)?.judul)
             i.putExtra("nama_kategori", userList?.get(position)?.kategori)
             i.putExtra("content", userList?.get(position)?.isi)
+            i.putExtra("image",userList?.get(position)?.image)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

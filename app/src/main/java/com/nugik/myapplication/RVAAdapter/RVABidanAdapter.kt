@@ -10,7 +10,10 @@ import android.widget.TextView
 import com.nugik.myapplication.Data.Bidan
 import com.nugik.myapplication.DetailActivityMenu.Bidan.PesanBidan
 import com.nugik.myapplication.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.list_bidan.view.*
+import kotlinx.android.synthetic.main.fragment_home.view.iv_image_bidan as iv_image_bidan1
 
 class RVABidanAdapter(val context: Context, val userList: ArrayList<Bidan>) : RecyclerView.Adapter<RVABidanAdapter.ViewHolder>() {
 
@@ -20,6 +23,10 @@ class RVABidanAdapter(val context: Context, val userList: ArrayList<Bidan>) : Re
     }
 
     override fun onBindViewHolder(holder: RVABidanAdapter.ViewHolder, position: Int) {
+        Picasso
+                .with(context)
+                .load(userList?.get(position).image)
+                .into(holder.itemView.iv_image_bidan)
         holder.itemView.textViewNamaBidan.text = userList?.get(position)?.name
         holder.itemView.textViewAlamat.text = userList?.get(position)?.alamat
         holder.itemView.textViewHarga.text = userList?.get(position)?.harga
@@ -32,6 +39,7 @@ class RVABidanAdapter(val context: Context, val userList: ArrayList<Bidan>) : Re
             i.putExtra("harga_bidan", userList?.get(position)?.harga)
             i.putExtra("status", userList?.get(position)?.status)
             i.putExtra("id_bidan", userList.get(position)?.id)
+            i.putExtra("image", userList.get(position)?.image)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

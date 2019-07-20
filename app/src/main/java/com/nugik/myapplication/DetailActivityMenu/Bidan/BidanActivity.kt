@@ -89,12 +89,17 @@ class BidanActivity : AppCompatActivity() {
                         for(i in 0 until jsonArray?.length()!!){
 
                             val jsonObject = jsonArray?.optJSONObject(i)
-//                            session.Sessionbidan(jsonObject.getString("id_bidan"))
+                            var pathImg: String = ""
+                            if(jsonObject.getString("pp_bidan") == ""){
+                                pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/0profil_foto.png"
+                            }else {
+                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/bidan/" + jsonObject.getString("pp_bidan")
+                            }
                             users.add(Bidan( jsonObject.getString("nm_bidan"),
                                     jsonObject.getString("alamat_bidan"),
                                     jsonObject.getString("harga_bidan"),
                                     jsonObject.getString("status"),
-                                    jsonObject.getString("id_bidan")))
+                                    jsonObject.getString("id_bidan"),pathImg))
                             if(jsonArray?.length() - 1 == i){
 
                                 loading.dismiss()

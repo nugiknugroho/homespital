@@ -82,9 +82,15 @@ class FragmentHome :Fragment(){
                         for(i in 0 until jsonArray?.length()!!){
 
                             val jsonObject = jsonArray?.optJSONObject(i)
+                            var pathImg: String = ""
+                            if(jsonObject.getString("image") == ""){
+                                pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/article/noimage.jpg"
+                            }else {
+                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/article/" + jsonObject.getString("image")
+                            }
                             users.add(Artikel(jsonObject.getString("title"),
                                     jsonObject.getString("content"),
-                                    jsonObject.getString("nama_kategori")))
+                                    jsonObject.getString("nama_kategori"),pathImg))
 
                             if(jsonArray?.length() - 1 == i){
 

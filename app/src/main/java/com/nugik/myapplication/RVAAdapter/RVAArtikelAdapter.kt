@@ -9,10 +9,12 @@ import android.view.ViewGroup
 import com.nugik.myapplication.Data.Artikel
 import com.nugik.myapplication.FragmentMenuLayanan.DetailArtikel
 import com.nugik.myapplication.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_artikel.view.*
 import kotlinx.android.synthetic.main.list_artikel.view.textViewJudulArtikel
 import kotlinx.android.synthetic.main.list_artikel.view.textViewKategori
 import kotlinx.android.synthetic.main.list_artikel_horizontal.view.*
+import kotlinx.android.synthetic.main.list_artikel_horizontal.view.iv_image_artikel as iv_image_artikel1
 
 class RVAArtikelAdapter(val context: Context, val userList: ArrayList<Artikel>) : RecyclerView.Adapter<RVAArtikelAdapter.ViewHolder>() {
 
@@ -22,6 +24,10 @@ class RVAArtikelAdapter(val context: Context, val userList: ArrayList<Artikel>) 
     }
 
     override fun onBindViewHolder(holder: RVAArtikelAdapter.ViewHolder, position: Int) {
+        Picasso
+                .with(context)
+                .load(userList?.get(position).image)
+                .into(holder.itemView.iv_image_artikel)
         holder.itemView.textViewJudulArtikel.text = userList?.get(position).judul
         holder.itemView.textViewKategori.text = userList?.get(position).kategori
 
@@ -31,6 +37,7 @@ class RVAArtikelAdapter(val context: Context, val userList: ArrayList<Artikel>) 
             i.putExtra("title", userList?.get(position)?.judul)
             i.putExtra("nama_kategori", userList?.get(position)?.kategori)
             i.putExtra("content", userList?.get(position)?.isi)
+            i.putExtra("image",userList?.get(position)?.image)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             context.startActivity(i)
         }

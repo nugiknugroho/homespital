@@ -15,7 +15,10 @@ import com.nugik.myapplication.API.ApiEndPoint
 import com.nugik.myapplication.LogRegister.MainActivity
 import com.nugik.myapplication.LogRegister.SessionManager
 import com.nugik.myapplication.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.activity_pesan_bidan.*
 import kotlinx.android.synthetic.main.activity_pesan_perawat.*
+import kotlinx.android.synthetic.main.activity_pesan_perawat.toolbar
 import org.json.JSONObject
 
 class PesanPerawat : AppCompatActivity() {
@@ -60,7 +63,10 @@ class PesanPerawat : AppCompatActivity() {
     }
 
     private fun onEditMode(){
-
+        Picasso
+                .with(this)
+                .load(i.getStringExtra("image"))
+                .into(iv_image_perawat)
         tv_namaPerawat.setText(i.getStringExtra("nm_perawat"))
         tv_alamatPerawat.setText(i.getStringExtra("alamat_perawat"))
         tv_hargaPerawat.setText("Rp. " +i.getStringExtra("harga"))
