@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -81,8 +82,9 @@ class FragmentArticle :Fragment(){
                             }else {
                                 pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/article/" + jsonObject.getString("image")
                             }
+                            var tes=Html.fromHtml(jsonObject.getString("content"))
                                 users.add(Artikel(jsonObject.getString("title"),
-                                    jsonObject.getString("content"),
+                                    tes.toString(),
                                     jsonObject.getString("nama_kategori"),pathImg))
 
                                     if(jsonArray?.length() - 1 == i){
