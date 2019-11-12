@@ -79,7 +79,7 @@ class PesanBidan : AppCompatActivity() {
         loading.setMessage("Mengkonfirmasi Pesanan Anda ...")
         loading.show()
         AndroidNetworking.post(ApiEndPoint.BOOKING)
-                .addBodyParameter("booking","1")
+                .addBodyParameter("booking  ","1")
                 .addBodyParameter("id",id)
                 .addBodyParameter("id_bidan",bidan)
                 .setPriority(Priority.MEDIUM)
