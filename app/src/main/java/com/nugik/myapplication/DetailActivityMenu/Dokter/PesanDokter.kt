@@ -77,6 +77,7 @@ class PesanDokter : AppCompatActivity() {
                 .with(this)
                 .load(i.getStringExtra("image"))
                 .into(iv_image_dokter)
+        toolbar.setTitle(i.getStringExtra("nm_dokter"))
         tv_namaDokter.setText(i.getStringExtra("nm_dokter"))
         tv_spesialisDokter.setText(i.getStringExtra("nm_spesialis"))
         tv_hargaDokter.setText("Rp. " +i.getStringExtra("harga_dokter"))

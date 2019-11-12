@@ -95,7 +95,7 @@ class ChatDokter : AppCompatActivity() {
     }
 
     private fun onEditMode(){
-        tv_nmdokter.setText(inten.getStringExtra("nm_dokter"))
+        toolbar.setTitle(inten.getStringExtra("nm_dokter"))
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {

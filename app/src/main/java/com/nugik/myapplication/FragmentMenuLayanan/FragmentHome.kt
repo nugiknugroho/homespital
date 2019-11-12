@@ -59,7 +59,7 @@ class FragmentHome :Fragment(){
         val loading = ProgressDialog(context)
         loading.setMessage("Melihat data...")
         loading.show()
-
+        Log.d("hasil",ApiEndPoint.READ_ARTIKEL);
         AndroidNetworking.get(ApiEndPoint.READ_ARTIKEL)
                 .setPriority(Priority.MEDIUM)
                 .build()
@@ -86,9 +86,9 @@ class FragmentHome :Fragment(){
                             val jsonObject = jsonArray?.optJSONObject(i)
                             var pathImg: String = ""
                             if(jsonObject.getString("image") == ""){
-                                pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/article/noimage.jpg"
+                                pathImg="http://alfathtech.co.id/homespital/admin/assets/post/article/noimage.jpg"
                             }else {
-                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/article/" + jsonObject.getString("image")
+                                pathImg = "http://alfathtech.co.id/homespital/admin/assets/post/article/" + jsonObject.getString("image")
                             }
                             var tes= Html.fromHtml(jsonObject.getString("content"))
                             users.add(Artikel(jsonObject.getString("title"),
@@ -128,8 +128,7 @@ class FragmentHome :Fragment(){
             activity!!.startActivity(intent)
         }
         cv_home_ambulance?.setOnClickListener {
-            val intent = Intent(activity, AmbulanceActivity::class.java)
-            activity!!.startActivity(intent)
+            Toast.makeText(context, "Fitur Ini Masih Dalam Tahap Pengembangan", Toast.LENGTH_SHORT).show()
         }
         cv_home_klinik?.setOnClickListener {
             val intent = Intent(activity, DaftarKlinik::class.java)

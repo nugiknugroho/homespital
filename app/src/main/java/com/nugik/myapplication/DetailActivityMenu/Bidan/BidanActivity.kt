@@ -89,9 +89,9 @@ class BidanActivity : AppCompatActivity() {
                             val jsonObject = jsonArray?.optJSONObject(i)
                             var pathImg: String = ""
                             if(jsonObject.getString("pp_bidan") == ""){
-                                pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/0profil_foto.png"
+                                pathImg="http://alfathtech.co.id/homespital/admin/assets/post/dokter/0profil_foto.png"
                             }else {
-                                pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/bidan/" + jsonObject.getString("pp_bidan")
+                                pathImg = "http://alfathtech.co.id/homespital/admin/assets/post/bidan/" + jsonObject.getString("pp_bidan")
                             }
                             users.add(Bidan( jsonObject.getString("nm_bidan"),
                                     jsonObject.getString("alamat_bidan"),

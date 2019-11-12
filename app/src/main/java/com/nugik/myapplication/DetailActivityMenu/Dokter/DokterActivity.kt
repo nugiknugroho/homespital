@@ -119,9 +119,9 @@ class DokterActivity : AppCompatActivity() {
                                         val jsonObject = jsonArray?.optJSONObject(i)
                                         var pathImg: String = ""
                                         if(jsonObject.getString("pp_dokter") == ""){
-                                            pathImg="https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/0profil_foto.png"
+                                            pathImg="http://alfathtech.co.id/homespital/admin/assets/post/dokter/0profil_foto.png"
                                         }else {
-                                            pathImg = "https://fahrulakbar.000webhostapp.com/homespital/admin/Homespital/assets/post/dokter/" + jsonObject.getString("pp_dokter")
+                                            pathImg = "http://alfathtech.co.id/homespital/admin/assets/post/dokter/" + jsonObject.getString("pp_dokter")
                                         }
                                         users.add(Dokter(jsonObject.getString("nm_dokter"),
                                                 jsonObject.getString("nm_spesialis"),

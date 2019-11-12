@@ -51,9 +51,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun load_data() {
-        AndroidNetworking.post(ApiEndPoint.READ_LOGIN)
-                .addBodyParameter("username", edt_email.text.toString())
-                .addBodyParameter("password", edt_password.text.toString())
+        Log.d("hasil",ApiEndPoint.READ_LOGIN)
+        AndroidNetworking.get(ApiEndPoint.READ_LOGIN)
+                .addQueryParameter("username", edt_email.text.toString())
+                .addQueryParameter("password", edt_password.text.toString())
                 .setPriority(Priority.MEDIUM)
                 .build()
                 .getAsJSONObject(object : JSONObjectRequestListener {

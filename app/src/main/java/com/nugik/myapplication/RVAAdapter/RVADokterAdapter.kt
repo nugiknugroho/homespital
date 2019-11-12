@@ -54,6 +54,11 @@ class RVADokterAdapter(val context: Context, var userList: ArrayList<Dokter>) : 
         // holder.bindItems(userList[position])
     }
 
+    fun filterList(filteredDokterList : ArrayList<Dokter>){
+        this.userList = filteredDokterList
+        notifyDataSetChanged()
+    }
+
     override fun getItemCount(): Int {
         return userList.size
     }
@@ -62,9 +67,6 @@ class RVADokterAdapter(val context: Context, var userList: ArrayList<Dokter>) : 
 
     }
 
-    fun filterList(filteredDokterList : ArrayList<Dokter>){
-        this.userList = filteredDokterList
-        notifyDataSetChanged()
-    }
+
 }
 
