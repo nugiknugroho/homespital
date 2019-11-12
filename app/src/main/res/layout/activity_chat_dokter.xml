@@ -15,12 +15,19 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:elevation="2dp"
-            app:title="Nama Dokter"
-            app:titleTextColor="@color/colorNew"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             >
+
+            <TextView
+                android:id="@+id/tv_nmdokter"
+                android:text="Nama Dokter"
+                android:textColor="@color/colorNew"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </android.support.v7.widget.Toolbar>
 

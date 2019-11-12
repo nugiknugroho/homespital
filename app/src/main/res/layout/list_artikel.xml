@@ -15,13 +15,14 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="160dp"
+            android:layout_height="200dp"
             android:background="@drawable/ripple">
 
             <ImageView
                 android:id="@+id/iv_image_artikel"
+                android:src="@drawable/ww"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="130dp"
                 android:background="@drawable/article_image" />
 
             <LinearLayout
@@ -48,6 +49,7 @@
                     android:textSize="13sp"
                     android:background="@drawable/bg_kategori"
                     android:textColor="@color/colorNew"
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>

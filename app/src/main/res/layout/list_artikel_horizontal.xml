@@ -11,7 +11,7 @@
                 android:id="@+id/iv_image_artikel"
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:background="@drawable/article_image"
                 android:src="@drawable/health2" />
 

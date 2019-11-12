@@ -1,9 +1,11 @@
 package com.nugik.myapplication.FragmentMenuLayanan
 
 import android.app.ProgressDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +24,15 @@ import org.json.JSONObject
 class FragmentAccount :Fragment() {
     lateinit var i: Intent
     lateinit var session: SessionManager
+
+    val positiveButtonClick = { dialog: DialogInterface, which: Int ->
+        Toast.makeText(context,
+                android.R.string.yes, Toast.LENGTH_SHORT).show()
+    }
+    val negativeButtonClick = { dialog: DialogInterface, which: Int ->
+        Toast.makeText(context,
+                android.R.string.no, Toast.LENGTH_SHORT).show()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +67,19 @@ class FragmentAccount :Fragment() {
 //        tv_gender.setText(jk)
         btn_logout?.setOnClickListener {
             session.logoutUser()
+        }
+
+        tv_edit_profil.setOnClickListener {
+            val builder = AlertDialog.Builder(context!!)
+
+            with(builder)
+            {
+                setTitle("Sunting Profil")
+                setMessage("Anda yakin mengubah ini ?")
+                setPositiveButton("OK", DialogInterface.OnClickListener(function = positiveButtonClick))
+                setNegativeButton(android.R.string.no, negativeButtonClick)
+                show()
+            }
         }
 
     }

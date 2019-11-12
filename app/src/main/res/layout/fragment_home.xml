@@ -162,7 +162,7 @@
                         android:layout_toRightOf="@id/iv_image_perawat">
 
                         <TextView
-                            android:text="PERAWAT"
+                            android:text="HOME CARE"
                             android:textSize="18sp"
                             android:textColor="@color/colorFontBaru"
                             android:layout_width="wrap_content"

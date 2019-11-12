@@ -66,6 +66,18 @@ class ChatDokter : AppCompatActivity() {
             startActivity(i)
         }
 
+        inten = intent
+
+        if(inten.hasExtra(  "pesan")){
+
+            if(inten.getStringExtra("pesan").equals("1")){
+
+                onEditMode()
+
+            }
+
+        }
+
         checkRuntimePermissions()
         edit_text_chat_activity_main.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
@@ -80,6 +92,10 @@ class ChatDokter : AppCompatActivity() {
             sendImageMessage()
         }
         setupAdapterRecyclerView()
+    }
+
+    private fun onEditMode(){
+        tv_nmdokter.setText(inten.getStringExtra("nm_dokter"))
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -172,6 +188,7 @@ class ChatDokter : AppCompatActivity() {
                                 adapterChat.notifyDataSetChanged()
                                 recycler_view_chat_activity_main.layoutManager = LinearLayoutManager(this@ChatDokter)
                                 recycler_view_chat_activity_main.adapter = adapterChat
+                                edit_text_chat_activity_main.text.clear()
 
                             }
 

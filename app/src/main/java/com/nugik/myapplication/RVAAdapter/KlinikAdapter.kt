@@ -27,7 +27,7 @@ class KlinikAdapter(val context: Context, val userList: ArrayList<Klinik>) : Rec
 
         holder.itemView.cv_klinik?.setOnClickListener {
             val i = Intent(context, KlinikMapsActivity::class.java)
-            i.putExtra("lihat", "1")
+            i.putExtra("pesan", "1")
             i.putExtra("nm_klinik", userList?.get(position)?.nama_klinik)
             i.putExtra("alamat_klinik", userList?.get(position)?.alamat_klinik)
             i.putExtra("no_telp", userList?.get(position)?.no_telp)

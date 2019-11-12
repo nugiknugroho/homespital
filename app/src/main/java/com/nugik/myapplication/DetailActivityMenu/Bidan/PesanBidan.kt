@@ -6,19 +6,18 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.LogRegister.MainActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.LogRegister.SessionManager
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_pesan_bidan.*
 import kotlinx.android.synthetic.main.activity_pesan_bidan.toolbar
-import kotlinx.android.synthetic.main.activity_pesan_dokter.*
 import org.json.JSONObject
 
 class PesanBidan : AppCompatActivity() {
@@ -30,6 +29,11 @@ class PesanBidan : AppCompatActivity() {
         setContentView(R.layout.activity_pesan_bidan)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        float_home.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         i = intent
 

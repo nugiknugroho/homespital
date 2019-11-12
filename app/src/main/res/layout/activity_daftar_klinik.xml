@@ -10,37 +10,14 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        app:title="List Klinik"
+        app:title="Daftar Klinik"
         app:titleTextColor="@color/colorNew"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
         >
     </android.support.v7.widget.Toolbar>
-    <LinearLayout
-        android:background="@color/colorPrimary"
-        android:elevation="2dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/cari_klinik"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:drawablePadding="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:drawableStart="@drawable/ic_search_black_24dp"
-            android:background="@drawable/bg_search"
-            android:elevation="2dp"
-            android:padding="10dp"
-            android:hint="Cari Klinik ..."
-            android:textColor="@color/colorHint"
-            android:textColorHint="@color/colorHint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"

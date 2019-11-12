@@ -12,11 +12,11 @@ import com.androidnetworking.common.Priority
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.JSONObjectRequestListener
 import com.nugik.myapplication.API.ApiEndPoint
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.LogRegister.MainActivity
 import com.nugik.myapplication.LogRegister.SessionManager
 import com.nugik.myapplication.R
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_pesan_bidan.*
 import kotlinx.android.synthetic.main.activity_pesan_perawat.*
 import kotlinx.android.synthetic.main.activity_pesan_perawat.toolbar
 import org.json.JSONObject
@@ -31,6 +31,11 @@ class PesanPerawat : AppCompatActivity() {
         setContentView(R.layout.activity_pesan_perawat)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        float_home.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         i = intent
 

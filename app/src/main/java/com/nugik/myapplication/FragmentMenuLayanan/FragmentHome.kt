@@ -23,6 +23,7 @@ import com.nugik.myapplication.DetailActivityMenu.Ambulance.AmbulanceActivity
 import com.nugik.myapplication.DetailActivityMenu.Bidan.BidanActivity
 import com.nugik.myapplication.DetailActivityMenu.Klinik.KlinikActivity
 import com.nugik.myapplication.DetailActivityMenu.Dokter.DokterActivity
+import com.nugik.myapplication.DetailActivityMenu.Klinik.DaftarKlinik
 import com.nugik.myapplication.DetailActivityMenu.Perawat.PerawatActivity
 import com.nugik.myapplication.R
 import com.nugik.myapplication.RVAAdapter.RVAArtikelAdapter
@@ -131,7 +132,7 @@ class FragmentHome :Fragment(){
             activity!!.startActivity(intent)
         }
         cv_home_klinik?.setOnClickListener {
-            val intent = Intent(activity, KlinikActivity::class.java)
+            val intent = Intent(activity, DaftarKlinik::class.java)
             activity!!.startActivity(intent)
         }
 

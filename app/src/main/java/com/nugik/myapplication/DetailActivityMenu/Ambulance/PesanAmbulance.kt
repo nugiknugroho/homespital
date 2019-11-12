@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import com.nugik.myapplication.FragmentMenuLayanan.HomeActivity
 import com.nugik.myapplication.R
 import kotlinx.android.synthetic.main.activity_pesan_ambulance.*
 
@@ -17,6 +18,11 @@ class PesanAmbulance : AppCompatActivity() {
         setContentView(R.layout.activity_pesan_ambulance)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        float_home.setOnClickListener {
+            val i = Intent(this, HomeActivity::class.java)
+            startActivity(i)
+        }
 
         i = intent
 
